@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/myronphan/cavestory
+CMAKE_SOURCE_DIR = /Users/myronphan/caveStory
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/myronphan/cavestory/out/build
+CMAKE_BINARY_DIR = /Users/myronphan/caveStory/out/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/myronphan/cavestory/out/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.22.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,49 +97,49 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/myronphan/cavestory/out/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/cavestory/out/build/CMakeFiles /Users/myronphan/cavestory/out/build/external/SDL2//CMakeFiles/progress.marks
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/cavestory/out/build/CMakeFiles 0
+	cd /Users/myronphan/caveStory/out/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/caveStory/out/build/CMakeFiles /Users/myronphan/caveStory/out/build/external/SDL2//CMakeFiles/progress.marks
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/caveStory/out/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/clean
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/preinstall
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/preinstall
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/myronphan/cavestory/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/myronphan/caveStory/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 external/SDL2/CMakeFiles/SDL2main.dir/rule:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/SDL2main.dir/rule
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/SDL2main.dir/rule
 .PHONY : external/SDL2/CMakeFiles/SDL2main.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ SDL2main: external/SDL2/CMakeFiles/SDL2main.dir/rule
 
 # fast build rule for target.
 SDL2main/fast:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/build
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/build
 .PHONY : SDL2main/fast
 
 # Convenience name for target.
 external/SDL2/CMakeFiles/SDL2.dir/rule:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/SDL2.dir/rule
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/SDL2.dir/rule
 .PHONY : external/SDL2/CMakeFiles/SDL2.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ SDL2: external/SDL2/CMakeFiles/SDL2.dir/rule
 
 # fast build rule for target.
 SDL2/fast:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/build
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/build
 .PHONY : SDL2/fast
 
 # Convenience name for target.
 external/SDL2/CMakeFiles/SDL2-static.dir/rule:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/SDL2-static.dir/rule
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/SDL2-static.dir/rule
 .PHONY : external/SDL2/CMakeFiles/SDL2-static.dir/rule
 
 # Convenience name for target.
@@ -200,12 +200,12 @@ SDL2-static: external/SDL2/CMakeFiles/SDL2-static.dir/rule
 
 # fast build rule for target.
 SDL2-static/fast:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/build
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/build
 .PHONY : SDL2-static/fast
 
 # Convenience name for target.
 external/SDL2/CMakeFiles/uninstall.dir/rule:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/uninstall.dir/rule
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/SDL2/CMakeFiles/uninstall.dir/rule
 .PHONY : external/SDL2/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -214,7 +214,7 @@ uninstall: external/SDL2/CMakeFiles/uninstall.dir/rule
 
 # fast build rule for target.
 uninstall/fast:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/uninstall.dir/build.make external/SDL2/CMakeFiles/uninstall.dir/build
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/uninstall.dir/build.make external/SDL2/CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
 src/SDL.o: src/SDL.c.o
@@ -222,8 +222,8 @@ src/SDL.o: src/SDL.c.o
 
 # target to build an object file
 src/SDL.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL.c.o
 .PHONY : src/SDL.c.o
 
 src/SDL.i: src/SDL.c.i
@@ -231,8 +231,8 @@ src/SDL.i: src/SDL.c.i
 
 # target to preprocess a source file
 src/SDL.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL.c.i
 .PHONY : src/SDL.c.i
 
 src/SDL.s: src/SDL.c.s
@@ -240,8 +240,8 @@ src/SDL.s: src/SDL.c.s
 
 # target to generate assembly for a file
 src/SDL.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL.c.s
 .PHONY : src/SDL.c.s
 
 src/SDL_assert.o: src/SDL_assert.c.o
@@ -249,8 +249,8 @@ src/SDL_assert.o: src/SDL_assert.c.o
 
 # target to build an object file
 src/SDL_assert.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_assert.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_assert.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_assert.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_assert.c.o
 .PHONY : src/SDL_assert.c.o
 
 src/SDL_assert.i: src/SDL_assert.c.i
@@ -258,8 +258,8 @@ src/SDL_assert.i: src/SDL_assert.c.i
 
 # target to preprocess a source file
 src/SDL_assert.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_assert.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_assert.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_assert.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_assert.c.i
 .PHONY : src/SDL_assert.c.i
 
 src/SDL_assert.s: src/SDL_assert.c.s
@@ -267,8 +267,8 @@ src/SDL_assert.s: src/SDL_assert.c.s
 
 # target to generate assembly for a file
 src/SDL_assert.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_assert.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_assert.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_assert.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_assert.c.s
 .PHONY : src/SDL_assert.c.s
 
 src/SDL_dataqueue.o: src/SDL_dataqueue.c.o
@@ -276,8 +276,8 @@ src/SDL_dataqueue.o: src/SDL_dataqueue.c.o
 
 # target to build an object file
 src/SDL_dataqueue.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_dataqueue.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_dataqueue.c.o
 .PHONY : src/SDL_dataqueue.c.o
 
 src/SDL_dataqueue.i: src/SDL_dataqueue.c.i
@@ -285,8 +285,8 @@ src/SDL_dataqueue.i: src/SDL_dataqueue.c.i
 
 # target to preprocess a source file
 src/SDL_dataqueue.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_dataqueue.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_dataqueue.c.i
 .PHONY : src/SDL_dataqueue.c.i
 
 src/SDL_dataqueue.s: src/SDL_dataqueue.c.s
@@ -294,8 +294,8 @@ src/SDL_dataqueue.s: src/SDL_dataqueue.c.s
 
 # target to generate assembly for a file
 src/SDL_dataqueue.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_dataqueue.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_dataqueue.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_dataqueue.c.s
 .PHONY : src/SDL_dataqueue.c.s
 
 src/SDL_error.o: src/SDL_error.c.o
@@ -303,8 +303,8 @@ src/SDL_error.o: src/SDL_error.c.o
 
 # target to build an object file
 src/SDL_error.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_error.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_error.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_error.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_error.c.o
 .PHONY : src/SDL_error.c.o
 
 src/SDL_error.i: src/SDL_error.c.i
@@ -312,8 +312,8 @@ src/SDL_error.i: src/SDL_error.c.i
 
 # target to preprocess a source file
 src/SDL_error.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_error.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_error.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_error.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_error.c.i
 .PHONY : src/SDL_error.c.i
 
 src/SDL_error.s: src/SDL_error.c.s
@@ -321,8 +321,8 @@ src/SDL_error.s: src/SDL_error.c.s
 
 # target to generate assembly for a file
 src/SDL_error.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_error.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_error.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_error.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_error.c.s
 .PHONY : src/SDL_error.c.s
 
 src/SDL_hints.o: src/SDL_hints.c.o
@@ -330,8 +330,8 @@ src/SDL_hints.o: src/SDL_hints.c.o
 
 # target to build an object file
 src/SDL_hints.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_hints.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_hints.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_hints.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_hints.c.o
 .PHONY : src/SDL_hints.c.o
 
 src/SDL_hints.i: src/SDL_hints.c.i
@@ -339,8 +339,8 @@ src/SDL_hints.i: src/SDL_hints.c.i
 
 # target to preprocess a source file
 src/SDL_hints.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_hints.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_hints.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_hints.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_hints.c.i
 .PHONY : src/SDL_hints.c.i
 
 src/SDL_hints.s: src/SDL_hints.c.s
@@ -348,8 +348,8 @@ src/SDL_hints.s: src/SDL_hints.c.s
 
 # target to generate assembly for a file
 src/SDL_hints.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_hints.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_hints.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_hints.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_hints.c.s
 .PHONY : src/SDL_hints.c.s
 
 src/SDL_list.o: src/SDL_list.c.o
@@ -357,8 +357,8 @@ src/SDL_list.o: src/SDL_list.c.o
 
 # target to build an object file
 src/SDL_list.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_list.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_list.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_list.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_list.c.o
 .PHONY : src/SDL_list.c.o
 
 src/SDL_list.i: src/SDL_list.c.i
@@ -366,8 +366,8 @@ src/SDL_list.i: src/SDL_list.c.i
 
 # target to preprocess a source file
 src/SDL_list.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_list.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_list.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_list.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_list.c.i
 .PHONY : src/SDL_list.c.i
 
 src/SDL_list.s: src/SDL_list.c.s
@@ -375,8 +375,8 @@ src/SDL_list.s: src/SDL_list.c.s
 
 # target to generate assembly for a file
 src/SDL_list.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_list.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_list.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_list.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_list.c.s
 .PHONY : src/SDL_list.c.s
 
 src/SDL_log.o: src/SDL_log.c.o
@@ -384,8 +384,8 @@ src/SDL_log.o: src/SDL_log.c.o
 
 # target to build an object file
 src/SDL_log.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_log.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_log.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_log.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_log.c.o
 .PHONY : src/SDL_log.c.o
 
 src/SDL_log.i: src/SDL_log.c.i
@@ -393,8 +393,8 @@ src/SDL_log.i: src/SDL_log.c.i
 
 # target to preprocess a source file
 src/SDL_log.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_log.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_log.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_log.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_log.c.i
 .PHONY : src/SDL_log.c.i
 
 src/SDL_log.s: src/SDL_log.c.s
@@ -402,8 +402,8 @@ src/SDL_log.s: src/SDL_log.c.s
 
 # target to generate assembly for a file
 src/SDL_log.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_log.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_log.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/SDL_log.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/SDL_log.c.s
 .PHONY : src/SDL_log.c.s
 
 src/atomic/SDL_atomic.o: src/atomic/SDL_atomic.c.o
@@ -411,8 +411,8 @@ src/atomic/SDL_atomic.o: src/atomic/SDL_atomic.c.o
 
 # target to build an object file
 src/atomic/SDL_atomic.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_atomic.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_atomic.c.o
 .PHONY : src/atomic/SDL_atomic.c.o
 
 src/atomic/SDL_atomic.i: src/atomic/SDL_atomic.c.i
@@ -420,8 +420,8 @@ src/atomic/SDL_atomic.i: src/atomic/SDL_atomic.c.i
 
 # target to preprocess a source file
 src/atomic/SDL_atomic.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_atomic.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_atomic.c.i
 .PHONY : src/atomic/SDL_atomic.c.i
 
 src/atomic/SDL_atomic.s: src/atomic/SDL_atomic.c.s
@@ -429,8 +429,8 @@ src/atomic/SDL_atomic.s: src/atomic/SDL_atomic.c.s
 
 # target to generate assembly for a file
 src/atomic/SDL_atomic.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_atomic.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_atomic.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_atomic.c.s
 .PHONY : src/atomic/SDL_atomic.c.s
 
 src/atomic/SDL_spinlock.o: src/atomic/SDL_spinlock.c.o
@@ -438,8 +438,8 @@ src/atomic/SDL_spinlock.o: src/atomic/SDL_spinlock.c.o
 
 # target to build an object file
 src/atomic/SDL_spinlock.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_spinlock.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_spinlock.c.o
 .PHONY : src/atomic/SDL_spinlock.c.o
 
 src/atomic/SDL_spinlock.i: src/atomic/SDL_spinlock.c.i
@@ -447,8 +447,8 @@ src/atomic/SDL_spinlock.i: src/atomic/SDL_spinlock.c.i
 
 # target to preprocess a source file
 src/atomic/SDL_spinlock.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_spinlock.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_spinlock.c.i
 .PHONY : src/atomic/SDL_spinlock.c.i
 
 src/atomic/SDL_spinlock.s: src/atomic/SDL_spinlock.c.s
@@ -456,8 +456,8 @@ src/atomic/SDL_spinlock.s: src/atomic/SDL_spinlock.c.s
 
 # target to generate assembly for a file
 src/atomic/SDL_spinlock.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_spinlock.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/atomic/SDL_spinlock.c.s
 .PHONY : src/atomic/SDL_spinlock.c.s
 
 src/audio/SDL_audio.o: src/audio/SDL_audio.c.o
@@ -465,8 +465,8 @@ src/audio/SDL_audio.o: src/audio/SDL_audio.c.o
 
 # target to build an object file
 src/audio/SDL_audio.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audio.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audio.c.o
 .PHONY : src/audio/SDL_audio.c.o
 
 src/audio/SDL_audio.i: src/audio/SDL_audio.c.i
@@ -474,8 +474,8 @@ src/audio/SDL_audio.i: src/audio/SDL_audio.c.i
 
 # target to preprocess a source file
 src/audio/SDL_audio.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audio.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audio.c.i
 .PHONY : src/audio/SDL_audio.c.i
 
 src/audio/SDL_audio.s: src/audio/SDL_audio.c.s
@@ -483,8 +483,8 @@ src/audio/SDL_audio.s: src/audio/SDL_audio.c.s
 
 # target to generate assembly for a file
 src/audio/SDL_audio.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audio.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audio.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audio.c.s
 .PHONY : src/audio/SDL_audio.c.s
 
 src/audio/SDL_audiocvt.o: src/audio/SDL_audiocvt.c.o
@@ -492,8 +492,8 @@ src/audio/SDL_audiocvt.o: src/audio/SDL_audiocvt.c.o
 
 # target to build an object file
 src/audio/SDL_audiocvt.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiocvt.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiocvt.c.o
 .PHONY : src/audio/SDL_audiocvt.c.o
 
 src/audio/SDL_audiocvt.i: src/audio/SDL_audiocvt.c.i
@@ -501,8 +501,8 @@ src/audio/SDL_audiocvt.i: src/audio/SDL_audiocvt.c.i
 
 # target to preprocess a source file
 src/audio/SDL_audiocvt.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiocvt.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiocvt.c.i
 .PHONY : src/audio/SDL_audiocvt.c.i
 
 src/audio/SDL_audiocvt.s: src/audio/SDL_audiocvt.c.s
@@ -510,8 +510,8 @@ src/audio/SDL_audiocvt.s: src/audio/SDL_audiocvt.c.s
 
 # target to generate assembly for a file
 src/audio/SDL_audiocvt.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiocvt.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiocvt.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiocvt.c.s
 .PHONY : src/audio/SDL_audiocvt.c.s
 
 src/audio/SDL_audiodev.o: src/audio/SDL_audiodev.c.o
@@ -519,8 +519,8 @@ src/audio/SDL_audiodev.o: src/audio/SDL_audiodev.c.o
 
 # target to build an object file
 src/audio/SDL_audiodev.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiodev.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiodev.c.o
 .PHONY : src/audio/SDL_audiodev.c.o
 
 src/audio/SDL_audiodev.i: src/audio/SDL_audiodev.c.i
@@ -528,8 +528,8 @@ src/audio/SDL_audiodev.i: src/audio/SDL_audiodev.c.i
 
 # target to preprocess a source file
 src/audio/SDL_audiodev.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiodev.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiodev.c.i
 .PHONY : src/audio/SDL_audiodev.c.i
 
 src/audio/SDL_audiodev.s: src/audio/SDL_audiodev.c.s
@@ -537,8 +537,8 @@ src/audio/SDL_audiodev.s: src/audio/SDL_audiodev.c.s
 
 # target to generate assembly for a file
 src/audio/SDL_audiodev.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiodev.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiodev.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiodev.c.s
 .PHONY : src/audio/SDL_audiodev.c.s
 
 src/audio/SDL_audiotypecvt.o: src/audio/SDL_audiotypecvt.c.o
@@ -546,8 +546,8 @@ src/audio/SDL_audiotypecvt.o: src/audio/SDL_audiotypecvt.c.o
 
 # target to build an object file
 src/audio/SDL_audiotypecvt.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiotypecvt.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiotypecvt.c.o
 .PHONY : src/audio/SDL_audiotypecvt.c.o
 
 src/audio/SDL_audiotypecvt.i: src/audio/SDL_audiotypecvt.c.i
@@ -555,8 +555,8 @@ src/audio/SDL_audiotypecvt.i: src/audio/SDL_audiotypecvt.c.i
 
 # target to preprocess a source file
 src/audio/SDL_audiotypecvt.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiotypecvt.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiotypecvt.c.i
 .PHONY : src/audio/SDL_audiotypecvt.c.i
 
 src/audio/SDL_audiotypecvt.s: src/audio/SDL_audiotypecvt.c.s
@@ -564,8 +564,8 @@ src/audio/SDL_audiotypecvt.s: src/audio/SDL_audiotypecvt.c.s
 
 # target to generate assembly for a file
 src/audio/SDL_audiotypecvt.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiotypecvt.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_audiotypecvt.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_audiotypecvt.c.s
 .PHONY : src/audio/SDL_audiotypecvt.c.s
 
 src/audio/SDL_mixer.o: src/audio/SDL_mixer.c.o
@@ -573,8 +573,8 @@ src/audio/SDL_mixer.o: src/audio/SDL_mixer.c.o
 
 # target to build an object file
 src/audio/SDL_mixer.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_mixer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_mixer.c.o
 .PHONY : src/audio/SDL_mixer.c.o
 
 src/audio/SDL_mixer.i: src/audio/SDL_mixer.c.i
@@ -582,8 +582,8 @@ src/audio/SDL_mixer.i: src/audio/SDL_mixer.c.i
 
 # target to preprocess a source file
 src/audio/SDL_mixer.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_mixer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_mixer.c.i
 .PHONY : src/audio/SDL_mixer.c.i
 
 src/audio/SDL_mixer.s: src/audio/SDL_mixer.c.s
@@ -591,8 +591,8 @@ src/audio/SDL_mixer.s: src/audio/SDL_mixer.c.s
 
 # target to generate assembly for a file
 src/audio/SDL_mixer.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_mixer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_mixer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_mixer.c.s
 .PHONY : src/audio/SDL_mixer.c.s
 
 src/audio/SDL_wave.o: src/audio/SDL_wave.c.o
@@ -600,8 +600,8 @@ src/audio/SDL_wave.o: src/audio/SDL_wave.c.o
 
 # target to build an object file
 src/audio/SDL_wave.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_wave.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_wave.c.o
 .PHONY : src/audio/SDL_wave.c.o
 
 src/audio/SDL_wave.i: src/audio/SDL_wave.c.i
@@ -609,8 +609,8 @@ src/audio/SDL_wave.i: src/audio/SDL_wave.c.i
 
 # target to preprocess a source file
 src/audio/SDL_wave.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_wave.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_wave.c.i
 .PHONY : src/audio/SDL_wave.c.i
 
 src/audio/SDL_wave.s: src/audio/SDL_wave.c.s
@@ -618,8 +618,8 @@ src/audio/SDL_wave.s: src/audio/SDL_wave.c.s
 
 # target to generate assembly for a file
 src/audio/SDL_wave.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_wave.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/SDL_wave.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/SDL_wave.c.s
 .PHONY : src/audio/SDL_wave.c.s
 
 src/audio/coreaudio/SDL_coreaudio.o: src/audio/coreaudio/SDL_coreaudio.m.o
@@ -627,8 +627,8 @@ src/audio/coreaudio/SDL_coreaudio.o: src/audio/coreaudio/SDL_coreaudio.m.o
 
 # target to build an object file
 src/audio/coreaudio/SDL_coreaudio.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/coreaudio/SDL_coreaudio.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/coreaudio/SDL_coreaudio.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/coreaudio/SDL_coreaudio.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/coreaudio/SDL_coreaudio.m.o
 .PHONY : src/audio/coreaudio/SDL_coreaudio.m.o
 
 src/audio/disk/SDL_diskaudio.o: src/audio/disk/SDL_diskaudio.c.o
@@ -636,8 +636,8 @@ src/audio/disk/SDL_diskaudio.o: src/audio/disk/SDL_diskaudio.c.o
 
 # target to build an object file
 src/audio/disk/SDL_diskaudio.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/disk/SDL_diskaudio.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/disk/SDL_diskaudio.c.o
 .PHONY : src/audio/disk/SDL_diskaudio.c.o
 
 src/audio/disk/SDL_diskaudio.i: src/audio/disk/SDL_diskaudio.c.i
@@ -645,8 +645,8 @@ src/audio/disk/SDL_diskaudio.i: src/audio/disk/SDL_diskaudio.c.i
 
 # target to preprocess a source file
 src/audio/disk/SDL_diskaudio.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/disk/SDL_diskaudio.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/disk/SDL_diskaudio.c.i
 .PHONY : src/audio/disk/SDL_diskaudio.c.i
 
 src/audio/disk/SDL_diskaudio.s: src/audio/disk/SDL_diskaudio.c.s
@@ -654,8 +654,8 @@ src/audio/disk/SDL_diskaudio.s: src/audio/disk/SDL_diskaudio.c.s
 
 # target to generate assembly for a file
 src/audio/disk/SDL_diskaudio.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/disk/SDL_diskaudio.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/disk/SDL_diskaudio.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/disk/SDL_diskaudio.c.s
 .PHONY : src/audio/disk/SDL_diskaudio.c.s
 
 src/audio/dummy/SDL_dummyaudio.o: src/audio/dummy/SDL_dummyaudio.c.o
@@ -663,8 +663,8 @@ src/audio/dummy/SDL_dummyaudio.o: src/audio/dummy/SDL_dummyaudio.c.o
 
 # target to build an object file
 src/audio/dummy/SDL_dummyaudio.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/dummy/SDL_dummyaudio.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/dummy/SDL_dummyaudio.c.o
 .PHONY : src/audio/dummy/SDL_dummyaudio.c.o
 
 src/audio/dummy/SDL_dummyaudio.i: src/audio/dummy/SDL_dummyaudio.c.i
@@ -672,8 +672,8 @@ src/audio/dummy/SDL_dummyaudio.i: src/audio/dummy/SDL_dummyaudio.c.i
 
 # target to preprocess a source file
 src/audio/dummy/SDL_dummyaudio.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/dummy/SDL_dummyaudio.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/dummy/SDL_dummyaudio.c.i
 .PHONY : src/audio/dummy/SDL_dummyaudio.c.i
 
 src/audio/dummy/SDL_dummyaudio.s: src/audio/dummy/SDL_dummyaudio.c.s
@@ -681,8 +681,8 @@ src/audio/dummy/SDL_dummyaudio.s: src/audio/dummy/SDL_dummyaudio.c.s
 
 # target to generate assembly for a file
 src/audio/dummy/SDL_dummyaudio.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/dummy/SDL_dummyaudio.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/audio/dummy/SDL_dummyaudio.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/audio/dummy/SDL_dummyaudio.c.s
 .PHONY : src/audio/dummy/SDL_dummyaudio.c.s
 
 src/cpuinfo/SDL_cpuinfo.o: src/cpuinfo/SDL_cpuinfo.c.o
@@ -690,8 +690,8 @@ src/cpuinfo/SDL_cpuinfo.o: src/cpuinfo/SDL_cpuinfo.c.o
 
 # target to build an object file
 src/cpuinfo/SDL_cpuinfo.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/cpuinfo/SDL_cpuinfo.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/cpuinfo/SDL_cpuinfo.c.o
 .PHONY : src/cpuinfo/SDL_cpuinfo.c.o
 
 src/cpuinfo/SDL_cpuinfo.i: src/cpuinfo/SDL_cpuinfo.c.i
@@ -699,8 +699,8 @@ src/cpuinfo/SDL_cpuinfo.i: src/cpuinfo/SDL_cpuinfo.c.i
 
 # target to preprocess a source file
 src/cpuinfo/SDL_cpuinfo.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/cpuinfo/SDL_cpuinfo.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/cpuinfo/SDL_cpuinfo.c.i
 .PHONY : src/cpuinfo/SDL_cpuinfo.c.i
 
 src/cpuinfo/SDL_cpuinfo.s: src/cpuinfo/SDL_cpuinfo.c.s
@@ -708,8 +708,8 @@ src/cpuinfo/SDL_cpuinfo.s: src/cpuinfo/SDL_cpuinfo.c.s
 
 # target to generate assembly for a file
 src/cpuinfo/SDL_cpuinfo.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/cpuinfo/SDL_cpuinfo.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/cpuinfo/SDL_cpuinfo.c.s
 .PHONY : src/cpuinfo/SDL_cpuinfo.c.s
 
 src/dynapi/SDL_dynapi.o: src/dynapi/SDL_dynapi.c.o
@@ -717,8 +717,8 @@ src/dynapi/SDL_dynapi.o: src/dynapi/SDL_dynapi.c.o
 
 # target to build an object file
 src/dynapi/SDL_dynapi.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/dynapi/SDL_dynapi.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/dynapi/SDL_dynapi.c.o
 .PHONY : src/dynapi/SDL_dynapi.c.o
 
 src/dynapi/SDL_dynapi.i: src/dynapi/SDL_dynapi.c.i
@@ -726,8 +726,8 @@ src/dynapi/SDL_dynapi.i: src/dynapi/SDL_dynapi.c.i
 
 # target to preprocess a source file
 src/dynapi/SDL_dynapi.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/dynapi/SDL_dynapi.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/dynapi/SDL_dynapi.c.i
 .PHONY : src/dynapi/SDL_dynapi.c.i
 
 src/dynapi/SDL_dynapi.s: src/dynapi/SDL_dynapi.c.s
@@ -735,8 +735,8 @@ src/dynapi/SDL_dynapi.s: src/dynapi/SDL_dynapi.c.s
 
 # target to generate assembly for a file
 src/dynapi/SDL_dynapi.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/dynapi/SDL_dynapi.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/dynapi/SDL_dynapi.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/dynapi/SDL_dynapi.c.s
 .PHONY : src/dynapi/SDL_dynapi.c.s
 
 src/events/SDL_clipboardevents.o: src/events/SDL_clipboardevents.c.o
@@ -744,8 +744,8 @@ src/events/SDL_clipboardevents.o: src/events/SDL_clipboardevents.c.o
 
 # target to build an object file
 src/events/SDL_clipboardevents.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_clipboardevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_clipboardevents.c.o
 .PHONY : src/events/SDL_clipboardevents.c.o
 
 src/events/SDL_clipboardevents.i: src/events/SDL_clipboardevents.c.i
@@ -753,8 +753,8 @@ src/events/SDL_clipboardevents.i: src/events/SDL_clipboardevents.c.i
 
 # target to preprocess a source file
 src/events/SDL_clipboardevents.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_clipboardevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_clipboardevents.c.i
 .PHONY : src/events/SDL_clipboardevents.c.i
 
 src/events/SDL_clipboardevents.s: src/events/SDL_clipboardevents.c.s
@@ -762,8 +762,8 @@ src/events/SDL_clipboardevents.s: src/events/SDL_clipboardevents.c.s
 
 # target to generate assembly for a file
 src/events/SDL_clipboardevents.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_clipboardevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_clipboardevents.c.s
 .PHONY : src/events/SDL_clipboardevents.c.s
 
 src/events/SDL_displayevents.o: src/events/SDL_displayevents.c.o
@@ -771,8 +771,8 @@ src/events/SDL_displayevents.o: src/events/SDL_displayevents.c.o
 
 # target to build an object file
 src/events/SDL_displayevents.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_displayevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_displayevents.c.o
 .PHONY : src/events/SDL_displayevents.c.o
 
 src/events/SDL_displayevents.i: src/events/SDL_displayevents.c.i
@@ -780,8 +780,8 @@ src/events/SDL_displayevents.i: src/events/SDL_displayevents.c.i
 
 # target to preprocess a source file
 src/events/SDL_displayevents.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_displayevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_displayevents.c.i
 .PHONY : src/events/SDL_displayevents.c.i
 
 src/events/SDL_displayevents.s: src/events/SDL_displayevents.c.s
@@ -789,8 +789,8 @@ src/events/SDL_displayevents.s: src/events/SDL_displayevents.c.s
 
 # target to generate assembly for a file
 src/events/SDL_displayevents.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_displayevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_displayevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_displayevents.c.s
 .PHONY : src/events/SDL_displayevents.c.s
 
 src/events/SDL_dropevents.o: src/events/SDL_dropevents.c.o
@@ -798,8 +798,8 @@ src/events/SDL_dropevents.o: src/events/SDL_dropevents.c.o
 
 # target to build an object file
 src/events/SDL_dropevents.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_dropevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_dropevents.c.o
 .PHONY : src/events/SDL_dropevents.c.o
 
 src/events/SDL_dropevents.i: src/events/SDL_dropevents.c.i
@@ -807,8 +807,8 @@ src/events/SDL_dropevents.i: src/events/SDL_dropevents.c.i
 
 # target to preprocess a source file
 src/events/SDL_dropevents.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_dropevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_dropevents.c.i
 .PHONY : src/events/SDL_dropevents.c.i
 
 src/events/SDL_dropevents.s: src/events/SDL_dropevents.c.s
@@ -816,8 +816,8 @@ src/events/SDL_dropevents.s: src/events/SDL_dropevents.c.s
 
 # target to generate assembly for a file
 src/events/SDL_dropevents.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_dropevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_dropevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_dropevents.c.s
 .PHONY : src/events/SDL_dropevents.c.s
 
 src/events/SDL_events.o: src/events/SDL_events.c.o
@@ -825,8 +825,8 @@ src/events/SDL_events.o: src/events/SDL_events.c.o
 
 # target to build an object file
 src/events/SDL_events.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_events.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_events.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_events.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_events.c.o
 .PHONY : src/events/SDL_events.c.o
 
 src/events/SDL_events.i: src/events/SDL_events.c.i
@@ -834,8 +834,8 @@ src/events/SDL_events.i: src/events/SDL_events.c.i
 
 # target to preprocess a source file
 src/events/SDL_events.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_events.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_events.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_events.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_events.c.i
 .PHONY : src/events/SDL_events.c.i
 
 src/events/SDL_events.s: src/events/SDL_events.c.s
@@ -843,8 +843,8 @@ src/events/SDL_events.s: src/events/SDL_events.c.s
 
 # target to generate assembly for a file
 src/events/SDL_events.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_events.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_events.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_events.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_events.c.s
 .PHONY : src/events/SDL_events.c.s
 
 src/events/SDL_gesture.o: src/events/SDL_gesture.c.o
@@ -852,8 +852,8 @@ src/events/SDL_gesture.o: src/events/SDL_gesture.c.o
 
 # target to build an object file
 src/events/SDL_gesture.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_gesture.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_gesture.c.o
 .PHONY : src/events/SDL_gesture.c.o
 
 src/events/SDL_gesture.i: src/events/SDL_gesture.c.i
@@ -861,8 +861,8 @@ src/events/SDL_gesture.i: src/events/SDL_gesture.c.i
 
 # target to preprocess a source file
 src/events/SDL_gesture.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_gesture.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_gesture.c.i
 .PHONY : src/events/SDL_gesture.c.i
 
 src/events/SDL_gesture.s: src/events/SDL_gesture.c.s
@@ -870,8 +870,8 @@ src/events/SDL_gesture.s: src/events/SDL_gesture.c.s
 
 # target to generate assembly for a file
 src/events/SDL_gesture.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_gesture.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_gesture.c.s
 .PHONY : src/events/SDL_gesture.c.s
 
 src/events/SDL_keyboard.o: src/events/SDL_keyboard.c.o
@@ -879,8 +879,8 @@ src/events/SDL_keyboard.o: src/events/SDL_keyboard.c.o
 
 # target to build an object file
 src/events/SDL_keyboard.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_keyboard.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_keyboard.c.o
 .PHONY : src/events/SDL_keyboard.c.o
 
 src/events/SDL_keyboard.i: src/events/SDL_keyboard.c.i
@@ -888,8 +888,8 @@ src/events/SDL_keyboard.i: src/events/SDL_keyboard.c.i
 
 # target to preprocess a source file
 src/events/SDL_keyboard.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_keyboard.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_keyboard.c.i
 .PHONY : src/events/SDL_keyboard.c.i
 
 src/events/SDL_keyboard.s: src/events/SDL_keyboard.c.s
@@ -897,8 +897,8 @@ src/events/SDL_keyboard.s: src/events/SDL_keyboard.c.s
 
 # target to generate assembly for a file
 src/events/SDL_keyboard.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_keyboard.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_keyboard.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_keyboard.c.s
 .PHONY : src/events/SDL_keyboard.c.s
 
 src/events/SDL_mouse.o: src/events/SDL_mouse.c.o
@@ -906,8 +906,8 @@ src/events/SDL_mouse.o: src/events/SDL_mouse.c.o
 
 # target to build an object file
 src/events/SDL_mouse.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_mouse.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_mouse.c.o
 .PHONY : src/events/SDL_mouse.c.o
 
 src/events/SDL_mouse.i: src/events/SDL_mouse.c.i
@@ -915,8 +915,8 @@ src/events/SDL_mouse.i: src/events/SDL_mouse.c.i
 
 # target to preprocess a source file
 src/events/SDL_mouse.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_mouse.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_mouse.c.i
 .PHONY : src/events/SDL_mouse.c.i
 
 src/events/SDL_mouse.s: src/events/SDL_mouse.c.s
@@ -924,8 +924,8 @@ src/events/SDL_mouse.s: src/events/SDL_mouse.c.s
 
 # target to generate assembly for a file
 src/events/SDL_mouse.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_mouse.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_mouse.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_mouse.c.s
 .PHONY : src/events/SDL_mouse.c.s
 
 src/events/SDL_quit.o: src/events/SDL_quit.c.o
@@ -933,8 +933,8 @@ src/events/SDL_quit.o: src/events/SDL_quit.c.o
 
 # target to build an object file
 src/events/SDL_quit.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_quit.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_quit.c.o
 .PHONY : src/events/SDL_quit.c.o
 
 src/events/SDL_quit.i: src/events/SDL_quit.c.i
@@ -942,8 +942,8 @@ src/events/SDL_quit.i: src/events/SDL_quit.c.i
 
 # target to preprocess a source file
 src/events/SDL_quit.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_quit.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_quit.c.i
 .PHONY : src/events/SDL_quit.c.i
 
 src/events/SDL_quit.s: src/events/SDL_quit.c.s
@@ -951,8 +951,8 @@ src/events/SDL_quit.s: src/events/SDL_quit.c.s
 
 # target to generate assembly for a file
 src/events/SDL_quit.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_quit.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_quit.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_quit.c.s
 .PHONY : src/events/SDL_quit.c.s
 
 src/events/SDL_touch.o: src/events/SDL_touch.c.o
@@ -960,8 +960,8 @@ src/events/SDL_touch.o: src/events/SDL_touch.c.o
 
 # target to build an object file
 src/events/SDL_touch.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_touch.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_touch.c.o
 .PHONY : src/events/SDL_touch.c.o
 
 src/events/SDL_touch.i: src/events/SDL_touch.c.i
@@ -969,8 +969,8 @@ src/events/SDL_touch.i: src/events/SDL_touch.c.i
 
 # target to preprocess a source file
 src/events/SDL_touch.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_touch.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_touch.c.i
 .PHONY : src/events/SDL_touch.c.i
 
 src/events/SDL_touch.s: src/events/SDL_touch.c.s
@@ -978,8 +978,8 @@ src/events/SDL_touch.s: src/events/SDL_touch.c.s
 
 # target to generate assembly for a file
 src/events/SDL_touch.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_touch.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_touch.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_touch.c.s
 .PHONY : src/events/SDL_touch.c.s
 
 src/events/SDL_windowevents.o: src/events/SDL_windowevents.c.o
@@ -987,8 +987,8 @@ src/events/SDL_windowevents.o: src/events/SDL_windowevents.c.o
 
 # target to build an object file
 src/events/SDL_windowevents.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_windowevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_windowevents.c.o
 .PHONY : src/events/SDL_windowevents.c.o
 
 src/events/SDL_windowevents.i: src/events/SDL_windowevents.c.i
@@ -996,8 +996,8 @@ src/events/SDL_windowevents.i: src/events/SDL_windowevents.c.i
 
 # target to preprocess a source file
 src/events/SDL_windowevents.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_windowevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_windowevents.c.i
 .PHONY : src/events/SDL_windowevents.c.i
 
 src/events/SDL_windowevents.s: src/events/SDL_windowevents.c.s
@@ -1005,8 +1005,8 @@ src/events/SDL_windowevents.s: src/events/SDL_windowevents.c.s
 
 # target to generate assembly for a file
 src/events/SDL_windowevents.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_windowevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/SDL_windowevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/SDL_windowevents.c.s
 .PHONY : src/events/SDL_windowevents.c.s
 
 src/events/imKStoUCS.o: src/events/imKStoUCS.c.o
@@ -1014,8 +1014,8 @@ src/events/imKStoUCS.o: src/events/imKStoUCS.c.o
 
 # target to build an object file
 src/events/imKStoUCS.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/imKStoUCS.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/imKStoUCS.c.o
 .PHONY : src/events/imKStoUCS.c.o
 
 src/events/imKStoUCS.i: src/events/imKStoUCS.c.i
@@ -1023,8 +1023,8 @@ src/events/imKStoUCS.i: src/events/imKStoUCS.c.i
 
 # target to preprocess a source file
 src/events/imKStoUCS.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/imKStoUCS.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/imKStoUCS.c.i
 .PHONY : src/events/imKStoUCS.c.i
 
 src/events/imKStoUCS.s: src/events/imKStoUCS.c.s
@@ -1032,8 +1032,8 @@ src/events/imKStoUCS.s: src/events/imKStoUCS.c.s
 
 # target to generate assembly for a file
 src/events/imKStoUCS.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/imKStoUCS.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/events/imKStoUCS.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/events/imKStoUCS.c.s
 .PHONY : src/events/imKStoUCS.c.s
 
 src/file/SDL_rwops.o: src/file/SDL_rwops.c.o
@@ -1041,8 +1041,8 @@ src/file/SDL_rwops.o: src/file/SDL_rwops.c.o
 
 # target to build an object file
 src/file/SDL_rwops.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/SDL_rwops.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/SDL_rwops.c.o
 .PHONY : src/file/SDL_rwops.c.o
 
 src/file/SDL_rwops.i: src/file/SDL_rwops.c.i
@@ -1050,8 +1050,8 @@ src/file/SDL_rwops.i: src/file/SDL_rwops.c.i
 
 # target to preprocess a source file
 src/file/SDL_rwops.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/SDL_rwops.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/SDL_rwops.c.i
 .PHONY : src/file/SDL_rwops.c.i
 
 src/file/SDL_rwops.s: src/file/SDL_rwops.c.s
@@ -1059,8 +1059,8 @@ src/file/SDL_rwops.s: src/file/SDL_rwops.c.s
 
 # target to generate assembly for a file
 src/file/SDL_rwops.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/SDL_rwops.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/SDL_rwops.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/SDL_rwops.c.s
 .PHONY : src/file/SDL_rwops.c.s
 
 src/file/cocoa/SDL_rwopsbundlesupport.o: src/file/cocoa/SDL_rwopsbundlesupport.m.o
@@ -1068,8 +1068,8 @@ src/file/cocoa/SDL_rwopsbundlesupport.o: src/file/cocoa/SDL_rwopsbundlesupport.m
 
 # target to build an object file
 src/file/cocoa/SDL_rwopsbundlesupport.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/cocoa/SDL_rwopsbundlesupport.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/cocoa/SDL_rwopsbundlesupport.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/file/cocoa/SDL_rwopsbundlesupport.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/file/cocoa/SDL_rwopsbundlesupport.m.o
 .PHONY : src/file/cocoa/SDL_rwopsbundlesupport.m.o
 
 src/filesystem/cocoa/SDL_sysfilesystem.o: src/filesystem/cocoa/SDL_sysfilesystem.m.o
@@ -1077,8 +1077,8 @@ src/filesystem/cocoa/SDL_sysfilesystem.o: src/filesystem/cocoa/SDL_sysfilesystem
 
 # target to build an object file
 src/filesystem/cocoa/SDL_sysfilesystem.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/filesystem/cocoa/SDL_sysfilesystem.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/filesystem/cocoa/SDL_sysfilesystem.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/filesystem/cocoa/SDL_sysfilesystem.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/filesystem/cocoa/SDL_sysfilesystem.m.o
 .PHONY : src/filesystem/cocoa/SDL_sysfilesystem.m.o
 
 src/haptic/SDL_haptic.o: src/haptic/SDL_haptic.c.o
@@ -1086,8 +1086,8 @@ src/haptic/SDL_haptic.o: src/haptic/SDL_haptic.c.o
 
 # target to build an object file
 src/haptic/SDL_haptic.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/SDL_haptic.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/SDL_haptic.c.o
 .PHONY : src/haptic/SDL_haptic.c.o
 
 src/haptic/SDL_haptic.i: src/haptic/SDL_haptic.c.i
@@ -1095,8 +1095,8 @@ src/haptic/SDL_haptic.i: src/haptic/SDL_haptic.c.i
 
 # target to preprocess a source file
 src/haptic/SDL_haptic.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/SDL_haptic.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/SDL_haptic.c.i
 .PHONY : src/haptic/SDL_haptic.c.i
 
 src/haptic/SDL_haptic.s: src/haptic/SDL_haptic.c.s
@@ -1104,8 +1104,8 @@ src/haptic/SDL_haptic.s: src/haptic/SDL_haptic.c.s
 
 # target to generate assembly for a file
 src/haptic/SDL_haptic.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/SDL_haptic.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/SDL_haptic.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/SDL_haptic.c.s
 .PHONY : src/haptic/SDL_haptic.c.s
 
 src/haptic/darwin/SDL_syshaptic.o: src/haptic/darwin/SDL_syshaptic.c.o
@@ -1113,8 +1113,8 @@ src/haptic/darwin/SDL_syshaptic.o: src/haptic/darwin/SDL_syshaptic.c.o
 
 # target to build an object file
 src/haptic/darwin/SDL_syshaptic.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/darwin/SDL_syshaptic.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/darwin/SDL_syshaptic.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/darwin/SDL_syshaptic.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/darwin/SDL_syshaptic.c.o
 .PHONY : src/haptic/darwin/SDL_syshaptic.c.o
 
 src/haptic/darwin/SDL_syshaptic.i: src/haptic/darwin/SDL_syshaptic.c.i
@@ -1122,8 +1122,8 @@ src/haptic/darwin/SDL_syshaptic.i: src/haptic/darwin/SDL_syshaptic.c.i
 
 # target to preprocess a source file
 src/haptic/darwin/SDL_syshaptic.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/darwin/SDL_syshaptic.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/darwin/SDL_syshaptic.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/darwin/SDL_syshaptic.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/darwin/SDL_syshaptic.c.i
 .PHONY : src/haptic/darwin/SDL_syshaptic.c.i
 
 src/haptic/darwin/SDL_syshaptic.s: src/haptic/darwin/SDL_syshaptic.c.s
@@ -1131,8 +1131,8 @@ src/haptic/darwin/SDL_syshaptic.s: src/haptic/darwin/SDL_syshaptic.c.s
 
 # target to generate assembly for a file
 src/haptic/darwin/SDL_syshaptic.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/darwin/SDL_syshaptic.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/darwin/SDL_syshaptic.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/haptic/darwin/SDL_syshaptic.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/haptic/darwin/SDL_syshaptic.c.s
 .PHONY : src/haptic/darwin/SDL_syshaptic.c.s
 
 src/hidapi/SDL_hidapi.o: src/hidapi/SDL_hidapi.c.o
@@ -1140,8 +1140,8 @@ src/hidapi/SDL_hidapi.o: src/hidapi/SDL_hidapi.c.o
 
 # target to build an object file
 src/hidapi/SDL_hidapi.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/hidapi/SDL_hidapi.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/hidapi/SDL_hidapi.c.o
 .PHONY : src/hidapi/SDL_hidapi.c.o
 
 src/hidapi/SDL_hidapi.i: src/hidapi/SDL_hidapi.c.i
@@ -1149,8 +1149,8 @@ src/hidapi/SDL_hidapi.i: src/hidapi/SDL_hidapi.c.i
 
 # target to preprocess a source file
 src/hidapi/SDL_hidapi.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/hidapi/SDL_hidapi.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/hidapi/SDL_hidapi.c.i
 .PHONY : src/hidapi/SDL_hidapi.c.i
 
 src/hidapi/SDL_hidapi.s: src/hidapi/SDL_hidapi.c.s
@@ -1158,8 +1158,8 @@ src/hidapi/SDL_hidapi.s: src/hidapi/SDL_hidapi.c.s
 
 # target to generate assembly for a file
 src/hidapi/SDL_hidapi.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/hidapi/SDL_hidapi.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/hidapi/SDL_hidapi.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/hidapi/SDL_hidapi.c.s
 .PHONY : src/hidapi/SDL_hidapi.c.s
 
 src/joystick/SDL_gamecontroller.o: src/joystick/SDL_gamecontroller.c.o
@@ -1167,8 +1167,8 @@ src/joystick/SDL_gamecontroller.o: src/joystick/SDL_gamecontroller.c.o
 
 # target to build an object file
 src/joystick/SDL_gamecontroller.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_gamecontroller.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_gamecontroller.c.o
 .PHONY : src/joystick/SDL_gamecontroller.c.o
 
 src/joystick/SDL_gamecontroller.i: src/joystick/SDL_gamecontroller.c.i
@@ -1176,8 +1176,8 @@ src/joystick/SDL_gamecontroller.i: src/joystick/SDL_gamecontroller.c.i
 
 # target to preprocess a source file
 src/joystick/SDL_gamecontroller.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_gamecontroller.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_gamecontroller.c.i
 .PHONY : src/joystick/SDL_gamecontroller.c.i
 
 src/joystick/SDL_gamecontroller.s: src/joystick/SDL_gamecontroller.c.s
@@ -1185,8 +1185,8 @@ src/joystick/SDL_gamecontroller.s: src/joystick/SDL_gamecontroller.c.s
 
 # target to generate assembly for a file
 src/joystick/SDL_gamecontroller.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_gamecontroller.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_gamecontroller.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_gamecontroller.c.s
 .PHONY : src/joystick/SDL_gamecontroller.c.s
 
 src/joystick/SDL_joystick.o: src/joystick/SDL_joystick.c.o
@@ -1194,8 +1194,8 @@ src/joystick/SDL_joystick.o: src/joystick/SDL_joystick.c.o
 
 # target to build an object file
 src/joystick/SDL_joystick.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_joystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_joystick.c.o
 .PHONY : src/joystick/SDL_joystick.c.o
 
 src/joystick/SDL_joystick.i: src/joystick/SDL_joystick.c.i
@@ -1203,8 +1203,8 @@ src/joystick/SDL_joystick.i: src/joystick/SDL_joystick.c.i
 
 # target to preprocess a source file
 src/joystick/SDL_joystick.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_joystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_joystick.c.i
 .PHONY : src/joystick/SDL_joystick.c.i
 
 src/joystick/SDL_joystick.s: src/joystick/SDL_joystick.c.s
@@ -1212,8 +1212,8 @@ src/joystick/SDL_joystick.s: src/joystick/SDL_joystick.c.s
 
 # target to generate assembly for a file
 src/joystick/SDL_joystick.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_joystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/SDL_joystick.c.s
 .PHONY : src/joystick/SDL_joystick.c.s
 
 src/joystick/darwin/SDL_iokitjoystick.o: src/joystick/darwin/SDL_iokitjoystick.c.o
@@ -1221,8 +1221,8 @@ src/joystick/darwin/SDL_iokitjoystick.o: src/joystick/darwin/SDL_iokitjoystick.c
 
 # target to build an object file
 src/joystick/darwin/SDL_iokitjoystick.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/darwin/SDL_iokitjoystick.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/darwin/SDL_iokitjoystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/darwin/SDL_iokitjoystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/darwin/SDL_iokitjoystick.c.o
 .PHONY : src/joystick/darwin/SDL_iokitjoystick.c.o
 
 src/joystick/darwin/SDL_iokitjoystick.i: src/joystick/darwin/SDL_iokitjoystick.c.i
@@ -1230,8 +1230,8 @@ src/joystick/darwin/SDL_iokitjoystick.i: src/joystick/darwin/SDL_iokitjoystick.c
 
 # target to preprocess a source file
 src/joystick/darwin/SDL_iokitjoystick.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/darwin/SDL_iokitjoystick.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/darwin/SDL_iokitjoystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/darwin/SDL_iokitjoystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/darwin/SDL_iokitjoystick.c.i
 .PHONY : src/joystick/darwin/SDL_iokitjoystick.c.i
 
 src/joystick/darwin/SDL_iokitjoystick.s: src/joystick/darwin/SDL_iokitjoystick.c.s
@@ -1239,8 +1239,8 @@ src/joystick/darwin/SDL_iokitjoystick.s: src/joystick/darwin/SDL_iokitjoystick.c
 
 # target to generate assembly for a file
 src/joystick/darwin/SDL_iokitjoystick.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/darwin/SDL_iokitjoystick.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/darwin/SDL_iokitjoystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/darwin/SDL_iokitjoystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/darwin/SDL_iokitjoystick.c.s
 .PHONY : src/joystick/darwin/SDL_iokitjoystick.c.s
 
 src/joystick/hidapi/SDL_hidapi_gamecube.o: src/joystick/hidapi/SDL_hidapi_gamecube.c.o
@@ -1248,8 +1248,8 @@ src/joystick/hidapi/SDL_hidapi_gamecube.o: src/joystick/hidapi/SDL_hidapi_gamecu
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_gamecube.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_gamecube.c.o
 
 src/joystick/hidapi/SDL_hidapi_gamecube.i: src/joystick/hidapi/SDL_hidapi_gamecube.c.i
@@ -1257,8 +1257,8 @@ src/joystick/hidapi/SDL_hidapi_gamecube.i: src/joystick/hidapi/SDL_hidapi_gamecu
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_gamecube.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_gamecube.c.i
 
 src/joystick/hidapi/SDL_hidapi_gamecube.s: src/joystick/hidapi/SDL_hidapi_gamecube.c.s
@@ -1266,8 +1266,8 @@ src/joystick/hidapi/SDL_hidapi_gamecube.s: src/joystick/hidapi/SDL_hidapi_gamecu
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_gamecube.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_gamecube.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_gamecube.c.s
 
 src/joystick/hidapi/SDL_hidapi_luna.o: src/joystick/hidapi/SDL_hidapi_luna.c.o
@@ -1275,8 +1275,8 @@ src/joystick/hidapi/SDL_hidapi_luna.o: src/joystick/hidapi/SDL_hidapi_luna.c.o
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_luna.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_luna.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_luna.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_luna.c.o
 
 src/joystick/hidapi/SDL_hidapi_luna.i: src/joystick/hidapi/SDL_hidapi_luna.c.i
@@ -1284,8 +1284,8 @@ src/joystick/hidapi/SDL_hidapi_luna.i: src/joystick/hidapi/SDL_hidapi_luna.c.i
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_luna.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_luna.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_luna.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_luna.c.i
 
 src/joystick/hidapi/SDL_hidapi_luna.s: src/joystick/hidapi/SDL_hidapi_luna.c.s
@@ -1293,8 +1293,8 @@ src/joystick/hidapi/SDL_hidapi_luna.s: src/joystick/hidapi/SDL_hidapi_luna.c.s
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_luna.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_luna.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_luna.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_luna.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_luna.c.s
 
 src/joystick/hidapi/SDL_hidapi_ps4.o: src/joystick/hidapi/SDL_hidapi_ps4.c.o
@@ -1302,8 +1302,8 @@ src/joystick/hidapi/SDL_hidapi_ps4.o: src/joystick/hidapi/SDL_hidapi_ps4.c.o
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_ps4.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_ps4.c.o
 
 src/joystick/hidapi/SDL_hidapi_ps4.i: src/joystick/hidapi/SDL_hidapi_ps4.c.i
@@ -1311,8 +1311,8 @@ src/joystick/hidapi/SDL_hidapi_ps4.i: src/joystick/hidapi/SDL_hidapi_ps4.c.i
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_ps4.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_ps4.c.i
 
 src/joystick/hidapi/SDL_hidapi_ps4.s: src/joystick/hidapi/SDL_hidapi_ps4.c.s
@@ -1320,8 +1320,8 @@ src/joystick/hidapi/SDL_hidapi_ps4.s: src/joystick/hidapi/SDL_hidapi_ps4.c.s
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_ps4.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps4.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_ps4.c.s
 
 src/joystick/hidapi/SDL_hidapi_ps5.o: src/joystick/hidapi/SDL_hidapi_ps5.c.o
@@ -1329,8 +1329,8 @@ src/joystick/hidapi/SDL_hidapi_ps5.o: src/joystick/hidapi/SDL_hidapi_ps5.c.o
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_ps5.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_ps5.c.o
 
 src/joystick/hidapi/SDL_hidapi_ps5.i: src/joystick/hidapi/SDL_hidapi_ps5.c.i
@@ -1338,8 +1338,8 @@ src/joystick/hidapi/SDL_hidapi_ps5.i: src/joystick/hidapi/SDL_hidapi_ps5.c.i
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_ps5.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_ps5.c.i
 
 src/joystick/hidapi/SDL_hidapi_ps5.s: src/joystick/hidapi/SDL_hidapi_ps5.c.s
@@ -1347,8 +1347,8 @@ src/joystick/hidapi/SDL_hidapi_ps5.s: src/joystick/hidapi/SDL_hidapi_ps5.c.s
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_ps5.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_ps5.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_ps5.c.s
 
 src/joystick/hidapi/SDL_hidapi_rumble.o: src/joystick/hidapi/SDL_hidapi_rumble.c.o
@@ -1356,8 +1356,8 @@ src/joystick/hidapi/SDL_hidapi_rumble.o: src/joystick/hidapi/SDL_hidapi_rumble.c
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_rumble.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_rumble.c.o
 
 src/joystick/hidapi/SDL_hidapi_rumble.i: src/joystick/hidapi/SDL_hidapi_rumble.c.i
@@ -1365,8 +1365,8 @@ src/joystick/hidapi/SDL_hidapi_rumble.i: src/joystick/hidapi/SDL_hidapi_rumble.c
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_rumble.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_rumble.c.i
 
 src/joystick/hidapi/SDL_hidapi_rumble.s: src/joystick/hidapi/SDL_hidapi_rumble.c.s
@@ -1374,8 +1374,8 @@ src/joystick/hidapi/SDL_hidapi_rumble.s: src/joystick/hidapi/SDL_hidapi_rumble.c
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_rumble.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_rumble.c.s
 
 src/joystick/hidapi/SDL_hidapi_stadia.o: src/joystick/hidapi/SDL_hidapi_stadia.c.o
@@ -1383,8 +1383,8 @@ src/joystick/hidapi/SDL_hidapi_stadia.o: src/joystick/hidapi/SDL_hidapi_stadia.c
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_stadia.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_stadia.c.o
 
 src/joystick/hidapi/SDL_hidapi_stadia.i: src/joystick/hidapi/SDL_hidapi_stadia.c.i
@@ -1392,8 +1392,8 @@ src/joystick/hidapi/SDL_hidapi_stadia.i: src/joystick/hidapi/SDL_hidapi_stadia.c
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_stadia.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_stadia.c.i
 
 src/joystick/hidapi/SDL_hidapi_stadia.s: src/joystick/hidapi/SDL_hidapi_stadia.c.s
@@ -1401,8 +1401,8 @@ src/joystick/hidapi/SDL_hidapi_stadia.s: src/joystick/hidapi/SDL_hidapi_stadia.c
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_stadia.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_stadia.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_stadia.c.s
 
 src/joystick/hidapi/SDL_hidapi_steam.o: src/joystick/hidapi/SDL_hidapi_steam.c.o
@@ -1410,8 +1410,8 @@ src/joystick/hidapi/SDL_hidapi_steam.o: src/joystick/hidapi/SDL_hidapi_steam.c.o
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_steam.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_steam.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_steam.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_steam.c.o
 
 src/joystick/hidapi/SDL_hidapi_steam.i: src/joystick/hidapi/SDL_hidapi_steam.c.i
@@ -1419,8 +1419,8 @@ src/joystick/hidapi/SDL_hidapi_steam.i: src/joystick/hidapi/SDL_hidapi_steam.c.i
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_steam.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_steam.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_steam.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_steam.c.i
 
 src/joystick/hidapi/SDL_hidapi_steam.s: src/joystick/hidapi/SDL_hidapi_steam.c.s
@@ -1428,8 +1428,8 @@ src/joystick/hidapi/SDL_hidapi_steam.s: src/joystick/hidapi/SDL_hidapi_steam.c.s
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_steam.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_steam.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_steam.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_steam.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_steam.c.s
 
 src/joystick/hidapi/SDL_hidapi_switch.o: src/joystick/hidapi/SDL_hidapi_switch.c.o
@@ -1437,8 +1437,8 @@ src/joystick/hidapi/SDL_hidapi_switch.o: src/joystick/hidapi/SDL_hidapi_switch.c
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_switch.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_switch.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_switch.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_switch.c.o
 
 src/joystick/hidapi/SDL_hidapi_switch.i: src/joystick/hidapi/SDL_hidapi_switch.c.i
@@ -1446,8 +1446,8 @@ src/joystick/hidapi/SDL_hidapi_switch.i: src/joystick/hidapi/SDL_hidapi_switch.c
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_switch.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_switch.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_switch.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_switch.c.i
 
 src/joystick/hidapi/SDL_hidapi_switch.s: src/joystick/hidapi/SDL_hidapi_switch.c.s
@@ -1455,8 +1455,8 @@ src/joystick/hidapi/SDL_hidapi_switch.s: src/joystick/hidapi/SDL_hidapi_switch.c
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_switch.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_switch.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_switch.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_switch.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_switch.c.s
 
 src/joystick/hidapi/SDL_hidapi_xbox360.o: src/joystick/hidapi/SDL_hidapi_xbox360.c.o
@@ -1464,8 +1464,8 @@ src/joystick/hidapi/SDL_hidapi_xbox360.o: src/joystick/hidapi/SDL_hidapi_xbox360
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_xbox360.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_xbox360.c.o
 
 src/joystick/hidapi/SDL_hidapi_xbox360.i: src/joystick/hidapi/SDL_hidapi_xbox360.c.i
@@ -1473,8 +1473,8 @@ src/joystick/hidapi/SDL_hidapi_xbox360.i: src/joystick/hidapi/SDL_hidapi_xbox360
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_xbox360.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_xbox360.c.i
 
 src/joystick/hidapi/SDL_hidapi_xbox360.s: src/joystick/hidapi/SDL_hidapi_xbox360.c.s
@@ -1482,8 +1482,8 @@ src/joystick/hidapi/SDL_hidapi_xbox360.s: src/joystick/hidapi/SDL_hidapi_xbox360
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_xbox360.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_xbox360.c.s
 
 src/joystick/hidapi/SDL_hidapi_xbox360w.o: src/joystick/hidapi/SDL_hidapi_xbox360w.c.o
@@ -1491,8 +1491,8 @@ src/joystick/hidapi/SDL_hidapi_xbox360w.o: src/joystick/hidapi/SDL_hidapi_xbox36
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_xbox360w.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_xbox360w.c.o
 
 src/joystick/hidapi/SDL_hidapi_xbox360w.i: src/joystick/hidapi/SDL_hidapi_xbox360w.c.i
@@ -1500,8 +1500,8 @@ src/joystick/hidapi/SDL_hidapi_xbox360w.i: src/joystick/hidapi/SDL_hidapi_xbox36
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_xbox360w.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_xbox360w.c.i
 
 src/joystick/hidapi/SDL_hidapi_xbox360w.s: src/joystick/hidapi/SDL_hidapi_xbox360w.c.s
@@ -1509,8 +1509,8 @@ src/joystick/hidapi/SDL_hidapi_xbox360w.s: src/joystick/hidapi/SDL_hidapi_xbox36
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_xbox360w.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xbox360w.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_xbox360w.c.s
 
 src/joystick/hidapi/SDL_hidapi_xboxone.o: src/joystick/hidapi/SDL_hidapi_xboxone.c.o
@@ -1518,8 +1518,8 @@ src/joystick/hidapi/SDL_hidapi_xboxone.o: src/joystick/hidapi/SDL_hidapi_xboxone
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapi_xboxone.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapi_xboxone.c.o
 
 src/joystick/hidapi/SDL_hidapi_xboxone.i: src/joystick/hidapi/SDL_hidapi_xboxone.c.i
@@ -1527,8 +1527,8 @@ src/joystick/hidapi/SDL_hidapi_xboxone.i: src/joystick/hidapi/SDL_hidapi_xboxone
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapi_xboxone.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapi_xboxone.c.i
 
 src/joystick/hidapi/SDL_hidapi_xboxone.s: src/joystick/hidapi/SDL_hidapi_xboxone.c.s
@@ -1536,8 +1536,8 @@ src/joystick/hidapi/SDL_hidapi_xboxone.s: src/joystick/hidapi/SDL_hidapi_xboxone
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapi_xboxone.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_xboxone.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapi_xboxone.c.s
 
 src/joystick/hidapi/SDL_hidapijoystick.o: src/joystick/hidapi/SDL_hidapijoystick.c.o
@@ -1545,8 +1545,8 @@ src/joystick/hidapi/SDL_hidapijoystick.o: src/joystick/hidapi/SDL_hidapijoystick
 
 # target to build an object file
 src/joystick/hidapi/SDL_hidapijoystick.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapijoystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapijoystick.c.o
 .PHONY : src/joystick/hidapi/SDL_hidapijoystick.c.o
 
 src/joystick/hidapi/SDL_hidapijoystick.i: src/joystick/hidapi/SDL_hidapijoystick.c.i
@@ -1554,8 +1554,8 @@ src/joystick/hidapi/SDL_hidapijoystick.i: src/joystick/hidapi/SDL_hidapijoystick
 
 # target to preprocess a source file
 src/joystick/hidapi/SDL_hidapijoystick.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapijoystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapijoystick.c.i
 .PHONY : src/joystick/hidapi/SDL_hidapijoystick.c.i
 
 src/joystick/hidapi/SDL_hidapijoystick.s: src/joystick/hidapi/SDL_hidapijoystick.c.s
@@ -1563,8 +1563,8 @@ src/joystick/hidapi/SDL_hidapijoystick.s: src/joystick/hidapi/SDL_hidapijoystick
 
 # target to generate assembly for a file
 src/joystick/hidapi/SDL_hidapijoystick.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapijoystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapijoystick.c.s
 .PHONY : src/joystick/hidapi/SDL_hidapijoystick.c.s
 
 src/joystick/iphoneos/SDL_mfijoystick.o: src/joystick/iphoneos/SDL_mfijoystick.m.o
@@ -1572,8 +1572,8 @@ src/joystick/iphoneos/SDL_mfijoystick.o: src/joystick/iphoneos/SDL_mfijoystick.m
 
 # target to build an object file
 src/joystick/iphoneos/SDL_mfijoystick.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/iphoneos/SDL_mfijoystick.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/iphoneos/SDL_mfijoystick.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/iphoneos/SDL_mfijoystick.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/iphoneos/SDL_mfijoystick.m.o
 .PHONY : src/joystick/iphoneos/SDL_mfijoystick.m.o
 
 src/joystick/virtual/SDL_virtualjoystick.o: src/joystick/virtual/SDL_virtualjoystick.c.o
@@ -1581,8 +1581,8 @@ src/joystick/virtual/SDL_virtualjoystick.o: src/joystick/virtual/SDL_virtualjoys
 
 # target to build an object file
 src/joystick/virtual/SDL_virtualjoystick.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/virtual/SDL_virtualjoystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/virtual/SDL_virtualjoystick.c.o
 .PHONY : src/joystick/virtual/SDL_virtualjoystick.c.o
 
 src/joystick/virtual/SDL_virtualjoystick.i: src/joystick/virtual/SDL_virtualjoystick.c.i
@@ -1590,8 +1590,8 @@ src/joystick/virtual/SDL_virtualjoystick.i: src/joystick/virtual/SDL_virtualjoys
 
 # target to preprocess a source file
 src/joystick/virtual/SDL_virtualjoystick.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/virtual/SDL_virtualjoystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/virtual/SDL_virtualjoystick.c.i
 .PHONY : src/joystick/virtual/SDL_virtualjoystick.c.i
 
 src/joystick/virtual/SDL_virtualjoystick.s: src/joystick/virtual/SDL_virtualjoystick.c.s
@@ -1599,8 +1599,8 @@ src/joystick/virtual/SDL_virtualjoystick.s: src/joystick/virtual/SDL_virtualjoys
 
 # target to generate assembly for a file
 src/joystick/virtual/SDL_virtualjoystick.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/virtual/SDL_virtualjoystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/joystick/virtual/SDL_virtualjoystick.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/joystick/virtual/SDL_virtualjoystick.c.s
 .PHONY : src/joystick/virtual/SDL_virtualjoystick.c.s
 
 src/libm/e_atan2.o: src/libm/e_atan2.c.o
@@ -1608,8 +1608,8 @@ src/libm/e_atan2.o: src/libm/e_atan2.c.o
 
 # target to build an object file
 src/libm/e_atan2.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_atan2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_atan2.c.o
 .PHONY : src/libm/e_atan2.c.o
 
 src/libm/e_atan2.i: src/libm/e_atan2.c.i
@@ -1617,8 +1617,8 @@ src/libm/e_atan2.i: src/libm/e_atan2.c.i
 
 # target to preprocess a source file
 src/libm/e_atan2.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_atan2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_atan2.c.i
 .PHONY : src/libm/e_atan2.c.i
 
 src/libm/e_atan2.s: src/libm/e_atan2.c.s
@@ -1626,8 +1626,8 @@ src/libm/e_atan2.s: src/libm/e_atan2.c.s
 
 # target to generate assembly for a file
 src/libm/e_atan2.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_atan2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_atan2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_atan2.c.s
 .PHONY : src/libm/e_atan2.c.s
 
 src/libm/e_exp.o: src/libm/e_exp.c.o
@@ -1635,8 +1635,8 @@ src/libm/e_exp.o: src/libm/e_exp.c.o
 
 # target to build an object file
 src/libm/e_exp.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_exp.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_exp.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_exp.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_exp.c.o
 .PHONY : src/libm/e_exp.c.o
 
 src/libm/e_exp.i: src/libm/e_exp.c.i
@@ -1644,8 +1644,8 @@ src/libm/e_exp.i: src/libm/e_exp.c.i
 
 # target to preprocess a source file
 src/libm/e_exp.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_exp.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_exp.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_exp.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_exp.c.i
 .PHONY : src/libm/e_exp.c.i
 
 src/libm/e_exp.s: src/libm/e_exp.c.s
@@ -1653,8 +1653,8 @@ src/libm/e_exp.s: src/libm/e_exp.c.s
 
 # target to generate assembly for a file
 src/libm/e_exp.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_exp.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_exp.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_exp.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_exp.c.s
 .PHONY : src/libm/e_exp.c.s
 
 src/libm/e_fmod.o: src/libm/e_fmod.c.o
@@ -1662,8 +1662,8 @@ src/libm/e_fmod.o: src/libm/e_fmod.c.o
 
 # target to build an object file
 src/libm/e_fmod.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_fmod.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_fmod.c.o
 .PHONY : src/libm/e_fmod.c.o
 
 src/libm/e_fmod.i: src/libm/e_fmod.c.i
@@ -1671,8 +1671,8 @@ src/libm/e_fmod.i: src/libm/e_fmod.c.i
 
 # target to preprocess a source file
 src/libm/e_fmod.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_fmod.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_fmod.c.i
 .PHONY : src/libm/e_fmod.c.i
 
 src/libm/e_fmod.s: src/libm/e_fmod.c.s
@@ -1680,8 +1680,8 @@ src/libm/e_fmod.s: src/libm/e_fmod.c.s
 
 # target to generate assembly for a file
 src/libm/e_fmod.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_fmod.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_fmod.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_fmod.c.s
 .PHONY : src/libm/e_fmod.c.s
 
 src/libm/e_log.o: src/libm/e_log.c.o
@@ -1689,8 +1689,8 @@ src/libm/e_log.o: src/libm/e_log.c.o
 
 # target to build an object file
 src/libm/e_log.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log.c.o
 .PHONY : src/libm/e_log.c.o
 
 src/libm/e_log.i: src/libm/e_log.c.i
@@ -1698,8 +1698,8 @@ src/libm/e_log.i: src/libm/e_log.c.i
 
 # target to preprocess a source file
 src/libm/e_log.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log.c.i
 .PHONY : src/libm/e_log.c.i
 
 src/libm/e_log.s: src/libm/e_log.c.s
@@ -1707,8 +1707,8 @@ src/libm/e_log.s: src/libm/e_log.c.s
 
 # target to generate assembly for a file
 src/libm/e_log.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log.c.s
 .PHONY : src/libm/e_log.c.s
 
 src/libm/e_log10.o: src/libm/e_log10.c.o
@@ -1716,8 +1716,8 @@ src/libm/e_log10.o: src/libm/e_log10.c.o
 
 # target to build an object file
 src/libm/e_log10.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log10.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log10.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log10.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log10.c.o
 .PHONY : src/libm/e_log10.c.o
 
 src/libm/e_log10.i: src/libm/e_log10.c.i
@@ -1725,8 +1725,8 @@ src/libm/e_log10.i: src/libm/e_log10.c.i
 
 # target to preprocess a source file
 src/libm/e_log10.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log10.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log10.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log10.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log10.c.i
 .PHONY : src/libm/e_log10.c.i
 
 src/libm/e_log10.s: src/libm/e_log10.c.s
@@ -1734,8 +1734,8 @@ src/libm/e_log10.s: src/libm/e_log10.c.s
 
 # target to generate assembly for a file
 src/libm/e_log10.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log10.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log10.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_log10.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_log10.c.s
 .PHONY : src/libm/e_log10.c.s
 
 src/libm/e_pow.o: src/libm/e_pow.c.o
@@ -1743,8 +1743,8 @@ src/libm/e_pow.o: src/libm/e_pow.c.o
 
 # target to build an object file
 src/libm/e_pow.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_pow.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_pow.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_pow.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_pow.c.o
 .PHONY : src/libm/e_pow.c.o
 
 src/libm/e_pow.i: src/libm/e_pow.c.i
@@ -1752,8 +1752,8 @@ src/libm/e_pow.i: src/libm/e_pow.c.i
 
 # target to preprocess a source file
 src/libm/e_pow.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_pow.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_pow.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_pow.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_pow.c.i
 .PHONY : src/libm/e_pow.c.i
 
 src/libm/e_pow.s: src/libm/e_pow.c.s
@@ -1761,8 +1761,8 @@ src/libm/e_pow.s: src/libm/e_pow.c.s
 
 # target to generate assembly for a file
 src/libm/e_pow.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_pow.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_pow.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_pow.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_pow.c.s
 .PHONY : src/libm/e_pow.c.s
 
 src/libm/e_rem_pio2.o: src/libm/e_rem_pio2.c.o
@@ -1770,8 +1770,8 @@ src/libm/e_rem_pio2.o: src/libm/e_rem_pio2.c.o
 
 # target to build an object file
 src/libm/e_rem_pio2.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_rem_pio2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_rem_pio2.c.o
 .PHONY : src/libm/e_rem_pio2.c.o
 
 src/libm/e_rem_pio2.i: src/libm/e_rem_pio2.c.i
@@ -1779,8 +1779,8 @@ src/libm/e_rem_pio2.i: src/libm/e_rem_pio2.c.i
 
 # target to preprocess a source file
 src/libm/e_rem_pio2.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_rem_pio2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_rem_pio2.c.i
 .PHONY : src/libm/e_rem_pio2.c.i
 
 src/libm/e_rem_pio2.s: src/libm/e_rem_pio2.c.s
@@ -1788,8 +1788,8 @@ src/libm/e_rem_pio2.s: src/libm/e_rem_pio2.c.s
 
 # target to generate assembly for a file
 src/libm/e_rem_pio2.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_rem_pio2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_rem_pio2.c.s
 .PHONY : src/libm/e_rem_pio2.c.s
 
 src/libm/e_sqrt.o: src/libm/e_sqrt.c.o
@@ -1797,8 +1797,8 @@ src/libm/e_sqrt.o: src/libm/e_sqrt.c.o
 
 # target to build an object file
 src/libm/e_sqrt.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_sqrt.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_sqrt.c.o
 .PHONY : src/libm/e_sqrt.c.o
 
 src/libm/e_sqrt.i: src/libm/e_sqrt.c.i
@@ -1806,8 +1806,8 @@ src/libm/e_sqrt.i: src/libm/e_sqrt.c.i
 
 # target to preprocess a source file
 src/libm/e_sqrt.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_sqrt.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_sqrt.c.i
 .PHONY : src/libm/e_sqrt.c.i
 
 src/libm/e_sqrt.s: src/libm/e_sqrt.c.s
@@ -1815,8 +1815,8 @@ src/libm/e_sqrt.s: src/libm/e_sqrt.c.s
 
 # target to generate assembly for a file
 src/libm/e_sqrt.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_sqrt.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/e_sqrt.c.s
 .PHONY : src/libm/e_sqrt.c.s
 
 src/libm/k_cos.o: src/libm/k_cos.c.o
@@ -1824,8 +1824,8 @@ src/libm/k_cos.o: src/libm/k_cos.c.o
 
 # target to build an object file
 src/libm/k_cos.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_cos.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_cos.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_cos.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_cos.c.o
 .PHONY : src/libm/k_cos.c.o
 
 src/libm/k_cos.i: src/libm/k_cos.c.i
@@ -1833,8 +1833,8 @@ src/libm/k_cos.i: src/libm/k_cos.c.i
 
 # target to preprocess a source file
 src/libm/k_cos.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_cos.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_cos.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_cos.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_cos.c.i
 .PHONY : src/libm/k_cos.c.i
 
 src/libm/k_cos.s: src/libm/k_cos.c.s
@@ -1842,8 +1842,8 @@ src/libm/k_cos.s: src/libm/k_cos.c.s
 
 # target to generate assembly for a file
 src/libm/k_cos.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_cos.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_cos.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_cos.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_cos.c.s
 .PHONY : src/libm/k_cos.c.s
 
 src/libm/k_rem_pio2.o: src/libm/k_rem_pio2.c.o
@@ -1851,8 +1851,8 @@ src/libm/k_rem_pio2.o: src/libm/k_rem_pio2.c.o
 
 # target to build an object file
 src/libm/k_rem_pio2.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_rem_pio2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_rem_pio2.c.o
 .PHONY : src/libm/k_rem_pio2.c.o
 
 src/libm/k_rem_pio2.i: src/libm/k_rem_pio2.c.i
@@ -1860,8 +1860,8 @@ src/libm/k_rem_pio2.i: src/libm/k_rem_pio2.c.i
 
 # target to preprocess a source file
 src/libm/k_rem_pio2.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_rem_pio2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_rem_pio2.c.i
 .PHONY : src/libm/k_rem_pio2.c.i
 
 src/libm/k_rem_pio2.s: src/libm/k_rem_pio2.c.s
@@ -1869,8 +1869,8 @@ src/libm/k_rem_pio2.s: src/libm/k_rem_pio2.c.s
 
 # target to generate assembly for a file
 src/libm/k_rem_pio2.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_rem_pio2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_rem_pio2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_rem_pio2.c.s
 .PHONY : src/libm/k_rem_pio2.c.s
 
 src/libm/k_sin.o: src/libm/k_sin.c.o
@@ -1878,8 +1878,8 @@ src/libm/k_sin.o: src/libm/k_sin.c.o
 
 # target to build an object file
 src/libm/k_sin.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_sin.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_sin.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_sin.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_sin.c.o
 .PHONY : src/libm/k_sin.c.o
 
 src/libm/k_sin.i: src/libm/k_sin.c.i
@@ -1887,8 +1887,8 @@ src/libm/k_sin.i: src/libm/k_sin.c.i
 
 # target to preprocess a source file
 src/libm/k_sin.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_sin.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_sin.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_sin.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_sin.c.i
 .PHONY : src/libm/k_sin.c.i
 
 src/libm/k_sin.s: src/libm/k_sin.c.s
@@ -1896,8 +1896,8 @@ src/libm/k_sin.s: src/libm/k_sin.c.s
 
 # target to generate assembly for a file
 src/libm/k_sin.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_sin.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_sin.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_sin.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_sin.c.s
 .PHONY : src/libm/k_sin.c.s
 
 src/libm/k_tan.o: src/libm/k_tan.c.o
@@ -1905,8 +1905,8 @@ src/libm/k_tan.o: src/libm/k_tan.c.o
 
 # target to build an object file
 src/libm/k_tan.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_tan.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_tan.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_tan.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_tan.c.o
 .PHONY : src/libm/k_tan.c.o
 
 src/libm/k_tan.i: src/libm/k_tan.c.i
@@ -1914,8 +1914,8 @@ src/libm/k_tan.i: src/libm/k_tan.c.i
 
 # target to preprocess a source file
 src/libm/k_tan.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_tan.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_tan.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_tan.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_tan.c.i
 .PHONY : src/libm/k_tan.c.i
 
 src/libm/k_tan.s: src/libm/k_tan.c.s
@@ -1923,8 +1923,8 @@ src/libm/k_tan.s: src/libm/k_tan.c.s
 
 # target to generate assembly for a file
 src/libm/k_tan.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_tan.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_tan.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/k_tan.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/k_tan.c.s
 .PHONY : src/libm/k_tan.c.s
 
 src/libm/s_atan.o: src/libm/s_atan.c.o
@@ -1932,8 +1932,8 @@ src/libm/s_atan.o: src/libm/s_atan.c.o
 
 # target to build an object file
 src/libm/s_atan.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_atan.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_atan.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_atan.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_atan.c.o
 .PHONY : src/libm/s_atan.c.o
 
 src/libm/s_atan.i: src/libm/s_atan.c.i
@@ -1941,8 +1941,8 @@ src/libm/s_atan.i: src/libm/s_atan.c.i
 
 # target to preprocess a source file
 src/libm/s_atan.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_atan.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_atan.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_atan.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_atan.c.i
 .PHONY : src/libm/s_atan.c.i
 
 src/libm/s_atan.s: src/libm/s_atan.c.s
@@ -1950,8 +1950,8 @@ src/libm/s_atan.s: src/libm/s_atan.c.s
 
 # target to generate assembly for a file
 src/libm/s_atan.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_atan.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_atan.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_atan.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_atan.c.s
 .PHONY : src/libm/s_atan.c.s
 
 src/libm/s_copysign.o: src/libm/s_copysign.c.o
@@ -1959,8 +1959,8 @@ src/libm/s_copysign.o: src/libm/s_copysign.c.o
 
 # target to build an object file
 src/libm/s_copysign.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_copysign.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_copysign.c.o
 .PHONY : src/libm/s_copysign.c.o
 
 src/libm/s_copysign.i: src/libm/s_copysign.c.i
@@ -1968,8 +1968,8 @@ src/libm/s_copysign.i: src/libm/s_copysign.c.i
 
 # target to preprocess a source file
 src/libm/s_copysign.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_copysign.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_copysign.c.i
 .PHONY : src/libm/s_copysign.c.i
 
 src/libm/s_copysign.s: src/libm/s_copysign.c.s
@@ -1977,8 +1977,8 @@ src/libm/s_copysign.s: src/libm/s_copysign.c.s
 
 # target to generate assembly for a file
 src/libm/s_copysign.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_copysign.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_copysign.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_copysign.c.s
 .PHONY : src/libm/s_copysign.c.s
 
 src/libm/s_cos.o: src/libm/s_cos.c.o
@@ -1986,8 +1986,8 @@ src/libm/s_cos.o: src/libm/s_cos.c.o
 
 # target to build an object file
 src/libm/s_cos.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_cos.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_cos.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_cos.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_cos.c.o
 .PHONY : src/libm/s_cos.c.o
 
 src/libm/s_cos.i: src/libm/s_cos.c.i
@@ -1995,8 +1995,8 @@ src/libm/s_cos.i: src/libm/s_cos.c.i
 
 # target to preprocess a source file
 src/libm/s_cos.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_cos.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_cos.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_cos.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_cos.c.i
 .PHONY : src/libm/s_cos.c.i
 
 src/libm/s_cos.s: src/libm/s_cos.c.s
@@ -2004,8 +2004,8 @@ src/libm/s_cos.s: src/libm/s_cos.c.s
 
 # target to generate assembly for a file
 src/libm/s_cos.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_cos.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_cos.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_cos.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_cos.c.s
 .PHONY : src/libm/s_cos.c.s
 
 src/libm/s_fabs.o: src/libm/s_fabs.c.o
@@ -2013,8 +2013,8 @@ src/libm/s_fabs.o: src/libm/s_fabs.c.o
 
 # target to build an object file
 src/libm/s_fabs.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_fabs.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_fabs.c.o
 .PHONY : src/libm/s_fabs.c.o
 
 src/libm/s_fabs.i: src/libm/s_fabs.c.i
@@ -2022,8 +2022,8 @@ src/libm/s_fabs.i: src/libm/s_fabs.c.i
 
 # target to preprocess a source file
 src/libm/s_fabs.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_fabs.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_fabs.c.i
 .PHONY : src/libm/s_fabs.c.i
 
 src/libm/s_fabs.s: src/libm/s_fabs.c.s
@@ -2031,8 +2031,8 @@ src/libm/s_fabs.s: src/libm/s_fabs.c.s
 
 # target to generate assembly for a file
 src/libm/s_fabs.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_fabs.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_fabs.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_fabs.c.s
 .PHONY : src/libm/s_fabs.c.s
 
 src/libm/s_floor.o: src/libm/s_floor.c.o
@@ -2040,8 +2040,8 @@ src/libm/s_floor.o: src/libm/s_floor.c.o
 
 # target to build an object file
 src/libm/s_floor.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_floor.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_floor.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_floor.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_floor.c.o
 .PHONY : src/libm/s_floor.c.o
 
 src/libm/s_floor.i: src/libm/s_floor.c.i
@@ -2049,8 +2049,8 @@ src/libm/s_floor.i: src/libm/s_floor.c.i
 
 # target to preprocess a source file
 src/libm/s_floor.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_floor.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_floor.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_floor.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_floor.c.i
 .PHONY : src/libm/s_floor.c.i
 
 src/libm/s_floor.s: src/libm/s_floor.c.s
@@ -2058,8 +2058,8 @@ src/libm/s_floor.s: src/libm/s_floor.c.s
 
 # target to generate assembly for a file
 src/libm/s_floor.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_floor.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_floor.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_floor.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_floor.c.s
 .PHONY : src/libm/s_floor.c.s
 
 src/libm/s_scalbn.o: src/libm/s_scalbn.c.o
@@ -2067,8 +2067,8 @@ src/libm/s_scalbn.o: src/libm/s_scalbn.c.o
 
 # target to build an object file
 src/libm/s_scalbn.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_scalbn.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_scalbn.c.o
 .PHONY : src/libm/s_scalbn.c.o
 
 src/libm/s_scalbn.i: src/libm/s_scalbn.c.i
@@ -2076,8 +2076,8 @@ src/libm/s_scalbn.i: src/libm/s_scalbn.c.i
 
 # target to preprocess a source file
 src/libm/s_scalbn.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_scalbn.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_scalbn.c.i
 .PHONY : src/libm/s_scalbn.c.i
 
 src/libm/s_scalbn.s: src/libm/s_scalbn.c.s
@@ -2085,8 +2085,8 @@ src/libm/s_scalbn.s: src/libm/s_scalbn.c.s
 
 # target to generate assembly for a file
 src/libm/s_scalbn.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_scalbn.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_scalbn.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_scalbn.c.s
 .PHONY : src/libm/s_scalbn.c.s
 
 src/libm/s_sin.o: src/libm/s_sin.c.o
@@ -2094,8 +2094,8 @@ src/libm/s_sin.o: src/libm/s_sin.c.o
 
 # target to build an object file
 src/libm/s_sin.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_sin.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_sin.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_sin.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_sin.c.o
 .PHONY : src/libm/s_sin.c.o
 
 src/libm/s_sin.i: src/libm/s_sin.c.i
@@ -2103,8 +2103,8 @@ src/libm/s_sin.i: src/libm/s_sin.c.i
 
 # target to preprocess a source file
 src/libm/s_sin.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_sin.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_sin.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_sin.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_sin.c.i
 .PHONY : src/libm/s_sin.c.i
 
 src/libm/s_sin.s: src/libm/s_sin.c.s
@@ -2112,8 +2112,8 @@ src/libm/s_sin.s: src/libm/s_sin.c.s
 
 # target to generate assembly for a file
 src/libm/s_sin.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_sin.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_sin.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_sin.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_sin.c.s
 .PHONY : src/libm/s_sin.c.s
 
 src/libm/s_tan.o: src/libm/s_tan.c.o
@@ -2121,8 +2121,8 @@ src/libm/s_tan.o: src/libm/s_tan.c.o
 
 # target to build an object file
 src/libm/s_tan.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_tan.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_tan.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_tan.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_tan.c.o
 .PHONY : src/libm/s_tan.c.o
 
 src/libm/s_tan.i: src/libm/s_tan.c.i
@@ -2130,8 +2130,8 @@ src/libm/s_tan.i: src/libm/s_tan.c.i
 
 # target to preprocess a source file
 src/libm/s_tan.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_tan.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_tan.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_tan.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_tan.c.i
 .PHONY : src/libm/s_tan.c.i
 
 src/libm/s_tan.s: src/libm/s_tan.c.s
@@ -2139,8 +2139,8 @@ src/libm/s_tan.s: src/libm/s_tan.c.s
 
 # target to generate assembly for a file
 src/libm/s_tan.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_tan.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_tan.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/libm/s_tan.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/libm/s_tan.c.s
 .PHONY : src/libm/s_tan.c.s
 
 src/loadso/dlopen/SDL_sysloadso.o: src/loadso/dlopen/SDL_sysloadso.c.o
@@ -2148,8 +2148,8 @@ src/loadso/dlopen/SDL_sysloadso.o: src/loadso/dlopen/SDL_sysloadso.c.o
 
 # target to build an object file
 src/loadso/dlopen/SDL_sysloadso.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/loadso/dlopen/SDL_sysloadso.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/loadso/dlopen/SDL_sysloadso.c.o
 .PHONY : src/loadso/dlopen/SDL_sysloadso.c.o
 
 src/loadso/dlopen/SDL_sysloadso.i: src/loadso/dlopen/SDL_sysloadso.c.i
@@ -2157,8 +2157,8 @@ src/loadso/dlopen/SDL_sysloadso.i: src/loadso/dlopen/SDL_sysloadso.c.i
 
 # target to preprocess a source file
 src/loadso/dlopen/SDL_sysloadso.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/loadso/dlopen/SDL_sysloadso.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/loadso/dlopen/SDL_sysloadso.c.i
 .PHONY : src/loadso/dlopen/SDL_sysloadso.c.i
 
 src/loadso/dlopen/SDL_sysloadso.s: src/loadso/dlopen/SDL_sysloadso.c.s
@@ -2166,8 +2166,8 @@ src/loadso/dlopen/SDL_sysloadso.s: src/loadso/dlopen/SDL_sysloadso.c.s
 
 # target to generate assembly for a file
 src/loadso/dlopen/SDL_sysloadso.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/loadso/dlopen/SDL_sysloadso.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/loadso/dlopen/SDL_sysloadso.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/loadso/dlopen/SDL_sysloadso.c.s
 .PHONY : src/loadso/dlopen/SDL_sysloadso.c.s
 
 src/locale/SDL_locale.o: src/locale/SDL_locale.c.o
@@ -2175,8 +2175,8 @@ src/locale/SDL_locale.o: src/locale/SDL_locale.c.o
 
 # target to build an object file
 src/locale/SDL_locale.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/SDL_locale.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/SDL_locale.c.o
 .PHONY : src/locale/SDL_locale.c.o
 
 src/locale/SDL_locale.i: src/locale/SDL_locale.c.i
@@ -2184,8 +2184,8 @@ src/locale/SDL_locale.i: src/locale/SDL_locale.c.i
 
 # target to preprocess a source file
 src/locale/SDL_locale.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/SDL_locale.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/SDL_locale.c.i
 .PHONY : src/locale/SDL_locale.c.i
 
 src/locale/SDL_locale.s: src/locale/SDL_locale.c.s
@@ -2193,8 +2193,8 @@ src/locale/SDL_locale.s: src/locale/SDL_locale.c.s
 
 # target to generate assembly for a file
 src/locale/SDL_locale.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/SDL_locale.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/SDL_locale.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/SDL_locale.c.s
 .PHONY : src/locale/SDL_locale.c.s
 
 src/locale/macosx/SDL_syslocale.o: src/locale/macosx/SDL_syslocale.m.o
@@ -2202,8 +2202,8 @@ src/locale/macosx/SDL_syslocale.o: src/locale/macosx/SDL_syslocale.m.o
 
 # target to build an object file
 src/locale/macosx/SDL_syslocale.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/macosx/SDL_syslocale.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/macosx/SDL_syslocale.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/locale/macosx/SDL_syslocale.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/locale/macosx/SDL_syslocale.m.o
 .PHONY : src/locale/macosx/SDL_syslocale.m.o
 
 src/main/dummy/SDL_dummy_main.o: src/main/dummy/SDL_dummy_main.c.o
@@ -2211,7 +2211,7 @@ src/main/dummy/SDL_dummy_main.o: src/main/dummy/SDL_dummy_main.c.o
 
 # target to build an object file
 src/main/dummy/SDL_dummy_main.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.o
 .PHONY : src/main/dummy/SDL_dummy_main.c.o
 
 src/main/dummy/SDL_dummy_main.i: src/main/dummy/SDL_dummy_main.c.i
@@ -2219,7 +2219,7 @@ src/main/dummy/SDL_dummy_main.i: src/main/dummy/SDL_dummy_main.c.i
 
 # target to preprocess a source file
 src/main/dummy/SDL_dummy_main.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.i
 .PHONY : src/main/dummy/SDL_dummy_main.c.i
 
 src/main/dummy/SDL_dummy_main.s: src/main/dummy/SDL_dummy_main.c.s
@@ -2227,7 +2227,7 @@ src/main/dummy/SDL_dummy_main.s: src/main/dummy/SDL_dummy_main.c.s
 
 # target to generate assembly for a file
 src/main/dummy/SDL_dummy_main.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2main.dir/build.make external/SDL2/CMakeFiles/SDL2main.dir/src/main/dummy/SDL_dummy_main.c.s
 .PHONY : src/main/dummy/SDL_dummy_main.c.s
 
 src/misc/SDL_url.o: src/misc/SDL_url.c.o
@@ -2235,8 +2235,8 @@ src/misc/SDL_url.o: src/misc/SDL_url.c.o
 
 # target to build an object file
 src/misc/SDL_url.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/SDL_url.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/SDL_url.c.o
 .PHONY : src/misc/SDL_url.c.o
 
 src/misc/SDL_url.i: src/misc/SDL_url.c.i
@@ -2244,8 +2244,8 @@ src/misc/SDL_url.i: src/misc/SDL_url.c.i
 
 # target to preprocess a source file
 src/misc/SDL_url.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/SDL_url.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/SDL_url.c.i
 .PHONY : src/misc/SDL_url.c.i
 
 src/misc/SDL_url.s: src/misc/SDL_url.c.s
@@ -2253,8 +2253,8 @@ src/misc/SDL_url.s: src/misc/SDL_url.c.s
 
 # target to generate assembly for a file
 src/misc/SDL_url.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/SDL_url.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/SDL_url.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/SDL_url.c.s
 .PHONY : src/misc/SDL_url.c.s
 
 src/misc/macosx/SDL_sysurl.o: src/misc/macosx/SDL_sysurl.m.o
@@ -2262,8 +2262,8 @@ src/misc/macosx/SDL_sysurl.o: src/misc/macosx/SDL_sysurl.m.o
 
 # target to build an object file
 src/misc/macosx/SDL_sysurl.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/macosx/SDL_sysurl.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/macosx/SDL_sysurl.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/misc/macosx/SDL_sysurl.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/misc/macosx/SDL_sysurl.m.o
 .PHONY : src/misc/macosx/SDL_sysurl.m.o
 
 src/power/SDL_power.o: src/power/SDL_power.c.o
@@ -2271,8 +2271,8 @@ src/power/SDL_power.o: src/power/SDL_power.c.o
 
 # target to build an object file
 src/power/SDL_power.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/SDL_power.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/SDL_power.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/SDL_power.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/SDL_power.c.o
 .PHONY : src/power/SDL_power.c.o
 
 src/power/SDL_power.i: src/power/SDL_power.c.i
@@ -2280,8 +2280,8 @@ src/power/SDL_power.i: src/power/SDL_power.c.i
 
 # target to preprocess a source file
 src/power/SDL_power.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/SDL_power.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/SDL_power.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/SDL_power.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/SDL_power.c.i
 .PHONY : src/power/SDL_power.c.i
 
 src/power/SDL_power.s: src/power/SDL_power.c.s
@@ -2289,8 +2289,8 @@ src/power/SDL_power.s: src/power/SDL_power.c.s
 
 # target to generate assembly for a file
 src/power/SDL_power.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/SDL_power.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/SDL_power.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/SDL_power.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/SDL_power.c.s
 .PHONY : src/power/SDL_power.c.s
 
 src/power/macosx/SDL_syspower.o: src/power/macosx/SDL_syspower.c.o
@@ -2298,8 +2298,8 @@ src/power/macosx/SDL_syspower.o: src/power/macosx/SDL_syspower.c.o
 
 # target to build an object file
 src/power/macosx/SDL_syspower.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/macosx/SDL_syspower.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/macosx/SDL_syspower.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/macosx/SDL_syspower.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/macosx/SDL_syspower.c.o
 .PHONY : src/power/macosx/SDL_syspower.c.o
 
 src/power/macosx/SDL_syspower.i: src/power/macosx/SDL_syspower.c.i
@@ -2307,8 +2307,8 @@ src/power/macosx/SDL_syspower.i: src/power/macosx/SDL_syspower.c.i
 
 # target to preprocess a source file
 src/power/macosx/SDL_syspower.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/macosx/SDL_syspower.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/macosx/SDL_syspower.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/macosx/SDL_syspower.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/macosx/SDL_syspower.c.i
 .PHONY : src/power/macosx/SDL_syspower.c.i
 
 src/power/macosx/SDL_syspower.s: src/power/macosx/SDL_syspower.c.s
@@ -2316,8 +2316,8 @@ src/power/macosx/SDL_syspower.s: src/power/macosx/SDL_syspower.c.s
 
 # target to generate assembly for a file
 src/power/macosx/SDL_syspower.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/macosx/SDL_syspower.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/macosx/SDL_syspower.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/power/macosx/SDL_syspower.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/power/macosx/SDL_syspower.c.s
 .PHONY : src/power/macosx/SDL_syspower.c.s
 
 src/render/SDL_d3dmath.o: src/render/SDL_d3dmath.c.o
@@ -2325,8 +2325,8 @@ src/render/SDL_d3dmath.o: src/render/SDL_d3dmath.c.o
 
 # target to build an object file
 src/render/SDL_d3dmath.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_d3dmath.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_d3dmath.c.o
 .PHONY : src/render/SDL_d3dmath.c.o
 
 src/render/SDL_d3dmath.i: src/render/SDL_d3dmath.c.i
@@ -2334,8 +2334,8 @@ src/render/SDL_d3dmath.i: src/render/SDL_d3dmath.c.i
 
 # target to preprocess a source file
 src/render/SDL_d3dmath.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_d3dmath.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_d3dmath.c.i
 .PHONY : src/render/SDL_d3dmath.c.i
 
 src/render/SDL_d3dmath.s: src/render/SDL_d3dmath.c.s
@@ -2343,8 +2343,8 @@ src/render/SDL_d3dmath.s: src/render/SDL_d3dmath.c.s
 
 # target to generate assembly for a file
 src/render/SDL_d3dmath.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_d3dmath.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_d3dmath.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_d3dmath.c.s
 .PHONY : src/render/SDL_d3dmath.c.s
 
 src/render/SDL_render.o: src/render/SDL_render.c.o
@@ -2352,8 +2352,8 @@ src/render/SDL_render.o: src/render/SDL_render.c.o
 
 # target to build an object file
 src/render/SDL_render.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_render.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_render.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_render.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_render.c.o
 .PHONY : src/render/SDL_render.c.o
 
 src/render/SDL_render.i: src/render/SDL_render.c.i
@@ -2361,8 +2361,8 @@ src/render/SDL_render.i: src/render/SDL_render.c.i
 
 # target to preprocess a source file
 src/render/SDL_render.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_render.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_render.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_render.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_render.c.i
 .PHONY : src/render/SDL_render.c.i
 
 src/render/SDL_render.s: src/render/SDL_render.c.s
@@ -2370,8 +2370,8 @@ src/render/SDL_render.s: src/render/SDL_render.c.s
 
 # target to generate assembly for a file
 src/render/SDL_render.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_render.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_render.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_render.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_render.c.s
 .PHONY : src/render/SDL_render.c.s
 
 src/render/SDL_yuv_sw.o: src/render/SDL_yuv_sw.c.o
@@ -2379,8 +2379,8 @@ src/render/SDL_yuv_sw.o: src/render/SDL_yuv_sw.c.o
 
 # target to build an object file
 src/render/SDL_yuv_sw.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_yuv_sw.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_yuv_sw.c.o
 .PHONY : src/render/SDL_yuv_sw.c.o
 
 src/render/SDL_yuv_sw.i: src/render/SDL_yuv_sw.c.i
@@ -2388,8 +2388,8 @@ src/render/SDL_yuv_sw.i: src/render/SDL_yuv_sw.c.i
 
 # target to preprocess a source file
 src/render/SDL_yuv_sw.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_yuv_sw.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_yuv_sw.c.i
 .PHONY : src/render/SDL_yuv_sw.c.i
 
 src/render/SDL_yuv_sw.s: src/render/SDL_yuv_sw.c.s
@@ -2397,8 +2397,8 @@ src/render/SDL_yuv_sw.s: src/render/SDL_yuv_sw.c.s
 
 # target to generate assembly for a file
 src/render/SDL_yuv_sw.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_yuv_sw.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/SDL_yuv_sw.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/SDL_yuv_sw.c.s
 .PHONY : src/render/SDL_yuv_sw.c.s
 
 src/render/direct3d/SDL_render_d3d.o: src/render/direct3d/SDL_render_d3d.c.o
@@ -2406,8 +2406,8 @@ src/render/direct3d/SDL_render_d3d.o: src/render/direct3d/SDL_render_d3d.c.o
 
 # target to build an object file
 src/render/direct3d/SDL_render_d3d.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_render_d3d.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_render_d3d.c.o
 .PHONY : src/render/direct3d/SDL_render_d3d.c.o
 
 src/render/direct3d/SDL_render_d3d.i: src/render/direct3d/SDL_render_d3d.c.i
@@ -2415,8 +2415,8 @@ src/render/direct3d/SDL_render_d3d.i: src/render/direct3d/SDL_render_d3d.c.i
 
 # target to preprocess a source file
 src/render/direct3d/SDL_render_d3d.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_render_d3d.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_render_d3d.c.i
 .PHONY : src/render/direct3d/SDL_render_d3d.c.i
 
 src/render/direct3d/SDL_render_d3d.s: src/render/direct3d/SDL_render_d3d.c.s
@@ -2424,8 +2424,8 @@ src/render/direct3d/SDL_render_d3d.s: src/render/direct3d/SDL_render_d3d.c.s
 
 # target to generate assembly for a file
 src/render/direct3d/SDL_render_d3d.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_render_d3d.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_render_d3d.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_render_d3d.c.s
 .PHONY : src/render/direct3d/SDL_render_d3d.c.s
 
 src/render/direct3d/SDL_shaders_d3d.o: src/render/direct3d/SDL_shaders_d3d.c.o
@@ -2433,8 +2433,8 @@ src/render/direct3d/SDL_shaders_d3d.o: src/render/direct3d/SDL_shaders_d3d.c.o
 
 # target to build an object file
 src/render/direct3d/SDL_shaders_d3d.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_shaders_d3d.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_shaders_d3d.c.o
 .PHONY : src/render/direct3d/SDL_shaders_d3d.c.o
 
 src/render/direct3d/SDL_shaders_d3d.i: src/render/direct3d/SDL_shaders_d3d.c.i
@@ -2442,8 +2442,8 @@ src/render/direct3d/SDL_shaders_d3d.i: src/render/direct3d/SDL_shaders_d3d.c.i
 
 # target to preprocess a source file
 src/render/direct3d/SDL_shaders_d3d.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_shaders_d3d.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_shaders_d3d.c.i
 .PHONY : src/render/direct3d/SDL_shaders_d3d.c.i
 
 src/render/direct3d/SDL_shaders_d3d.s: src/render/direct3d/SDL_shaders_d3d.c.s
@@ -2451,8 +2451,8 @@ src/render/direct3d/SDL_shaders_d3d.s: src/render/direct3d/SDL_shaders_d3d.c.s
 
 # target to generate assembly for a file
 src/render/direct3d/SDL_shaders_d3d.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_shaders_d3d.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d/SDL_shaders_d3d.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d/SDL_shaders_d3d.c.s
 .PHONY : src/render/direct3d/SDL_shaders_d3d.c.s
 
 src/render/direct3d11/SDL_render_d3d11.o: src/render/direct3d11/SDL_render_d3d11.c.o
@@ -2460,8 +2460,8 @@ src/render/direct3d11/SDL_render_d3d11.o: src/render/direct3d11/SDL_render_d3d11
 
 # target to build an object file
 src/render/direct3d11/SDL_render_d3d11.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_render_d3d11.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_render_d3d11.c.o
 .PHONY : src/render/direct3d11/SDL_render_d3d11.c.o
 
 src/render/direct3d11/SDL_render_d3d11.i: src/render/direct3d11/SDL_render_d3d11.c.i
@@ -2469,8 +2469,8 @@ src/render/direct3d11/SDL_render_d3d11.i: src/render/direct3d11/SDL_render_d3d11
 
 # target to preprocess a source file
 src/render/direct3d11/SDL_render_d3d11.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_render_d3d11.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_render_d3d11.c.i
 .PHONY : src/render/direct3d11/SDL_render_d3d11.c.i
 
 src/render/direct3d11/SDL_render_d3d11.s: src/render/direct3d11/SDL_render_d3d11.c.s
@@ -2478,8 +2478,8 @@ src/render/direct3d11/SDL_render_d3d11.s: src/render/direct3d11/SDL_render_d3d11
 
 # target to generate assembly for a file
 src/render/direct3d11/SDL_render_d3d11.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_render_d3d11.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_render_d3d11.c.s
 .PHONY : src/render/direct3d11/SDL_render_d3d11.c.s
 
 src/render/direct3d11/SDL_shaders_d3d11.o: src/render/direct3d11/SDL_shaders_d3d11.c.o
@@ -2487,8 +2487,8 @@ src/render/direct3d11/SDL_shaders_d3d11.o: src/render/direct3d11/SDL_shaders_d3d
 
 # target to build an object file
 src/render/direct3d11/SDL_shaders_d3d11.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_shaders_d3d11.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_shaders_d3d11.c.o
 .PHONY : src/render/direct3d11/SDL_shaders_d3d11.c.o
 
 src/render/direct3d11/SDL_shaders_d3d11.i: src/render/direct3d11/SDL_shaders_d3d11.c.i
@@ -2496,8 +2496,8 @@ src/render/direct3d11/SDL_shaders_d3d11.i: src/render/direct3d11/SDL_shaders_d3d
 
 # target to preprocess a source file
 src/render/direct3d11/SDL_shaders_d3d11.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_shaders_d3d11.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_shaders_d3d11.c.i
 .PHONY : src/render/direct3d11/SDL_shaders_d3d11.c.i
 
 src/render/direct3d11/SDL_shaders_d3d11.s: src/render/direct3d11/SDL_shaders_d3d11.c.s
@@ -2505,8 +2505,8 @@ src/render/direct3d11/SDL_shaders_d3d11.s: src/render/direct3d11/SDL_shaders_d3d
 
 # target to generate assembly for a file
 src/render/direct3d11/SDL_shaders_d3d11.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_shaders_d3d11.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_shaders_d3d11.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/direct3d11/SDL_shaders_d3d11.c.s
 .PHONY : src/render/direct3d11/SDL_shaders_d3d11.c.s
 
 src/render/metal/SDL_render_metal.o: src/render/metal/SDL_render_metal.m.o
@@ -2514,8 +2514,8 @@ src/render/metal/SDL_render_metal.o: src/render/metal/SDL_render_metal.m.o
 
 # target to build an object file
 src/render/metal/SDL_render_metal.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/metal/SDL_render_metal.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/metal/SDL_render_metal.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/metal/SDL_render_metal.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/metal/SDL_render_metal.m.o
 .PHONY : src/render/metal/SDL_render_metal.m.o
 
 src/render/opengl/SDL_render_gl.o: src/render/opengl/SDL_render_gl.c.o
@@ -2523,8 +2523,8 @@ src/render/opengl/SDL_render_gl.o: src/render/opengl/SDL_render_gl.c.o
 
 # target to build an object file
 src/render/opengl/SDL_render_gl.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_render_gl.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_render_gl.c.o
 .PHONY : src/render/opengl/SDL_render_gl.c.o
 
 src/render/opengl/SDL_render_gl.i: src/render/opengl/SDL_render_gl.c.i
@@ -2532,8 +2532,8 @@ src/render/opengl/SDL_render_gl.i: src/render/opengl/SDL_render_gl.c.i
 
 # target to preprocess a source file
 src/render/opengl/SDL_render_gl.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_render_gl.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_render_gl.c.i
 .PHONY : src/render/opengl/SDL_render_gl.c.i
 
 src/render/opengl/SDL_render_gl.s: src/render/opengl/SDL_render_gl.c.s
@@ -2541,8 +2541,8 @@ src/render/opengl/SDL_render_gl.s: src/render/opengl/SDL_render_gl.c.s
 
 # target to generate assembly for a file
 src/render/opengl/SDL_render_gl.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_render_gl.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_render_gl.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_render_gl.c.s
 .PHONY : src/render/opengl/SDL_render_gl.c.s
 
 src/render/opengl/SDL_shaders_gl.o: src/render/opengl/SDL_shaders_gl.c.o
@@ -2550,8 +2550,8 @@ src/render/opengl/SDL_shaders_gl.o: src/render/opengl/SDL_shaders_gl.c.o
 
 # target to build an object file
 src/render/opengl/SDL_shaders_gl.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_shaders_gl.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_shaders_gl.c.o
 .PHONY : src/render/opengl/SDL_shaders_gl.c.o
 
 src/render/opengl/SDL_shaders_gl.i: src/render/opengl/SDL_shaders_gl.c.i
@@ -2559,8 +2559,8 @@ src/render/opengl/SDL_shaders_gl.i: src/render/opengl/SDL_shaders_gl.c.i
 
 # target to preprocess a source file
 src/render/opengl/SDL_shaders_gl.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_shaders_gl.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_shaders_gl.c.i
 .PHONY : src/render/opengl/SDL_shaders_gl.c.i
 
 src/render/opengl/SDL_shaders_gl.s: src/render/opengl/SDL_shaders_gl.c.s
@@ -2568,8 +2568,8 @@ src/render/opengl/SDL_shaders_gl.s: src/render/opengl/SDL_shaders_gl.c.s
 
 # target to generate assembly for a file
 src/render/opengl/SDL_shaders_gl.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_shaders_gl.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengl/SDL_shaders_gl.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengl/SDL_shaders_gl.c.s
 .PHONY : src/render/opengl/SDL_shaders_gl.c.s
 
 src/render/opengles/SDL_render_gles.o: src/render/opengles/SDL_render_gles.c.o
@@ -2577,8 +2577,8 @@ src/render/opengles/SDL_render_gles.o: src/render/opengles/SDL_render_gles.c.o
 
 # target to build an object file
 src/render/opengles/SDL_render_gles.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles/SDL_render_gles.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles/SDL_render_gles.c.o
 .PHONY : src/render/opengles/SDL_render_gles.c.o
 
 src/render/opengles/SDL_render_gles.i: src/render/opengles/SDL_render_gles.c.i
@@ -2586,8 +2586,8 @@ src/render/opengles/SDL_render_gles.i: src/render/opengles/SDL_render_gles.c.i
 
 # target to preprocess a source file
 src/render/opengles/SDL_render_gles.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles/SDL_render_gles.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles/SDL_render_gles.c.i
 .PHONY : src/render/opengles/SDL_render_gles.c.i
 
 src/render/opengles/SDL_render_gles.s: src/render/opengles/SDL_render_gles.c.s
@@ -2595,8 +2595,8 @@ src/render/opengles/SDL_render_gles.s: src/render/opengles/SDL_render_gles.c.s
 
 # target to generate assembly for a file
 src/render/opengles/SDL_render_gles.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles/SDL_render_gles.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles/SDL_render_gles.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles/SDL_render_gles.c.s
 .PHONY : src/render/opengles/SDL_render_gles.c.s
 
 src/render/opengles2/SDL_render_gles2.o: src/render/opengles2/SDL_render_gles2.c.o
@@ -2604,8 +2604,8 @@ src/render/opengles2/SDL_render_gles2.o: src/render/opengles2/SDL_render_gles2.c
 
 # target to build an object file
 src/render/opengles2/SDL_render_gles2.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_render_gles2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_render_gles2.c.o
 .PHONY : src/render/opengles2/SDL_render_gles2.c.o
 
 src/render/opengles2/SDL_render_gles2.i: src/render/opengles2/SDL_render_gles2.c.i
@@ -2613,8 +2613,8 @@ src/render/opengles2/SDL_render_gles2.i: src/render/opengles2/SDL_render_gles2.c
 
 # target to preprocess a source file
 src/render/opengles2/SDL_render_gles2.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_render_gles2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_render_gles2.c.i
 .PHONY : src/render/opengles2/SDL_render_gles2.c.i
 
 src/render/opengles2/SDL_render_gles2.s: src/render/opengles2/SDL_render_gles2.c.s
@@ -2622,8 +2622,8 @@ src/render/opengles2/SDL_render_gles2.s: src/render/opengles2/SDL_render_gles2.c
 
 # target to generate assembly for a file
 src/render/opengles2/SDL_render_gles2.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_render_gles2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_render_gles2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_render_gles2.c.s
 .PHONY : src/render/opengles2/SDL_render_gles2.c.s
 
 src/render/opengles2/SDL_shaders_gles2.o: src/render/opengles2/SDL_shaders_gles2.c.o
@@ -2631,8 +2631,8 @@ src/render/opengles2/SDL_shaders_gles2.o: src/render/opengles2/SDL_shaders_gles2
 
 # target to build an object file
 src/render/opengles2/SDL_shaders_gles2.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_shaders_gles2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_shaders_gles2.c.o
 .PHONY : src/render/opengles2/SDL_shaders_gles2.c.o
 
 src/render/opengles2/SDL_shaders_gles2.i: src/render/opengles2/SDL_shaders_gles2.c.i
@@ -2640,8 +2640,8 @@ src/render/opengles2/SDL_shaders_gles2.i: src/render/opengles2/SDL_shaders_gles2
 
 # target to preprocess a source file
 src/render/opengles2/SDL_shaders_gles2.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_shaders_gles2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_shaders_gles2.c.i
 .PHONY : src/render/opengles2/SDL_shaders_gles2.c.i
 
 src/render/opengles2/SDL_shaders_gles2.s: src/render/opengles2/SDL_shaders_gles2.c.s
@@ -2649,8 +2649,8 @@ src/render/opengles2/SDL_shaders_gles2.s: src/render/opengles2/SDL_shaders_gles2
 
 # target to generate assembly for a file
 src/render/opengles2/SDL_shaders_gles2.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_shaders_gles2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/opengles2/SDL_shaders_gles2.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/opengles2/SDL_shaders_gles2.c.s
 .PHONY : src/render/opengles2/SDL_shaders_gles2.c.s
 
 src/render/psp/SDL_render_psp.o: src/render/psp/SDL_render_psp.c.o
@@ -2658,8 +2658,8 @@ src/render/psp/SDL_render_psp.o: src/render/psp/SDL_render_psp.c.o
 
 # target to build an object file
 src/render/psp/SDL_render_psp.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/psp/SDL_render_psp.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/psp/SDL_render_psp.c.o
 .PHONY : src/render/psp/SDL_render_psp.c.o
 
 src/render/psp/SDL_render_psp.i: src/render/psp/SDL_render_psp.c.i
@@ -2667,8 +2667,8 @@ src/render/psp/SDL_render_psp.i: src/render/psp/SDL_render_psp.c.i
 
 # target to preprocess a source file
 src/render/psp/SDL_render_psp.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/psp/SDL_render_psp.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/psp/SDL_render_psp.c.i
 .PHONY : src/render/psp/SDL_render_psp.c.i
 
 src/render/psp/SDL_render_psp.s: src/render/psp/SDL_render_psp.c.s
@@ -2676,8 +2676,8 @@ src/render/psp/SDL_render_psp.s: src/render/psp/SDL_render_psp.c.s
 
 # target to generate assembly for a file
 src/render/psp/SDL_render_psp.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/psp/SDL_render_psp.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/psp/SDL_render_psp.c.s
 .PHONY : src/render/psp/SDL_render_psp.c.s
 
 src/render/software/SDL_blendfillrect.o: src/render/software/SDL_blendfillrect.c.o
@@ -2685,8 +2685,8 @@ src/render/software/SDL_blendfillrect.o: src/render/software/SDL_blendfillrect.c
 
 # target to build an object file
 src/render/software/SDL_blendfillrect.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendfillrect.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendfillrect.c.o
 .PHONY : src/render/software/SDL_blendfillrect.c.o
 
 src/render/software/SDL_blendfillrect.i: src/render/software/SDL_blendfillrect.c.i
@@ -2694,8 +2694,8 @@ src/render/software/SDL_blendfillrect.i: src/render/software/SDL_blendfillrect.c
 
 # target to preprocess a source file
 src/render/software/SDL_blendfillrect.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendfillrect.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendfillrect.c.i
 .PHONY : src/render/software/SDL_blendfillrect.c.i
 
 src/render/software/SDL_blendfillrect.s: src/render/software/SDL_blendfillrect.c.s
@@ -2703,8 +2703,8 @@ src/render/software/SDL_blendfillrect.s: src/render/software/SDL_blendfillrect.c
 
 # target to generate assembly for a file
 src/render/software/SDL_blendfillrect.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendfillrect.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendfillrect.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendfillrect.c.s
 .PHONY : src/render/software/SDL_blendfillrect.c.s
 
 src/render/software/SDL_blendline.o: src/render/software/SDL_blendline.c.o
@@ -2712,8 +2712,8 @@ src/render/software/SDL_blendline.o: src/render/software/SDL_blendline.c.o
 
 # target to build an object file
 src/render/software/SDL_blendline.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendline.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendline.c.o
 .PHONY : src/render/software/SDL_blendline.c.o
 
 src/render/software/SDL_blendline.i: src/render/software/SDL_blendline.c.i
@@ -2721,8 +2721,8 @@ src/render/software/SDL_blendline.i: src/render/software/SDL_blendline.c.i
 
 # target to preprocess a source file
 src/render/software/SDL_blendline.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendline.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendline.c.i
 .PHONY : src/render/software/SDL_blendline.c.i
 
 src/render/software/SDL_blendline.s: src/render/software/SDL_blendline.c.s
@@ -2730,8 +2730,8 @@ src/render/software/SDL_blendline.s: src/render/software/SDL_blendline.c.s
 
 # target to generate assembly for a file
 src/render/software/SDL_blendline.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendline.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendline.c.s
 .PHONY : src/render/software/SDL_blendline.c.s
 
 src/render/software/SDL_blendpoint.o: src/render/software/SDL_blendpoint.c.o
@@ -2739,8 +2739,8 @@ src/render/software/SDL_blendpoint.o: src/render/software/SDL_blendpoint.c.o
 
 # target to build an object file
 src/render/software/SDL_blendpoint.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendpoint.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendpoint.c.o
 .PHONY : src/render/software/SDL_blendpoint.c.o
 
 src/render/software/SDL_blendpoint.i: src/render/software/SDL_blendpoint.c.i
@@ -2748,8 +2748,8 @@ src/render/software/SDL_blendpoint.i: src/render/software/SDL_blendpoint.c.i
 
 # target to preprocess a source file
 src/render/software/SDL_blendpoint.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendpoint.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendpoint.c.i
 .PHONY : src/render/software/SDL_blendpoint.c.i
 
 src/render/software/SDL_blendpoint.s: src/render/software/SDL_blendpoint.c.s
@@ -2757,8 +2757,8 @@ src/render/software/SDL_blendpoint.s: src/render/software/SDL_blendpoint.c.s
 
 # target to generate assembly for a file
 src/render/software/SDL_blendpoint.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendpoint.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_blendpoint.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_blendpoint.c.s
 .PHONY : src/render/software/SDL_blendpoint.c.s
 
 src/render/software/SDL_drawline.o: src/render/software/SDL_drawline.c.o
@@ -2766,8 +2766,8 @@ src/render/software/SDL_drawline.o: src/render/software/SDL_drawline.c.o
 
 # target to build an object file
 src/render/software/SDL_drawline.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawline.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawline.c.o
 .PHONY : src/render/software/SDL_drawline.c.o
 
 src/render/software/SDL_drawline.i: src/render/software/SDL_drawline.c.i
@@ -2775,8 +2775,8 @@ src/render/software/SDL_drawline.i: src/render/software/SDL_drawline.c.i
 
 # target to preprocess a source file
 src/render/software/SDL_drawline.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawline.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawline.c.i
 .PHONY : src/render/software/SDL_drawline.c.i
 
 src/render/software/SDL_drawline.s: src/render/software/SDL_drawline.c.s
@@ -2784,8 +2784,8 @@ src/render/software/SDL_drawline.s: src/render/software/SDL_drawline.c.s
 
 # target to generate assembly for a file
 src/render/software/SDL_drawline.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawline.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawline.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawline.c.s
 .PHONY : src/render/software/SDL_drawline.c.s
 
 src/render/software/SDL_drawpoint.o: src/render/software/SDL_drawpoint.c.o
@@ -2793,8 +2793,8 @@ src/render/software/SDL_drawpoint.o: src/render/software/SDL_drawpoint.c.o
 
 # target to build an object file
 src/render/software/SDL_drawpoint.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawpoint.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawpoint.c.o
 .PHONY : src/render/software/SDL_drawpoint.c.o
 
 src/render/software/SDL_drawpoint.i: src/render/software/SDL_drawpoint.c.i
@@ -2802,8 +2802,8 @@ src/render/software/SDL_drawpoint.i: src/render/software/SDL_drawpoint.c.i
 
 # target to preprocess a source file
 src/render/software/SDL_drawpoint.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawpoint.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawpoint.c.i
 .PHONY : src/render/software/SDL_drawpoint.c.i
 
 src/render/software/SDL_drawpoint.s: src/render/software/SDL_drawpoint.c.s
@@ -2811,8 +2811,8 @@ src/render/software/SDL_drawpoint.s: src/render/software/SDL_drawpoint.c.s
 
 # target to generate assembly for a file
 src/render/software/SDL_drawpoint.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawpoint.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_drawpoint.c.s
 .PHONY : src/render/software/SDL_drawpoint.c.s
 
 src/render/software/SDL_render_sw.o: src/render/software/SDL_render_sw.c.o
@@ -2820,8 +2820,8 @@ src/render/software/SDL_render_sw.o: src/render/software/SDL_render_sw.c.o
 
 # target to build an object file
 src/render/software/SDL_render_sw.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_render_sw.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_render_sw.c.o
 .PHONY : src/render/software/SDL_render_sw.c.o
 
 src/render/software/SDL_render_sw.i: src/render/software/SDL_render_sw.c.i
@@ -2829,8 +2829,8 @@ src/render/software/SDL_render_sw.i: src/render/software/SDL_render_sw.c.i
 
 # target to preprocess a source file
 src/render/software/SDL_render_sw.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_render_sw.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_render_sw.c.i
 .PHONY : src/render/software/SDL_render_sw.c.i
 
 src/render/software/SDL_render_sw.s: src/render/software/SDL_render_sw.c.s
@@ -2838,8 +2838,8 @@ src/render/software/SDL_render_sw.s: src/render/software/SDL_render_sw.c.s
 
 # target to generate assembly for a file
 src/render/software/SDL_render_sw.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_render_sw.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_render_sw.c.s
 .PHONY : src/render/software/SDL_render_sw.c.s
 
 src/render/software/SDL_rotate.o: src/render/software/SDL_rotate.c.o
@@ -2847,8 +2847,8 @@ src/render/software/SDL_rotate.o: src/render/software/SDL_rotate.c.o
 
 # target to build an object file
 src/render/software/SDL_rotate.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_rotate.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_rotate.c.o
 .PHONY : src/render/software/SDL_rotate.c.o
 
 src/render/software/SDL_rotate.i: src/render/software/SDL_rotate.c.i
@@ -2856,8 +2856,8 @@ src/render/software/SDL_rotate.i: src/render/software/SDL_rotate.c.i
 
 # target to preprocess a source file
 src/render/software/SDL_rotate.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_rotate.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_rotate.c.i
 .PHONY : src/render/software/SDL_rotate.c.i
 
 src/render/software/SDL_rotate.s: src/render/software/SDL_rotate.c.s
@@ -2865,8 +2865,8 @@ src/render/software/SDL_rotate.s: src/render/software/SDL_rotate.c.s
 
 # target to generate assembly for a file
 src/render/software/SDL_rotate.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_rotate.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_rotate.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_rotate.c.s
 .PHONY : src/render/software/SDL_rotate.c.s
 
 src/render/software/SDL_triangle.o: src/render/software/SDL_triangle.c.o
@@ -2874,8 +2874,8 @@ src/render/software/SDL_triangle.o: src/render/software/SDL_triangle.c.o
 
 # target to build an object file
 src/render/software/SDL_triangle.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_triangle.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_triangle.c.o
 .PHONY : src/render/software/SDL_triangle.c.o
 
 src/render/software/SDL_triangle.i: src/render/software/SDL_triangle.c.i
@@ -2883,8 +2883,8 @@ src/render/software/SDL_triangle.i: src/render/software/SDL_triangle.c.i
 
 # target to preprocess a source file
 src/render/software/SDL_triangle.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_triangle.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_triangle.c.i
 .PHONY : src/render/software/SDL_triangle.c.i
 
 src/render/software/SDL_triangle.s: src/render/software/SDL_triangle.c.s
@@ -2892,8 +2892,8 @@ src/render/software/SDL_triangle.s: src/render/software/SDL_triangle.c.s
 
 # target to generate assembly for a file
 src/render/software/SDL_triangle.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_triangle.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/software/SDL_triangle.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/software/SDL_triangle.c.s
 .PHONY : src/render/software/SDL_triangle.c.s
 
 src/render/vitagxm/SDL_render_vita_gxm.o: src/render/vitagxm/SDL_render_vita_gxm.c.o
@@ -2901,8 +2901,8 @@ src/render/vitagxm/SDL_render_vita_gxm.o: src/render/vitagxm/SDL_render_vita_gxm
 
 # target to build an object file
 src/render/vitagxm/SDL_render_vita_gxm.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm.c.o
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm.c.o
 
 src/render/vitagxm/SDL_render_vita_gxm.i: src/render/vitagxm/SDL_render_vita_gxm.c.i
@@ -2910,8 +2910,8 @@ src/render/vitagxm/SDL_render_vita_gxm.i: src/render/vitagxm/SDL_render_vita_gxm
 
 # target to preprocess a source file
 src/render/vitagxm/SDL_render_vita_gxm.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm.c.i
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm.c.i
 
 src/render/vitagxm/SDL_render_vita_gxm.s: src/render/vitagxm/SDL_render_vita_gxm.c.s
@@ -2919,8 +2919,8 @@ src/render/vitagxm/SDL_render_vita_gxm.s: src/render/vitagxm/SDL_render_vita_gxm
 
 # target to generate assembly for a file
 src/render/vitagxm/SDL_render_vita_gxm.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm.c.s
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm.c.s
 
 src/render/vitagxm/SDL_render_vita_gxm_memory.o: src/render/vitagxm/SDL_render_vita_gxm_memory.c.o
@@ -2928,8 +2928,8 @@ src/render/vitagxm/SDL_render_vita_gxm_memory.o: src/render/vitagxm/SDL_render_v
 
 # target to build an object file
 src/render/vitagxm/SDL_render_vita_gxm_memory.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.o
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm_memory.c.o
 
 src/render/vitagxm/SDL_render_vita_gxm_memory.i: src/render/vitagxm/SDL_render_vita_gxm_memory.c.i
@@ -2937,8 +2937,8 @@ src/render/vitagxm/SDL_render_vita_gxm_memory.i: src/render/vitagxm/SDL_render_v
 
 # target to preprocess a source file
 src/render/vitagxm/SDL_render_vita_gxm_memory.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.i
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm_memory.c.i
 
 src/render/vitagxm/SDL_render_vita_gxm_memory.s: src/render/vitagxm/SDL_render_vita_gxm_memory.c.s
@@ -2946,8 +2946,8 @@ src/render/vitagxm/SDL_render_vita_gxm_memory.s: src/render/vitagxm/SDL_render_v
 
 # target to generate assembly for a file
 src/render/vitagxm/SDL_render_vita_gxm_memory.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_memory.c.s
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm_memory.c.s
 
 src/render/vitagxm/SDL_render_vita_gxm_tools.o: src/render/vitagxm/SDL_render_vita_gxm_tools.c.o
@@ -2955,8 +2955,8 @@ src/render/vitagxm/SDL_render_vita_gxm_tools.o: src/render/vitagxm/SDL_render_vi
 
 # target to build an object file
 src/render/vitagxm/SDL_render_vita_gxm_tools.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.o
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm_tools.c.o
 
 src/render/vitagxm/SDL_render_vita_gxm_tools.i: src/render/vitagxm/SDL_render_vita_gxm_tools.c.i
@@ -2964,8 +2964,8 @@ src/render/vitagxm/SDL_render_vita_gxm_tools.i: src/render/vitagxm/SDL_render_vi
 
 # target to preprocess a source file
 src/render/vitagxm/SDL_render_vita_gxm_tools.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.i
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm_tools.c.i
 
 src/render/vitagxm/SDL_render_vita_gxm_tools.s: src/render/vitagxm/SDL_render_vita_gxm_tools.c.s
@@ -2973,8 +2973,8 @@ src/render/vitagxm/SDL_render_vita_gxm_tools.s: src/render/vitagxm/SDL_render_vi
 
 # target to generate assembly for a file
 src/render/vitagxm/SDL_render_vita_gxm_tools.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/render/vitagxm/SDL_render_vita_gxm_tools.c.s
 .PHONY : src/render/vitagxm/SDL_render_vita_gxm_tools.c.s
 
 src/sensor/SDL_sensor.o: src/sensor/SDL_sensor.c.o
@@ -2982,8 +2982,8 @@ src/sensor/SDL_sensor.o: src/sensor/SDL_sensor.c.o
 
 # target to build an object file
 src/sensor/SDL_sensor.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/SDL_sensor.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/SDL_sensor.c.o
 .PHONY : src/sensor/SDL_sensor.c.o
 
 src/sensor/SDL_sensor.i: src/sensor/SDL_sensor.c.i
@@ -2991,8 +2991,8 @@ src/sensor/SDL_sensor.i: src/sensor/SDL_sensor.c.i
 
 # target to preprocess a source file
 src/sensor/SDL_sensor.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/SDL_sensor.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/SDL_sensor.c.i
 .PHONY : src/sensor/SDL_sensor.c.i
 
 src/sensor/SDL_sensor.s: src/sensor/SDL_sensor.c.s
@@ -3000,8 +3000,8 @@ src/sensor/SDL_sensor.s: src/sensor/SDL_sensor.c.s
 
 # target to generate assembly for a file
 src/sensor/SDL_sensor.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/SDL_sensor.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/SDL_sensor.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/SDL_sensor.c.s
 .PHONY : src/sensor/SDL_sensor.c.s
 
 src/sensor/dummy/SDL_dummysensor.o: src/sensor/dummy/SDL_dummysensor.c.o
@@ -3009,8 +3009,8 @@ src/sensor/dummy/SDL_dummysensor.o: src/sensor/dummy/SDL_dummysensor.c.o
 
 # target to build an object file
 src/sensor/dummy/SDL_dummysensor.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o
 .PHONY : src/sensor/dummy/SDL_dummysensor.c.o
 
 src/sensor/dummy/SDL_dummysensor.i: src/sensor/dummy/SDL_dummysensor.c.i
@@ -3018,8 +3018,8 @@ src/sensor/dummy/SDL_dummysensor.i: src/sensor/dummy/SDL_dummysensor.c.i
 
 # target to preprocess a source file
 src/sensor/dummy/SDL_dummysensor.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.i
 .PHONY : src/sensor/dummy/SDL_dummysensor.c.i
 
 src/sensor/dummy/SDL_dummysensor.s: src/sensor/dummy/SDL_dummysensor.c.s
@@ -3027,8 +3027,8 @@ src/sensor/dummy/SDL_dummysensor.s: src/sensor/dummy/SDL_dummysensor.c.s
 
 # target to generate assembly for a file
 src/sensor/dummy/SDL_dummysensor.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/sensor/dummy/SDL_dummysensor.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.s
 .PHONY : src/sensor/dummy/SDL_dummysensor.c.s
 
 src/stdlib/SDL_crc32.o: src/stdlib/SDL_crc32.c.o
@@ -3036,8 +3036,8 @@ src/stdlib/SDL_crc32.o: src/stdlib/SDL_crc32.c.o
 
 # target to build an object file
 src/stdlib/SDL_crc32.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_crc32.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_crc32.c.o
 .PHONY : src/stdlib/SDL_crc32.c.o
 
 src/stdlib/SDL_crc32.i: src/stdlib/SDL_crc32.c.i
@@ -3045,8 +3045,8 @@ src/stdlib/SDL_crc32.i: src/stdlib/SDL_crc32.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_crc32.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_crc32.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_crc32.c.i
 .PHONY : src/stdlib/SDL_crc32.c.i
 
 src/stdlib/SDL_crc32.s: src/stdlib/SDL_crc32.c.s
@@ -3054,8 +3054,8 @@ src/stdlib/SDL_crc32.s: src/stdlib/SDL_crc32.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_crc32.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_crc32.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_crc32.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_crc32.c.s
 .PHONY : src/stdlib/SDL_crc32.c.s
 
 src/stdlib/SDL_getenv.o: src/stdlib/SDL_getenv.c.o
@@ -3063,8 +3063,8 @@ src/stdlib/SDL_getenv.o: src/stdlib/SDL_getenv.c.o
 
 # target to build an object file
 src/stdlib/SDL_getenv.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_getenv.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_getenv.c.o
 .PHONY : src/stdlib/SDL_getenv.c.o
 
 src/stdlib/SDL_getenv.i: src/stdlib/SDL_getenv.c.i
@@ -3072,8 +3072,8 @@ src/stdlib/SDL_getenv.i: src/stdlib/SDL_getenv.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_getenv.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_getenv.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_getenv.c.i
 .PHONY : src/stdlib/SDL_getenv.c.i
 
 src/stdlib/SDL_getenv.s: src/stdlib/SDL_getenv.c.s
@@ -3081,8 +3081,8 @@ src/stdlib/SDL_getenv.s: src/stdlib/SDL_getenv.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_getenv.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_getenv.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_getenv.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_getenv.c.s
 .PHONY : src/stdlib/SDL_getenv.c.s
 
 src/stdlib/SDL_iconv.o: src/stdlib/SDL_iconv.c.o
@@ -3090,8 +3090,8 @@ src/stdlib/SDL_iconv.o: src/stdlib/SDL_iconv.c.o
 
 # target to build an object file
 src/stdlib/SDL_iconv.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_iconv.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_iconv.c.o
 .PHONY : src/stdlib/SDL_iconv.c.o
 
 src/stdlib/SDL_iconv.i: src/stdlib/SDL_iconv.c.i
@@ -3099,8 +3099,8 @@ src/stdlib/SDL_iconv.i: src/stdlib/SDL_iconv.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_iconv.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_iconv.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_iconv.c.i
 .PHONY : src/stdlib/SDL_iconv.c.i
 
 src/stdlib/SDL_iconv.s: src/stdlib/SDL_iconv.c.s
@@ -3108,8 +3108,8 @@ src/stdlib/SDL_iconv.s: src/stdlib/SDL_iconv.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_iconv.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_iconv.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_iconv.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_iconv.c.s
 .PHONY : src/stdlib/SDL_iconv.c.s
 
 src/stdlib/SDL_malloc.o: src/stdlib/SDL_malloc.c.o
@@ -3117,8 +3117,8 @@ src/stdlib/SDL_malloc.o: src/stdlib/SDL_malloc.c.o
 
 # target to build an object file
 src/stdlib/SDL_malloc.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_malloc.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_malloc.c.o
 .PHONY : src/stdlib/SDL_malloc.c.o
 
 src/stdlib/SDL_malloc.i: src/stdlib/SDL_malloc.c.i
@@ -3126,8 +3126,8 @@ src/stdlib/SDL_malloc.i: src/stdlib/SDL_malloc.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_malloc.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_malloc.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_malloc.c.i
 .PHONY : src/stdlib/SDL_malloc.c.i
 
 src/stdlib/SDL_malloc.s: src/stdlib/SDL_malloc.c.s
@@ -3135,8 +3135,8 @@ src/stdlib/SDL_malloc.s: src/stdlib/SDL_malloc.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_malloc.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_malloc.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_malloc.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_malloc.c.s
 .PHONY : src/stdlib/SDL_malloc.c.s
 
 src/stdlib/SDL_qsort.o: src/stdlib/SDL_qsort.c.o
@@ -3144,8 +3144,8 @@ src/stdlib/SDL_qsort.o: src/stdlib/SDL_qsort.c.o
 
 # target to build an object file
 src/stdlib/SDL_qsort.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_qsort.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_qsort.c.o
 .PHONY : src/stdlib/SDL_qsort.c.o
 
 src/stdlib/SDL_qsort.i: src/stdlib/SDL_qsort.c.i
@@ -3153,8 +3153,8 @@ src/stdlib/SDL_qsort.i: src/stdlib/SDL_qsort.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_qsort.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_qsort.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_qsort.c.i
 .PHONY : src/stdlib/SDL_qsort.c.i
 
 src/stdlib/SDL_qsort.s: src/stdlib/SDL_qsort.c.s
@@ -3162,8 +3162,8 @@ src/stdlib/SDL_qsort.s: src/stdlib/SDL_qsort.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_qsort.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_qsort.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_qsort.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_qsort.c.s
 .PHONY : src/stdlib/SDL_qsort.c.s
 
 src/stdlib/SDL_stdlib.o: src/stdlib/SDL_stdlib.c.o
@@ -3171,8 +3171,8 @@ src/stdlib/SDL_stdlib.o: src/stdlib/SDL_stdlib.c.o
 
 # target to build an object file
 src/stdlib/SDL_stdlib.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_stdlib.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_stdlib.c.o
 .PHONY : src/stdlib/SDL_stdlib.c.o
 
 src/stdlib/SDL_stdlib.i: src/stdlib/SDL_stdlib.c.i
@@ -3180,8 +3180,8 @@ src/stdlib/SDL_stdlib.i: src/stdlib/SDL_stdlib.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_stdlib.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_stdlib.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_stdlib.c.i
 .PHONY : src/stdlib/SDL_stdlib.c.i
 
 src/stdlib/SDL_stdlib.s: src/stdlib/SDL_stdlib.c.s
@@ -3189,8 +3189,8 @@ src/stdlib/SDL_stdlib.s: src/stdlib/SDL_stdlib.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_stdlib.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_stdlib.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_stdlib.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_stdlib.c.s
 .PHONY : src/stdlib/SDL_stdlib.c.s
 
 src/stdlib/SDL_string.o: src/stdlib/SDL_string.c.o
@@ -3198,8 +3198,8 @@ src/stdlib/SDL_string.o: src/stdlib/SDL_string.c.o
 
 # target to build an object file
 src/stdlib/SDL_string.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_string.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_string.c.o
 .PHONY : src/stdlib/SDL_string.c.o
 
 src/stdlib/SDL_string.i: src/stdlib/SDL_string.c.i
@@ -3207,8 +3207,8 @@ src/stdlib/SDL_string.i: src/stdlib/SDL_string.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_string.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_string.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_string.c.i
 .PHONY : src/stdlib/SDL_string.c.i
 
 src/stdlib/SDL_string.s: src/stdlib/SDL_string.c.s
@@ -3216,8 +3216,8 @@ src/stdlib/SDL_string.s: src/stdlib/SDL_string.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_string.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_string.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_string.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_string.c.s
 .PHONY : src/stdlib/SDL_string.c.s
 
 src/stdlib/SDL_strtokr.o: src/stdlib/SDL_strtokr.c.o
@@ -3225,8 +3225,8 @@ src/stdlib/SDL_strtokr.o: src/stdlib/SDL_strtokr.c.o
 
 # target to build an object file
 src/stdlib/SDL_strtokr.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_strtokr.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_strtokr.c.o
 .PHONY : src/stdlib/SDL_strtokr.c.o
 
 src/stdlib/SDL_strtokr.i: src/stdlib/SDL_strtokr.c.i
@@ -3234,8 +3234,8 @@ src/stdlib/SDL_strtokr.i: src/stdlib/SDL_strtokr.c.i
 
 # target to preprocess a source file
 src/stdlib/SDL_strtokr.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_strtokr.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_strtokr.c.i
 .PHONY : src/stdlib/SDL_strtokr.c.i
 
 src/stdlib/SDL_strtokr.s: src/stdlib/SDL_strtokr.c.s
@@ -3243,8 +3243,8 @@ src/stdlib/SDL_strtokr.s: src/stdlib/SDL_strtokr.c.s
 
 # target to generate assembly for a file
 src/stdlib/SDL_strtokr.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_strtokr.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/stdlib/SDL_strtokr.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/stdlib/SDL_strtokr.c.s
 .PHONY : src/stdlib/SDL_strtokr.c.s
 
 src/thread/SDL_thread.o: src/thread/SDL_thread.c.o
@@ -3252,8 +3252,8 @@ src/thread/SDL_thread.o: src/thread/SDL_thread.c.o
 
 # target to build an object file
 src/thread/SDL_thread.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/SDL_thread.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/SDL_thread.c.o
 .PHONY : src/thread/SDL_thread.c.o
 
 src/thread/SDL_thread.i: src/thread/SDL_thread.c.i
@@ -3261,8 +3261,8 @@ src/thread/SDL_thread.i: src/thread/SDL_thread.c.i
 
 # target to preprocess a source file
 src/thread/SDL_thread.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/SDL_thread.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/SDL_thread.c.i
 .PHONY : src/thread/SDL_thread.c.i
 
 src/thread/SDL_thread.s: src/thread/SDL_thread.c.s
@@ -3270,8 +3270,8 @@ src/thread/SDL_thread.s: src/thread/SDL_thread.c.s
 
 # target to generate assembly for a file
 src/thread/SDL_thread.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/SDL_thread.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/SDL_thread.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/SDL_thread.c.s
 .PHONY : src/thread/SDL_thread.c.s
 
 src/thread/pthread/SDL_syscond.o: src/thread/pthread/SDL_syscond.c.o
@@ -3279,8 +3279,8 @@ src/thread/pthread/SDL_syscond.o: src/thread/pthread/SDL_syscond.c.o
 
 # target to build an object file
 src/thread/pthread/SDL_syscond.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o
 .PHONY : src/thread/pthread/SDL_syscond.c.o
 
 src/thread/pthread/SDL_syscond.i: src/thread/pthread/SDL_syscond.c.i
@@ -3288,8 +3288,8 @@ src/thread/pthread/SDL_syscond.i: src/thread/pthread/SDL_syscond.c.i
 
 # target to preprocess a source file
 src/thread/pthread/SDL_syscond.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.i
 .PHONY : src/thread/pthread/SDL_syscond.c.i
 
 src/thread/pthread/SDL_syscond.s: src/thread/pthread/SDL_syscond.c.s
@@ -3297,8 +3297,8 @@ src/thread/pthread/SDL_syscond.s: src/thread/pthread/SDL_syscond.c.s
 
 # target to generate assembly for a file
 src/thread/pthread/SDL_syscond.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syscond.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.s
 .PHONY : src/thread/pthread/SDL_syscond.c.s
 
 src/thread/pthread/SDL_sysmutex.o: src/thread/pthread/SDL_sysmutex.c.o
@@ -3306,8 +3306,8 @@ src/thread/pthread/SDL_sysmutex.o: src/thread/pthread/SDL_sysmutex.c.o
 
 # target to build an object file
 src/thread/pthread/SDL_sysmutex.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o
 .PHONY : src/thread/pthread/SDL_sysmutex.c.o
 
 src/thread/pthread/SDL_sysmutex.i: src/thread/pthread/SDL_sysmutex.c.i
@@ -3315,8 +3315,8 @@ src/thread/pthread/SDL_sysmutex.i: src/thread/pthread/SDL_sysmutex.c.i
 
 # target to preprocess a source file
 src/thread/pthread/SDL_sysmutex.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.i
 .PHONY : src/thread/pthread/SDL_sysmutex.c.i
 
 src/thread/pthread/SDL_sysmutex.s: src/thread/pthread/SDL_sysmutex.c.s
@@ -3324,8 +3324,8 @@ src/thread/pthread/SDL_sysmutex.s: src/thread/pthread/SDL_sysmutex.c.s
 
 # target to generate assembly for a file
 src/thread/pthread/SDL_sysmutex.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_sysmutex.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.s
 .PHONY : src/thread/pthread/SDL_sysmutex.c.s
 
 src/thread/pthread/SDL_syssem.o: src/thread/pthread/SDL_syssem.c.o
@@ -3333,8 +3333,8 @@ src/thread/pthread/SDL_syssem.o: src/thread/pthread/SDL_syssem.c.o
 
 # target to build an object file
 src/thread/pthread/SDL_syssem.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o
 .PHONY : src/thread/pthread/SDL_syssem.c.o
 
 src/thread/pthread/SDL_syssem.i: src/thread/pthread/SDL_syssem.c.i
@@ -3342,8 +3342,8 @@ src/thread/pthread/SDL_syssem.i: src/thread/pthread/SDL_syssem.c.i
 
 # target to preprocess a source file
 src/thread/pthread/SDL_syssem.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.i
 .PHONY : src/thread/pthread/SDL_syssem.c.i
 
 src/thread/pthread/SDL_syssem.s: src/thread/pthread/SDL_syssem.c.s
@@ -3351,8 +3351,8 @@ src/thread/pthread/SDL_syssem.s: src/thread/pthread/SDL_syssem.c.s
 
 # target to generate assembly for a file
 src/thread/pthread/SDL_syssem.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_syssem.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.s
 .PHONY : src/thread/pthread/SDL_syssem.c.s
 
 src/thread/pthread/SDL_systhread.o: src/thread/pthread/SDL_systhread.c.o
@@ -3360,8 +3360,8 @@ src/thread/pthread/SDL_systhread.o: src/thread/pthread/SDL_systhread.c.o
 
 # target to build an object file
 src/thread/pthread/SDL_systhread.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o
 .PHONY : src/thread/pthread/SDL_systhread.c.o
 
 src/thread/pthread/SDL_systhread.i: src/thread/pthread/SDL_systhread.c.i
@@ -3369,8 +3369,8 @@ src/thread/pthread/SDL_systhread.i: src/thread/pthread/SDL_systhread.c.i
 
 # target to preprocess a source file
 src/thread/pthread/SDL_systhread.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.i
 .PHONY : src/thread/pthread/SDL_systhread.c.i
 
 src/thread/pthread/SDL_systhread.s: src/thread/pthread/SDL_systhread.c.s
@@ -3378,8 +3378,8 @@ src/thread/pthread/SDL_systhread.s: src/thread/pthread/SDL_systhread.c.s
 
 # target to generate assembly for a file
 src/thread/pthread/SDL_systhread.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systhread.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.s
 .PHONY : src/thread/pthread/SDL_systhread.c.s
 
 src/thread/pthread/SDL_systls.o: src/thread/pthread/SDL_systls.c.o
@@ -3387,8 +3387,8 @@ src/thread/pthread/SDL_systls.o: src/thread/pthread/SDL_systls.c.o
 
 # target to build an object file
 src/thread/pthread/SDL_systls.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o
 .PHONY : src/thread/pthread/SDL_systls.c.o
 
 src/thread/pthread/SDL_systls.i: src/thread/pthread/SDL_systls.c.i
@@ -3396,8 +3396,8 @@ src/thread/pthread/SDL_systls.i: src/thread/pthread/SDL_systls.c.i
 
 # target to preprocess a source file
 src/thread/pthread/SDL_systls.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.i
 .PHONY : src/thread/pthread/SDL_systls.c.i
 
 src/thread/pthread/SDL_systls.s: src/thread/pthread/SDL_systls.c.s
@@ -3405,8 +3405,8 @@ src/thread/pthread/SDL_systls.s: src/thread/pthread/SDL_systls.c.s
 
 # target to generate assembly for a file
 src/thread/pthread/SDL_systls.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/thread/pthread/SDL_systls.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.s
 .PHONY : src/thread/pthread/SDL_systls.c.s
 
 src/timer/SDL_timer.o: src/timer/SDL_timer.c.o
@@ -3414,8 +3414,8 @@ src/timer/SDL_timer.o: src/timer/SDL_timer.c.o
 
 # target to build an object file
 src/timer/SDL_timer.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/SDL_timer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/SDL_timer.c.o
 .PHONY : src/timer/SDL_timer.c.o
 
 src/timer/SDL_timer.i: src/timer/SDL_timer.c.i
@@ -3423,8 +3423,8 @@ src/timer/SDL_timer.i: src/timer/SDL_timer.c.i
 
 # target to preprocess a source file
 src/timer/SDL_timer.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/SDL_timer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/SDL_timer.c.i
 .PHONY : src/timer/SDL_timer.c.i
 
 src/timer/SDL_timer.s: src/timer/SDL_timer.c.s
@@ -3432,8 +3432,8 @@ src/timer/SDL_timer.s: src/timer/SDL_timer.c.s
 
 # target to generate assembly for a file
 src/timer/SDL_timer.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/SDL_timer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/SDL_timer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/SDL_timer.c.s
 .PHONY : src/timer/SDL_timer.c.s
 
 src/timer/unix/SDL_systimer.o: src/timer/unix/SDL_systimer.c.o
@@ -3441,8 +3441,8 @@ src/timer/unix/SDL_systimer.o: src/timer/unix/SDL_systimer.c.o
 
 # target to build an object file
 src/timer/unix/SDL_systimer.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o
 .PHONY : src/timer/unix/SDL_systimer.c.o
 
 src/timer/unix/SDL_systimer.i: src/timer/unix/SDL_systimer.c.i
@@ -3450,8 +3450,8 @@ src/timer/unix/SDL_systimer.i: src/timer/unix/SDL_systimer.c.i
 
 # target to preprocess a source file
 src/timer/unix/SDL_systimer.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.i
 .PHONY : src/timer/unix/SDL_systimer.c.i
 
 src/timer/unix/SDL_systimer.s: src/timer/unix/SDL_systimer.c.s
@@ -3459,8 +3459,8 @@ src/timer/unix/SDL_systimer.s: src/timer/unix/SDL_systimer.c.s
 
 # target to generate assembly for a file
 src/timer/unix/SDL_systimer.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/timer/unix/SDL_systimer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.s
 .PHONY : src/timer/unix/SDL_systimer.c.s
 
 src/video/SDL_RLEaccel.o: src/video/SDL_RLEaccel.c.o
@@ -3468,8 +3468,8 @@ src/video/SDL_RLEaccel.o: src/video/SDL_RLEaccel.c.o
 
 # target to build an object file
 src/video/SDL_RLEaccel.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_RLEaccel.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_RLEaccel.c.o
 .PHONY : src/video/SDL_RLEaccel.c.o
 
 src/video/SDL_RLEaccel.i: src/video/SDL_RLEaccel.c.i
@@ -3477,8 +3477,8 @@ src/video/SDL_RLEaccel.i: src/video/SDL_RLEaccel.c.i
 
 # target to preprocess a source file
 src/video/SDL_RLEaccel.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_RLEaccel.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_RLEaccel.c.i
 .PHONY : src/video/SDL_RLEaccel.c.i
 
 src/video/SDL_RLEaccel.s: src/video/SDL_RLEaccel.c.s
@@ -3486,8 +3486,8 @@ src/video/SDL_RLEaccel.s: src/video/SDL_RLEaccel.c.s
 
 # target to generate assembly for a file
 src/video/SDL_RLEaccel.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_RLEaccel.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_RLEaccel.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_RLEaccel.c.s
 .PHONY : src/video/SDL_RLEaccel.c.s
 
 src/video/SDL_blit.o: src/video/SDL_blit.c.o
@@ -3495,8 +3495,8 @@ src/video/SDL_blit.o: src/video/SDL_blit.c.o
 
 # target to build an object file
 src/video/SDL_blit.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit.c.o
 .PHONY : src/video/SDL_blit.c.o
 
 src/video/SDL_blit.i: src/video/SDL_blit.c.i
@@ -3504,8 +3504,8 @@ src/video/SDL_blit.i: src/video/SDL_blit.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit.c.i
 .PHONY : src/video/SDL_blit.c.i
 
 src/video/SDL_blit.s: src/video/SDL_blit.c.s
@@ -3513,8 +3513,8 @@ src/video/SDL_blit.s: src/video/SDL_blit.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit.c.s
 .PHONY : src/video/SDL_blit.c.s
 
 src/video/SDL_blit_0.o: src/video/SDL_blit_0.c.o
@@ -3522,8 +3522,8 @@ src/video/SDL_blit_0.o: src/video/SDL_blit_0.c.o
 
 # target to build an object file
 src/video/SDL_blit_0.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_0.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_0.c.o
 .PHONY : src/video/SDL_blit_0.c.o
 
 src/video/SDL_blit_0.i: src/video/SDL_blit_0.c.i
@@ -3531,8 +3531,8 @@ src/video/SDL_blit_0.i: src/video/SDL_blit_0.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit_0.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_0.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_0.c.i
 .PHONY : src/video/SDL_blit_0.c.i
 
 src/video/SDL_blit_0.s: src/video/SDL_blit_0.c.s
@@ -3540,8 +3540,8 @@ src/video/SDL_blit_0.s: src/video/SDL_blit_0.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit_0.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_0.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_0.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_0.c.s
 .PHONY : src/video/SDL_blit_0.c.s
 
 src/video/SDL_blit_1.o: src/video/SDL_blit_1.c.o
@@ -3549,8 +3549,8 @@ src/video/SDL_blit_1.o: src/video/SDL_blit_1.c.o
 
 # target to build an object file
 src/video/SDL_blit_1.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_1.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_1.c.o
 .PHONY : src/video/SDL_blit_1.c.o
 
 src/video/SDL_blit_1.i: src/video/SDL_blit_1.c.i
@@ -3558,8 +3558,8 @@ src/video/SDL_blit_1.i: src/video/SDL_blit_1.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit_1.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_1.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_1.c.i
 .PHONY : src/video/SDL_blit_1.c.i
 
 src/video/SDL_blit_1.s: src/video/SDL_blit_1.c.s
@@ -3567,8 +3567,8 @@ src/video/SDL_blit_1.s: src/video/SDL_blit_1.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit_1.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_1.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_1.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_1.c.s
 .PHONY : src/video/SDL_blit_1.c.s
 
 src/video/SDL_blit_A.o: src/video/SDL_blit_A.c.o
@@ -3576,8 +3576,8 @@ src/video/SDL_blit_A.o: src/video/SDL_blit_A.c.o
 
 # target to build an object file
 src/video/SDL_blit_A.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_A.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_A.c.o
 .PHONY : src/video/SDL_blit_A.c.o
 
 src/video/SDL_blit_A.i: src/video/SDL_blit_A.c.i
@@ -3585,8 +3585,8 @@ src/video/SDL_blit_A.i: src/video/SDL_blit_A.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit_A.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_A.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_A.c.i
 .PHONY : src/video/SDL_blit_A.c.i
 
 src/video/SDL_blit_A.s: src/video/SDL_blit_A.c.s
@@ -3594,8 +3594,8 @@ src/video/SDL_blit_A.s: src/video/SDL_blit_A.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit_A.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_A.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_A.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_A.c.s
 .PHONY : src/video/SDL_blit_A.c.s
 
 src/video/SDL_blit_N.o: src/video/SDL_blit_N.c.o
@@ -3603,8 +3603,8 @@ src/video/SDL_blit_N.o: src/video/SDL_blit_N.c.o
 
 # target to build an object file
 src/video/SDL_blit_N.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_N.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_N.c.o
 .PHONY : src/video/SDL_blit_N.c.o
 
 src/video/SDL_blit_N.i: src/video/SDL_blit_N.c.i
@@ -3612,8 +3612,8 @@ src/video/SDL_blit_N.i: src/video/SDL_blit_N.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit_N.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_N.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_N.c.i
 .PHONY : src/video/SDL_blit_N.c.i
 
 src/video/SDL_blit_N.s: src/video/SDL_blit_N.c.s
@@ -3621,8 +3621,8 @@ src/video/SDL_blit_N.s: src/video/SDL_blit_N.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit_N.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_N.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_N.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_N.c.s
 .PHONY : src/video/SDL_blit_N.c.s
 
 src/video/SDL_blit_auto.o: src/video/SDL_blit_auto.c.o
@@ -3630,8 +3630,8 @@ src/video/SDL_blit_auto.o: src/video/SDL_blit_auto.c.o
 
 # target to build an object file
 src/video/SDL_blit_auto.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_auto.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_auto.c.o
 .PHONY : src/video/SDL_blit_auto.c.o
 
 src/video/SDL_blit_auto.i: src/video/SDL_blit_auto.c.i
@@ -3639,8 +3639,8 @@ src/video/SDL_blit_auto.i: src/video/SDL_blit_auto.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit_auto.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_auto.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_auto.c.i
 .PHONY : src/video/SDL_blit_auto.c.i
 
 src/video/SDL_blit_auto.s: src/video/SDL_blit_auto.c.s
@@ -3648,8 +3648,8 @@ src/video/SDL_blit_auto.s: src/video/SDL_blit_auto.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit_auto.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_auto.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_auto.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_auto.c.s
 .PHONY : src/video/SDL_blit_auto.c.s
 
 src/video/SDL_blit_copy.o: src/video/SDL_blit_copy.c.o
@@ -3657,8 +3657,8 @@ src/video/SDL_blit_copy.o: src/video/SDL_blit_copy.c.o
 
 # target to build an object file
 src/video/SDL_blit_copy.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_copy.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_copy.c.o
 .PHONY : src/video/SDL_blit_copy.c.o
 
 src/video/SDL_blit_copy.i: src/video/SDL_blit_copy.c.i
@@ -3666,8 +3666,8 @@ src/video/SDL_blit_copy.i: src/video/SDL_blit_copy.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit_copy.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_copy.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_copy.c.i
 .PHONY : src/video/SDL_blit_copy.c.i
 
 src/video/SDL_blit_copy.s: src/video/SDL_blit_copy.c.s
@@ -3675,8 +3675,8 @@ src/video/SDL_blit_copy.s: src/video/SDL_blit_copy.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit_copy.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_copy.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_copy.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_copy.c.s
 .PHONY : src/video/SDL_blit_copy.c.s
 
 src/video/SDL_blit_slow.o: src/video/SDL_blit_slow.c.o
@@ -3684,8 +3684,8 @@ src/video/SDL_blit_slow.o: src/video/SDL_blit_slow.c.o
 
 # target to build an object file
 src/video/SDL_blit_slow.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_slow.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_slow.c.o
 .PHONY : src/video/SDL_blit_slow.c.o
 
 src/video/SDL_blit_slow.i: src/video/SDL_blit_slow.c.i
@@ -3693,8 +3693,8 @@ src/video/SDL_blit_slow.i: src/video/SDL_blit_slow.c.i
 
 # target to preprocess a source file
 src/video/SDL_blit_slow.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_slow.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_slow.c.i
 .PHONY : src/video/SDL_blit_slow.c.i
 
 src/video/SDL_blit_slow.s: src/video/SDL_blit_slow.c.s
@@ -3702,8 +3702,8 @@ src/video/SDL_blit_slow.s: src/video/SDL_blit_slow.c.s
 
 # target to generate assembly for a file
 src/video/SDL_blit_slow.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_slow.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_blit_slow.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_blit_slow.c.s
 .PHONY : src/video/SDL_blit_slow.c.s
 
 src/video/SDL_bmp.o: src/video/SDL_bmp.c.o
@@ -3711,8 +3711,8 @@ src/video/SDL_bmp.o: src/video/SDL_bmp.c.o
 
 # target to build an object file
 src/video/SDL_bmp.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_bmp.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_bmp.c.o
 .PHONY : src/video/SDL_bmp.c.o
 
 src/video/SDL_bmp.i: src/video/SDL_bmp.c.i
@@ -3720,8 +3720,8 @@ src/video/SDL_bmp.i: src/video/SDL_bmp.c.i
 
 # target to preprocess a source file
 src/video/SDL_bmp.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_bmp.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_bmp.c.i
 .PHONY : src/video/SDL_bmp.c.i
 
 src/video/SDL_bmp.s: src/video/SDL_bmp.c.s
@@ -3729,8 +3729,8 @@ src/video/SDL_bmp.s: src/video/SDL_bmp.c.s
 
 # target to generate assembly for a file
 src/video/SDL_bmp.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_bmp.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_bmp.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_bmp.c.s
 .PHONY : src/video/SDL_bmp.c.s
 
 src/video/SDL_clipboard.o: src/video/SDL_clipboard.c.o
@@ -3738,8 +3738,8 @@ src/video/SDL_clipboard.o: src/video/SDL_clipboard.c.o
 
 # target to build an object file
 src/video/SDL_clipboard.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_clipboard.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_clipboard.c.o
 .PHONY : src/video/SDL_clipboard.c.o
 
 src/video/SDL_clipboard.i: src/video/SDL_clipboard.c.i
@@ -3747,8 +3747,8 @@ src/video/SDL_clipboard.i: src/video/SDL_clipboard.c.i
 
 # target to preprocess a source file
 src/video/SDL_clipboard.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_clipboard.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_clipboard.c.i
 .PHONY : src/video/SDL_clipboard.c.i
 
 src/video/SDL_clipboard.s: src/video/SDL_clipboard.c.s
@@ -3756,8 +3756,8 @@ src/video/SDL_clipboard.s: src/video/SDL_clipboard.c.s
 
 # target to generate assembly for a file
 src/video/SDL_clipboard.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_clipboard.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_clipboard.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_clipboard.c.s
 .PHONY : src/video/SDL_clipboard.c.s
 
 src/video/SDL_egl.o: src/video/SDL_egl.c.o
@@ -3765,8 +3765,8 @@ src/video/SDL_egl.o: src/video/SDL_egl.c.o
 
 # target to build an object file
 src/video/SDL_egl.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_egl.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_egl.c.o
 .PHONY : src/video/SDL_egl.c.o
 
 src/video/SDL_egl.i: src/video/SDL_egl.c.i
@@ -3774,8 +3774,8 @@ src/video/SDL_egl.i: src/video/SDL_egl.c.i
 
 # target to preprocess a source file
 src/video/SDL_egl.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_egl.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_egl.c.i
 .PHONY : src/video/SDL_egl.c.i
 
 src/video/SDL_egl.s: src/video/SDL_egl.c.s
@@ -3783,8 +3783,8 @@ src/video/SDL_egl.s: src/video/SDL_egl.c.s
 
 # target to generate assembly for a file
 src/video/SDL_egl.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_egl.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_egl.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_egl.c.s
 .PHONY : src/video/SDL_egl.c.s
 
 src/video/SDL_fillrect.o: src/video/SDL_fillrect.c.o
@@ -3792,8 +3792,8 @@ src/video/SDL_fillrect.o: src/video/SDL_fillrect.c.o
 
 # target to build an object file
 src/video/SDL_fillrect.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_fillrect.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_fillrect.c.o
 .PHONY : src/video/SDL_fillrect.c.o
 
 src/video/SDL_fillrect.i: src/video/SDL_fillrect.c.i
@@ -3801,8 +3801,8 @@ src/video/SDL_fillrect.i: src/video/SDL_fillrect.c.i
 
 # target to preprocess a source file
 src/video/SDL_fillrect.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_fillrect.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_fillrect.c.i
 .PHONY : src/video/SDL_fillrect.c.i
 
 src/video/SDL_fillrect.s: src/video/SDL_fillrect.c.s
@@ -3810,8 +3810,8 @@ src/video/SDL_fillrect.s: src/video/SDL_fillrect.c.s
 
 # target to generate assembly for a file
 src/video/SDL_fillrect.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_fillrect.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_fillrect.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_fillrect.c.s
 .PHONY : src/video/SDL_fillrect.c.s
 
 src/video/SDL_pixels.o: src/video/SDL_pixels.c.o
@@ -3819,8 +3819,8 @@ src/video/SDL_pixels.o: src/video/SDL_pixels.c.o
 
 # target to build an object file
 src/video/SDL_pixels.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_pixels.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_pixels.c.o
 .PHONY : src/video/SDL_pixels.c.o
 
 src/video/SDL_pixels.i: src/video/SDL_pixels.c.i
@@ -3828,8 +3828,8 @@ src/video/SDL_pixels.i: src/video/SDL_pixels.c.i
 
 # target to preprocess a source file
 src/video/SDL_pixels.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_pixels.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_pixels.c.i
 .PHONY : src/video/SDL_pixels.c.i
 
 src/video/SDL_pixels.s: src/video/SDL_pixels.c.s
@@ -3837,8 +3837,8 @@ src/video/SDL_pixels.s: src/video/SDL_pixels.c.s
 
 # target to generate assembly for a file
 src/video/SDL_pixels.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_pixels.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_pixels.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_pixels.c.s
 .PHONY : src/video/SDL_pixels.c.s
 
 src/video/SDL_rect.o: src/video/SDL_rect.c.o
@@ -3846,8 +3846,8 @@ src/video/SDL_rect.o: src/video/SDL_rect.c.o
 
 # target to build an object file
 src/video/SDL_rect.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_rect.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_rect.c.o
 .PHONY : src/video/SDL_rect.c.o
 
 src/video/SDL_rect.i: src/video/SDL_rect.c.i
@@ -3855,8 +3855,8 @@ src/video/SDL_rect.i: src/video/SDL_rect.c.i
 
 # target to preprocess a source file
 src/video/SDL_rect.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_rect.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_rect.c.i
 .PHONY : src/video/SDL_rect.c.i
 
 src/video/SDL_rect.s: src/video/SDL_rect.c.s
@@ -3864,8 +3864,8 @@ src/video/SDL_rect.s: src/video/SDL_rect.c.s
 
 # target to generate assembly for a file
 src/video/SDL_rect.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_rect.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_rect.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_rect.c.s
 .PHONY : src/video/SDL_rect.c.s
 
 src/video/SDL_shape.o: src/video/SDL_shape.c.o
@@ -3873,8 +3873,8 @@ src/video/SDL_shape.o: src/video/SDL_shape.c.o
 
 # target to build an object file
 src/video/SDL_shape.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_shape.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_shape.c.o
 .PHONY : src/video/SDL_shape.c.o
 
 src/video/SDL_shape.i: src/video/SDL_shape.c.i
@@ -3882,8 +3882,8 @@ src/video/SDL_shape.i: src/video/SDL_shape.c.i
 
 # target to preprocess a source file
 src/video/SDL_shape.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_shape.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_shape.c.i
 .PHONY : src/video/SDL_shape.c.i
 
 src/video/SDL_shape.s: src/video/SDL_shape.c.s
@@ -3891,8 +3891,8 @@ src/video/SDL_shape.s: src/video/SDL_shape.c.s
 
 # target to generate assembly for a file
 src/video/SDL_shape.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_shape.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_shape.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_shape.c.s
 .PHONY : src/video/SDL_shape.c.s
 
 src/video/SDL_stretch.o: src/video/SDL_stretch.c.o
@@ -3900,8 +3900,8 @@ src/video/SDL_stretch.o: src/video/SDL_stretch.c.o
 
 # target to build an object file
 src/video/SDL_stretch.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_stretch.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_stretch.c.o
 .PHONY : src/video/SDL_stretch.c.o
 
 src/video/SDL_stretch.i: src/video/SDL_stretch.c.i
@@ -3909,8 +3909,8 @@ src/video/SDL_stretch.i: src/video/SDL_stretch.c.i
 
 # target to preprocess a source file
 src/video/SDL_stretch.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_stretch.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_stretch.c.i
 .PHONY : src/video/SDL_stretch.c.i
 
 src/video/SDL_stretch.s: src/video/SDL_stretch.c.s
@@ -3918,8 +3918,8 @@ src/video/SDL_stretch.s: src/video/SDL_stretch.c.s
 
 # target to generate assembly for a file
 src/video/SDL_stretch.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_stretch.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_stretch.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_stretch.c.s
 .PHONY : src/video/SDL_stretch.c.s
 
 src/video/SDL_surface.o: src/video/SDL_surface.c.o
@@ -3927,8 +3927,8 @@ src/video/SDL_surface.o: src/video/SDL_surface.c.o
 
 # target to build an object file
 src/video/SDL_surface.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.o
 .PHONY : src/video/SDL_surface.c.o
 
 src/video/SDL_surface.i: src/video/SDL_surface.c.i
@@ -3936,8 +3936,8 @@ src/video/SDL_surface.i: src/video/SDL_surface.c.i
 
 # target to preprocess a source file
 src/video/SDL_surface.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.i
 .PHONY : src/video/SDL_surface.c.i
 
 src/video/SDL_surface.s: src/video/SDL_surface.c.s
@@ -3945,8 +3945,8 @@ src/video/SDL_surface.s: src/video/SDL_surface.c.s
 
 # target to generate assembly for a file
 src/video/SDL_surface.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_surface.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.s
 .PHONY : src/video/SDL_surface.c.s
 
 src/video/SDL_video.o: src/video/SDL_video.c.o
@@ -3954,8 +3954,8 @@ src/video/SDL_video.o: src/video/SDL_video.c.o
 
 # target to build an object file
 src/video/SDL_video.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_video.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_video.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_video.c.o
 .PHONY : src/video/SDL_video.c.o
 
 src/video/SDL_video.i: src/video/SDL_video.c.i
@@ -3963,8 +3963,8 @@ src/video/SDL_video.i: src/video/SDL_video.c.i
 
 # target to preprocess a source file
 src/video/SDL_video.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_video.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_video.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_video.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_video.c.i
 .PHONY : src/video/SDL_video.c.i
 
 src/video/SDL_video.s: src/video/SDL_video.c.s
@@ -3972,8 +3972,8 @@ src/video/SDL_video.s: src/video/SDL_video.c.s
 
 # target to generate assembly for a file
 src/video/SDL_video.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_video.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_video.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_video.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_video.c.s
 .PHONY : src/video/SDL_video.c.s
 
 src/video/SDL_vulkan_utils.o: src/video/SDL_vulkan_utils.c.o
@@ -3981,8 +3981,8 @@ src/video/SDL_vulkan_utils.o: src/video/SDL_vulkan_utils.c.o
 
 # target to build an object file
 src/video/SDL_vulkan_utils.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_vulkan_utils.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_vulkan_utils.c.o
 .PHONY : src/video/SDL_vulkan_utils.c.o
 
 src/video/SDL_vulkan_utils.i: src/video/SDL_vulkan_utils.c.i
@@ -3990,8 +3990,8 @@ src/video/SDL_vulkan_utils.i: src/video/SDL_vulkan_utils.c.i
 
 # target to preprocess a source file
 src/video/SDL_vulkan_utils.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_vulkan_utils.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_vulkan_utils.c.i
 .PHONY : src/video/SDL_vulkan_utils.c.i
 
 src/video/SDL_vulkan_utils.s: src/video/SDL_vulkan_utils.c.s
@@ -3999,8 +3999,8 @@ src/video/SDL_vulkan_utils.s: src/video/SDL_vulkan_utils.c.s
 
 # target to generate assembly for a file
 src/video/SDL_vulkan_utils.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_vulkan_utils.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_vulkan_utils.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_vulkan_utils.c.s
 .PHONY : src/video/SDL_vulkan_utils.c.s
 
 src/video/SDL_yuv.o: src/video/SDL_yuv.c.o
@@ -4008,8 +4008,8 @@ src/video/SDL_yuv.o: src/video/SDL_yuv.c.o
 
 # target to build an object file
 src/video/SDL_yuv.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_yuv.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_yuv.c.o
 .PHONY : src/video/SDL_yuv.c.o
 
 src/video/SDL_yuv.i: src/video/SDL_yuv.c.i
@@ -4017,8 +4017,8 @@ src/video/SDL_yuv.i: src/video/SDL_yuv.c.i
 
 # target to preprocess a source file
 src/video/SDL_yuv.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_yuv.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_yuv.c.i
 .PHONY : src/video/SDL_yuv.c.i
 
 src/video/SDL_yuv.s: src/video/SDL_yuv.c.s
@@ -4026,8 +4026,8 @@ src/video/SDL_yuv.s: src/video/SDL_yuv.c.s
 
 # target to generate assembly for a file
 src/video/SDL_yuv.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_yuv.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/SDL_yuv.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/SDL_yuv.c.s
 .PHONY : src/video/SDL_yuv.c.s
 
 src/video/cocoa/SDL_cocoaclipboard.o: src/video/cocoa/SDL_cocoaclipboard.m.o
@@ -4035,8 +4035,8 @@ src/video/cocoa/SDL_cocoaclipboard.o: src/video/cocoa/SDL_cocoaclipboard.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoaclipboard.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaclipboard.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaclipboard.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaclipboard.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaclipboard.m.o
 .PHONY : src/video/cocoa/SDL_cocoaclipboard.m.o
 
 src/video/cocoa/SDL_cocoaclipboard.i: src/video/cocoa/SDL_cocoaclipboard.m.i
@@ -4044,8 +4044,8 @@ src/video/cocoa/SDL_cocoaclipboard.i: src/video/cocoa/SDL_cocoaclipboard.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoaclipboard.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaclipboard.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaclipboard.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaclipboard.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaclipboard.m.i
 .PHONY : src/video/cocoa/SDL_cocoaclipboard.m.i
 
 src/video/cocoa/SDL_cocoaclipboard.s: src/video/cocoa/SDL_cocoaclipboard.m.s
@@ -4053,8 +4053,8 @@ src/video/cocoa/SDL_cocoaclipboard.s: src/video/cocoa/SDL_cocoaclipboard.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoaclipboard.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaclipboard.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaclipboard.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaclipboard.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaclipboard.m.s
 .PHONY : src/video/cocoa/SDL_cocoaclipboard.m.s
 
 src/video/cocoa/SDL_cocoaevents.o: src/video/cocoa/SDL_cocoaevents.m.o
@@ -4062,8 +4062,8 @@ src/video/cocoa/SDL_cocoaevents.o: src/video/cocoa/SDL_cocoaevents.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoaevents.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaevents.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaevents.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaevents.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaevents.m.o
 .PHONY : src/video/cocoa/SDL_cocoaevents.m.o
 
 src/video/cocoa/SDL_cocoaevents.i: src/video/cocoa/SDL_cocoaevents.m.i
@@ -4071,8 +4071,8 @@ src/video/cocoa/SDL_cocoaevents.i: src/video/cocoa/SDL_cocoaevents.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoaevents.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaevents.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaevents.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaevents.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaevents.m.i
 .PHONY : src/video/cocoa/SDL_cocoaevents.m.i
 
 src/video/cocoa/SDL_cocoaevents.s: src/video/cocoa/SDL_cocoaevents.m.s
@@ -4080,8 +4080,8 @@ src/video/cocoa/SDL_cocoaevents.s: src/video/cocoa/SDL_cocoaevents.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoaevents.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaevents.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaevents.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaevents.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaevents.m.s
 .PHONY : src/video/cocoa/SDL_cocoaevents.m.s
 
 src/video/cocoa/SDL_cocoakeyboard.o: src/video/cocoa/SDL_cocoakeyboard.m.o
@@ -4089,8 +4089,8 @@ src/video/cocoa/SDL_cocoakeyboard.o: src/video/cocoa/SDL_cocoakeyboard.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoakeyboard.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoakeyboard.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoakeyboard.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoakeyboard.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoakeyboard.m.o
 .PHONY : src/video/cocoa/SDL_cocoakeyboard.m.o
 
 src/video/cocoa/SDL_cocoakeyboard.i: src/video/cocoa/SDL_cocoakeyboard.m.i
@@ -4098,8 +4098,8 @@ src/video/cocoa/SDL_cocoakeyboard.i: src/video/cocoa/SDL_cocoakeyboard.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoakeyboard.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoakeyboard.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoakeyboard.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoakeyboard.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoakeyboard.m.i
 .PHONY : src/video/cocoa/SDL_cocoakeyboard.m.i
 
 src/video/cocoa/SDL_cocoakeyboard.s: src/video/cocoa/SDL_cocoakeyboard.m.s
@@ -4107,8 +4107,8 @@ src/video/cocoa/SDL_cocoakeyboard.s: src/video/cocoa/SDL_cocoakeyboard.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoakeyboard.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoakeyboard.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoakeyboard.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoakeyboard.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoakeyboard.m.s
 .PHONY : src/video/cocoa/SDL_cocoakeyboard.m.s
 
 src/video/cocoa/SDL_cocoamessagebox.o: src/video/cocoa/SDL_cocoamessagebox.m.o
@@ -4116,8 +4116,8 @@ src/video/cocoa/SDL_cocoamessagebox.o: src/video/cocoa/SDL_cocoamessagebox.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoamessagebox.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamessagebox.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamessagebox.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamessagebox.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamessagebox.m.o
 .PHONY : src/video/cocoa/SDL_cocoamessagebox.m.o
 
 src/video/cocoa/SDL_cocoamessagebox.i: src/video/cocoa/SDL_cocoamessagebox.m.i
@@ -4125,8 +4125,8 @@ src/video/cocoa/SDL_cocoamessagebox.i: src/video/cocoa/SDL_cocoamessagebox.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoamessagebox.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamessagebox.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamessagebox.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamessagebox.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamessagebox.m.i
 .PHONY : src/video/cocoa/SDL_cocoamessagebox.m.i
 
 src/video/cocoa/SDL_cocoamessagebox.s: src/video/cocoa/SDL_cocoamessagebox.m.s
@@ -4134,8 +4134,8 @@ src/video/cocoa/SDL_cocoamessagebox.s: src/video/cocoa/SDL_cocoamessagebox.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoamessagebox.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamessagebox.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamessagebox.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamessagebox.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamessagebox.m.s
 .PHONY : src/video/cocoa/SDL_cocoamessagebox.m.s
 
 src/video/cocoa/SDL_cocoametalview.o: src/video/cocoa/SDL_cocoametalview.m.o
@@ -4143,8 +4143,8 @@ src/video/cocoa/SDL_cocoametalview.o: src/video/cocoa/SDL_cocoametalview.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoametalview.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoametalview.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoametalview.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoametalview.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoametalview.m.o
 .PHONY : src/video/cocoa/SDL_cocoametalview.m.o
 
 src/video/cocoa/SDL_cocoametalview.i: src/video/cocoa/SDL_cocoametalview.m.i
@@ -4152,8 +4152,8 @@ src/video/cocoa/SDL_cocoametalview.i: src/video/cocoa/SDL_cocoametalview.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoametalview.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoametalview.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoametalview.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoametalview.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoametalview.m.i
 .PHONY : src/video/cocoa/SDL_cocoametalview.m.i
 
 src/video/cocoa/SDL_cocoametalview.s: src/video/cocoa/SDL_cocoametalview.m.s
@@ -4161,8 +4161,8 @@ src/video/cocoa/SDL_cocoametalview.s: src/video/cocoa/SDL_cocoametalview.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoametalview.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoametalview.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoametalview.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoametalview.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoametalview.m.s
 .PHONY : src/video/cocoa/SDL_cocoametalview.m.s
 
 src/video/cocoa/SDL_cocoamodes.o: src/video/cocoa/SDL_cocoamodes.m.o
@@ -4170,8 +4170,8 @@ src/video/cocoa/SDL_cocoamodes.o: src/video/cocoa/SDL_cocoamodes.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoamodes.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamodes.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamodes.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamodes.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamodes.m.o
 .PHONY : src/video/cocoa/SDL_cocoamodes.m.o
 
 src/video/cocoa/SDL_cocoamodes.i: src/video/cocoa/SDL_cocoamodes.m.i
@@ -4179,8 +4179,8 @@ src/video/cocoa/SDL_cocoamodes.i: src/video/cocoa/SDL_cocoamodes.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoamodes.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamodes.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamodes.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamodes.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamodes.m.i
 .PHONY : src/video/cocoa/SDL_cocoamodes.m.i
 
 src/video/cocoa/SDL_cocoamodes.s: src/video/cocoa/SDL_cocoamodes.m.s
@@ -4188,8 +4188,8 @@ src/video/cocoa/SDL_cocoamodes.s: src/video/cocoa/SDL_cocoamodes.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoamodes.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamodes.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamodes.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamodes.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamodes.m.s
 .PHONY : src/video/cocoa/SDL_cocoamodes.m.s
 
 src/video/cocoa/SDL_cocoamouse.o: src/video/cocoa/SDL_cocoamouse.m.o
@@ -4197,8 +4197,8 @@ src/video/cocoa/SDL_cocoamouse.o: src/video/cocoa/SDL_cocoamouse.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoamouse.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamouse.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamouse.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamouse.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamouse.m.o
 .PHONY : src/video/cocoa/SDL_cocoamouse.m.o
 
 src/video/cocoa/SDL_cocoamouse.i: src/video/cocoa/SDL_cocoamouse.m.i
@@ -4206,8 +4206,8 @@ src/video/cocoa/SDL_cocoamouse.i: src/video/cocoa/SDL_cocoamouse.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoamouse.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamouse.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamouse.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamouse.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamouse.m.i
 .PHONY : src/video/cocoa/SDL_cocoamouse.m.i
 
 src/video/cocoa/SDL_cocoamouse.s: src/video/cocoa/SDL_cocoamouse.m.s
@@ -4215,8 +4215,8 @@ src/video/cocoa/SDL_cocoamouse.s: src/video/cocoa/SDL_cocoamouse.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoamouse.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamouse.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamouse.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoamouse.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoamouse.m.s
 .PHONY : src/video/cocoa/SDL_cocoamouse.m.s
 
 src/video/cocoa/SDL_cocoaopengl.o: src/video/cocoa/SDL_cocoaopengl.m.o
@@ -4224,8 +4224,8 @@ src/video/cocoa/SDL_cocoaopengl.o: src/video/cocoa/SDL_cocoaopengl.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoaopengl.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengl.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengl.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengl.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengl.m.o
 .PHONY : src/video/cocoa/SDL_cocoaopengl.m.o
 
 src/video/cocoa/SDL_cocoaopengl.i: src/video/cocoa/SDL_cocoaopengl.m.i
@@ -4233,8 +4233,8 @@ src/video/cocoa/SDL_cocoaopengl.i: src/video/cocoa/SDL_cocoaopengl.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoaopengl.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengl.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengl.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengl.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengl.m.i
 .PHONY : src/video/cocoa/SDL_cocoaopengl.m.i
 
 src/video/cocoa/SDL_cocoaopengl.s: src/video/cocoa/SDL_cocoaopengl.m.s
@@ -4242,8 +4242,8 @@ src/video/cocoa/SDL_cocoaopengl.s: src/video/cocoa/SDL_cocoaopengl.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoaopengl.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengl.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengl.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengl.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengl.m.s
 .PHONY : src/video/cocoa/SDL_cocoaopengl.m.s
 
 src/video/cocoa/SDL_cocoaopengles.o: src/video/cocoa/SDL_cocoaopengles.m.o
@@ -4251,8 +4251,8 @@ src/video/cocoa/SDL_cocoaopengles.o: src/video/cocoa/SDL_cocoaopengles.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoaopengles.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengles.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengles.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengles.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengles.m.o
 .PHONY : src/video/cocoa/SDL_cocoaopengles.m.o
 
 src/video/cocoa/SDL_cocoaopengles.i: src/video/cocoa/SDL_cocoaopengles.m.i
@@ -4260,8 +4260,8 @@ src/video/cocoa/SDL_cocoaopengles.i: src/video/cocoa/SDL_cocoaopengles.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoaopengles.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengles.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengles.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengles.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengles.m.i
 .PHONY : src/video/cocoa/SDL_cocoaopengles.m.i
 
 src/video/cocoa/SDL_cocoaopengles.s: src/video/cocoa/SDL_cocoaopengles.m.s
@@ -4269,8 +4269,8 @@ src/video/cocoa/SDL_cocoaopengles.s: src/video/cocoa/SDL_cocoaopengles.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoaopengles.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengles.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengles.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoaopengles.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoaopengles.m.s
 .PHONY : src/video/cocoa/SDL_cocoaopengles.m.s
 
 src/video/cocoa/SDL_cocoashape.o: src/video/cocoa/SDL_cocoashape.m.o
@@ -4278,8 +4278,8 @@ src/video/cocoa/SDL_cocoashape.o: src/video/cocoa/SDL_cocoashape.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoashape.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoashape.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoashape.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoashape.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoashape.m.o
 .PHONY : src/video/cocoa/SDL_cocoashape.m.o
 
 src/video/cocoa/SDL_cocoashape.i: src/video/cocoa/SDL_cocoashape.m.i
@@ -4287,8 +4287,8 @@ src/video/cocoa/SDL_cocoashape.i: src/video/cocoa/SDL_cocoashape.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoashape.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoashape.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoashape.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoashape.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoashape.m.i
 .PHONY : src/video/cocoa/SDL_cocoashape.m.i
 
 src/video/cocoa/SDL_cocoashape.s: src/video/cocoa/SDL_cocoashape.m.s
@@ -4296,8 +4296,8 @@ src/video/cocoa/SDL_cocoashape.s: src/video/cocoa/SDL_cocoashape.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoashape.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoashape.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoashape.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoashape.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoashape.m.s
 .PHONY : src/video/cocoa/SDL_cocoashape.m.s
 
 src/video/cocoa/SDL_cocoavideo.o: src/video/cocoa/SDL_cocoavideo.m.o
@@ -4305,8 +4305,8 @@ src/video/cocoa/SDL_cocoavideo.o: src/video/cocoa/SDL_cocoavideo.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoavideo.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavideo.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavideo.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavideo.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavideo.m.o
 .PHONY : src/video/cocoa/SDL_cocoavideo.m.o
 
 src/video/cocoa/SDL_cocoavideo.i: src/video/cocoa/SDL_cocoavideo.m.i
@@ -4314,8 +4314,8 @@ src/video/cocoa/SDL_cocoavideo.i: src/video/cocoa/SDL_cocoavideo.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoavideo.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavideo.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavideo.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavideo.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavideo.m.i
 .PHONY : src/video/cocoa/SDL_cocoavideo.m.i
 
 src/video/cocoa/SDL_cocoavideo.s: src/video/cocoa/SDL_cocoavideo.m.s
@@ -4323,8 +4323,8 @@ src/video/cocoa/SDL_cocoavideo.s: src/video/cocoa/SDL_cocoavideo.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoavideo.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavideo.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavideo.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavideo.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavideo.m.s
 .PHONY : src/video/cocoa/SDL_cocoavideo.m.s
 
 src/video/cocoa/SDL_cocoavulkan.o: src/video/cocoa/SDL_cocoavulkan.m.o
@@ -4332,8 +4332,8 @@ src/video/cocoa/SDL_cocoavulkan.o: src/video/cocoa/SDL_cocoavulkan.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoavulkan.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavulkan.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavulkan.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavulkan.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavulkan.m.o
 .PHONY : src/video/cocoa/SDL_cocoavulkan.m.o
 
 src/video/cocoa/SDL_cocoavulkan.i: src/video/cocoa/SDL_cocoavulkan.m.i
@@ -4341,8 +4341,8 @@ src/video/cocoa/SDL_cocoavulkan.i: src/video/cocoa/SDL_cocoavulkan.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoavulkan.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavulkan.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavulkan.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavulkan.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavulkan.m.i
 .PHONY : src/video/cocoa/SDL_cocoavulkan.m.i
 
 src/video/cocoa/SDL_cocoavulkan.s: src/video/cocoa/SDL_cocoavulkan.m.s
@@ -4350,8 +4350,8 @@ src/video/cocoa/SDL_cocoavulkan.s: src/video/cocoa/SDL_cocoavulkan.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoavulkan.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavulkan.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavulkan.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoavulkan.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoavulkan.m.s
 .PHONY : src/video/cocoa/SDL_cocoavulkan.m.s
 
 src/video/cocoa/SDL_cocoawindow.o: src/video/cocoa/SDL_cocoawindow.m.o
@@ -4359,8 +4359,8 @@ src/video/cocoa/SDL_cocoawindow.o: src/video/cocoa/SDL_cocoawindow.m.o
 
 # target to build an object file
 src/video/cocoa/SDL_cocoawindow.m.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoawindow.m.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoawindow.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoawindow.m.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoawindow.m.o
 .PHONY : src/video/cocoa/SDL_cocoawindow.m.o
 
 src/video/cocoa/SDL_cocoawindow.i: src/video/cocoa/SDL_cocoawindow.m.i
@@ -4368,8 +4368,8 @@ src/video/cocoa/SDL_cocoawindow.i: src/video/cocoa/SDL_cocoawindow.m.i
 
 # target to preprocess a source file
 src/video/cocoa/SDL_cocoawindow.m.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoawindow.m.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoawindow.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoawindow.m.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoawindow.m.i
 .PHONY : src/video/cocoa/SDL_cocoawindow.m.i
 
 src/video/cocoa/SDL_cocoawindow.s: src/video/cocoa/SDL_cocoawindow.m.s
@@ -4377,8 +4377,8 @@ src/video/cocoa/SDL_cocoawindow.s: src/video/cocoa/SDL_cocoawindow.m.s
 
 # target to generate assembly for a file
 src/video/cocoa/SDL_cocoawindow.m.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoawindow.m.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoawindow.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/cocoa/SDL_cocoawindow.m.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/cocoa/SDL_cocoawindow.m.s
 .PHONY : src/video/cocoa/SDL_cocoawindow.m.s
 
 src/video/dummy/SDL_nullevents.o: src/video/dummy/SDL_nullevents.c.o
@@ -4386,8 +4386,8 @@ src/video/dummy/SDL_nullevents.o: src/video/dummy/SDL_nullevents.c.o
 
 # target to build an object file
 src/video/dummy/SDL_nullevents.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullevents.c.o
 .PHONY : src/video/dummy/SDL_nullevents.c.o
 
 src/video/dummy/SDL_nullevents.i: src/video/dummy/SDL_nullevents.c.i
@@ -4395,8 +4395,8 @@ src/video/dummy/SDL_nullevents.i: src/video/dummy/SDL_nullevents.c.i
 
 # target to preprocess a source file
 src/video/dummy/SDL_nullevents.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullevents.c.i
 .PHONY : src/video/dummy/SDL_nullevents.c.i
 
 src/video/dummy/SDL_nullevents.s: src/video/dummy/SDL_nullevents.c.s
@@ -4404,8 +4404,8 @@ src/video/dummy/SDL_nullevents.s: src/video/dummy/SDL_nullevents.c.s
 
 # target to generate assembly for a file
 src/video/dummy/SDL_nullevents.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullevents.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullevents.c.s
 .PHONY : src/video/dummy/SDL_nullevents.c.s
 
 src/video/dummy/SDL_nullframebuffer.o: src/video/dummy/SDL_nullframebuffer.c.o
@@ -4413,8 +4413,8 @@ src/video/dummy/SDL_nullframebuffer.o: src/video/dummy/SDL_nullframebuffer.c.o
 
 # target to build an object file
 src/video/dummy/SDL_nullframebuffer.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.o
 .PHONY : src/video/dummy/SDL_nullframebuffer.c.o
 
 src/video/dummy/SDL_nullframebuffer.i: src/video/dummy/SDL_nullframebuffer.c.i
@@ -4422,8 +4422,8 @@ src/video/dummy/SDL_nullframebuffer.i: src/video/dummy/SDL_nullframebuffer.c.i
 
 # target to preprocess a source file
 src/video/dummy/SDL_nullframebuffer.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.i
 .PHONY : src/video/dummy/SDL_nullframebuffer.c.i
 
 src/video/dummy/SDL_nullframebuffer.s: src/video/dummy/SDL_nullframebuffer.c.s
@@ -4431,8 +4431,8 @@ src/video/dummy/SDL_nullframebuffer.s: src/video/dummy/SDL_nullframebuffer.c.s
 
 # target to generate assembly for a file
 src/video/dummy/SDL_nullframebuffer.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullframebuffer.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.s
 .PHONY : src/video/dummy/SDL_nullframebuffer.c.s
 
 src/video/dummy/SDL_nullvideo.o: src/video/dummy/SDL_nullvideo.c.o
@@ -4440,8 +4440,8 @@ src/video/dummy/SDL_nullvideo.o: src/video/dummy/SDL_nullvideo.c.o
 
 # target to build an object file
 src/video/dummy/SDL_nullvideo.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.o
 .PHONY : src/video/dummy/SDL_nullvideo.c.o
 
 src/video/dummy/SDL_nullvideo.i: src/video/dummy/SDL_nullvideo.c.i
@@ -4449,8 +4449,8 @@ src/video/dummy/SDL_nullvideo.i: src/video/dummy/SDL_nullvideo.c.i
 
 # target to preprocess a source file
 src/video/dummy/SDL_nullvideo.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.i
 .PHONY : src/video/dummy/SDL_nullvideo.c.i
 
 src/video/dummy/SDL_nullvideo.s: src/video/dummy/SDL_nullvideo.c.s
@@ -4458,8 +4458,8 @@ src/video/dummy/SDL_nullvideo.s: src/video/dummy/SDL_nullvideo.c.s
 
 # target to generate assembly for a file
 src/video/dummy/SDL_nullvideo.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/dummy/SDL_nullvideo.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.s
 .PHONY : src/video/dummy/SDL_nullvideo.c.s
 
 src/video/yuv2rgb/yuv_rgb.o: src/video/yuv2rgb/yuv_rgb.c.o
@@ -4467,8 +4467,8 @@ src/video/yuv2rgb/yuv_rgb.o: src/video/yuv2rgb/yuv_rgb.c.o
 
 # target to build an object file
 src/video/yuv2rgb/yuv_rgb.c.o:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.o
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/yuv2rgb/yuv_rgb.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.o
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/yuv2rgb/yuv_rgb.c.o
 .PHONY : src/video/yuv2rgb/yuv_rgb.c.o
 
 src/video/yuv2rgb/yuv_rgb.i: src/video/yuv2rgb/yuv_rgb.c.i
@@ -4476,8 +4476,8 @@ src/video/yuv2rgb/yuv_rgb.i: src/video/yuv2rgb/yuv_rgb.c.i
 
 # target to preprocess a source file
 src/video/yuv2rgb/yuv_rgb.c.i:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.i
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/yuv2rgb/yuv_rgb.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.i
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/yuv2rgb/yuv_rgb.c.i
 .PHONY : src/video/yuv2rgb/yuv_rgb.c.i
 
 src/video/yuv2rgb/yuv_rgb.s: src/video/yuv2rgb/yuv_rgb.c.s
@@ -4485,8 +4485,8 @@ src/video/yuv2rgb/yuv_rgb.s: src/video/yuv2rgb/yuv_rgb.c.s
 
 # target to generate assembly for a file
 src/video/yuv2rgb/yuv_rgb.c.s:
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.s
-	cd /Users/myronphan/cavestory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/yuv2rgb/yuv_rgb.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2.dir/build.make external/SDL2/CMakeFiles/SDL2.dir/src/video/yuv2rgb/yuv_rgb.c.s
+	cd /Users/myronphan/caveStory/out/build && $(MAKE) $(MAKESILENT) -f external/SDL2/CMakeFiles/SDL2-static.dir/build.make external/SDL2/CMakeFiles/SDL2-static.dir/src/video/yuv2rgb/yuv_rgb.c.s
 .PHONY : src/video/yuv2rgb/yuv_rgb.c.s
 
 # Help Target
@@ -4991,6 +4991,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/myronphan/cavestory/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/myronphan/caveStory/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/a.out.dir/Testing.cpp.o"
   "CMakeFiles/a.out.dir/Testing.cpp.o.d"
+  "CMakeFiles/a.out.dir/src/Input.cpp.o"
+  "CMakeFiles/a.out.dir/src/Input.cpp.o.d"
+  "CMakeFiles/a.out.dir/src/game.cpp.o"
+  "CMakeFiles/a.out.dir/src/game.cpp.o.d"
   "CMakeFiles/a.out.dir/src/graphics.cpp.o"
   "CMakeFiles/a.out.dir/src/graphics.cpp.o.d"
   "a.out"

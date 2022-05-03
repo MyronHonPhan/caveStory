@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/myronphan/cavestory
+CMAKE_SOURCE_DIR = /Users/myronphan/caveStory
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/myronphan/cavestory/out/build
+CMAKE_BINARY_DIR = /Users/myronphan/caveStory/out/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include external/SDL2/CMakeFiles/uninstall.dir/compiler_depend.make
 include external/SDL2/CMakeFiles/uninstall.dir/progress.make
 
 external/SDL2/CMakeFiles/uninstall:
-	cd /Users/myronphan/cavestory/out/build/external/SDL2 && /usr/local/Cellar/cmake/3.22.2/bin/cmake -P /Users/myronphan/cavestory/out/build/external/SDL2/cmake_uninstall.cmake
+	cd /Users/myronphan/caveStory/out/build/external/SDL2 && /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P /Users/myronphan/caveStory/out/build/external/SDL2/cmake_uninstall.cmake
 
 uninstall: external/SDL2/CMakeFiles/uninstall
 uninstall: external/SDL2/CMakeFiles/uninstall.dir/build.make
@@ -78,10 +78,10 @@ external/SDL2/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : external/SDL2/CMakeFiles/uninstall.dir/build
 
 external/SDL2/CMakeFiles/uninstall.dir/clean:
-	cd /Users/myronphan/cavestory/out/build/external/SDL2 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /Users/myronphan/caveStory/out/build/external/SDL2 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : external/SDL2/CMakeFiles/uninstall.dir/clean
 
 external/SDL2/CMakeFiles/uninstall.dir/depend:
-	cd /Users/myronphan/cavestory/out/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/myronphan/cavestory /Users/myronphan/cavestory/external/SDL2 /Users/myronphan/cavestory/out/build /Users/myronphan/cavestory/out/build/external/SDL2 /Users/myronphan/cavestory/out/build/external/SDL2/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/myronphan/caveStory/out/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/myronphan/caveStory /Users/myronphan/caveStory/external/SDL2 /Users/myronphan/caveStory/out/build /Users/myronphan/caveStory/out/build/external/SDL2 /Users/myronphan/caveStory/out/build/external/SDL2/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : external/SDL2/CMakeFiles/uninstall.dir/depend
 

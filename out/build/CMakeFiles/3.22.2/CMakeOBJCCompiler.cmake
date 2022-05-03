@@ -1,7 +1,7 @@
 set(CMAKE_OBJC_COMPILER "/Library/Developer/CommandLineTools/usr/bin/cc")
 set(CMAKE_OBJC_COMPILER_ARG1 "")
 set(CMAKE_OBJC_COMPILER_ID "AppleClang")
-set(CMAKE_OBJC_COMPILER_VERSION "12.0.5.12050022")
+set(CMAKE_OBJC_COMPILER_VERSION "12.0.0.12000032")
 set(CMAKE_OBJC_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_OBJC_COMPILER_WRAPPER "")
 set(CMAKE_OBJC_STANDARD_COMPUTED_DEFAULT "11")
@@ -67,7 +67,7 @@ endif()
 
 
 
-set(CMAKE_OBJC_IMPLICIT_INCLUDE_DIRECTORIES "/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include;/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include")
+set(CMAKE_OBJC_IMPLICIT_INCLUDE_DIRECTORIES "/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include")
 set(CMAKE_OBJC_IMPLICIT_LINK_LIBRARIES "")
-set(CMAKE_OBJC_IMPLICIT_LINK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/lib")
-set(CMAKE_OBJC_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks")
+set(CMAKE_OBJC_IMPLICIT_LINK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/lib")
+set(CMAKE_OBJC_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks")

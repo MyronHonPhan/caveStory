@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 project(a.out)
 
-add_executable(${PROJECT_NAME} Testing.cpp src/graphics.cpp)
+add_executable(${PROJECT_NAME} Testing.cpp src/graphics.cpp src/game.cpp src/Input.cpp)
 
 add_subdirectory(external/SDL2)
 
