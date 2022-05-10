@@ -1,5 +1,5 @@
 #include <iostream>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include "src/game.h"
 #include "src/Input.h"
 #undef main

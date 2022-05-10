@@ -1,4 +1,4 @@
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include <iostream>
 #include "game.h"
@@ -25,8 +25,11 @@ void Game::gameLoop() {
     SDL_Event event;
     Input input;
 
-    // import image, specify source location, size and destination to render image
-    this->_player = Sprite(graphics, "res/sprites/MyChar.png", 0, 0, 16, 16, 100, 100);
+    this->_player = AnimatedSprite(graphics, "res/sprites/MyChar.png", 0, 0, 16, 16, 100, 100,100);
+
+    this->_player.setUpAnimations();
+    this->_player.playAnimation("Running Right");
+
     int LAST_UPDATE_TIME = SDL_GetTicks();
 
     while (true) {
@@ -66,5 +69,5 @@ void Game::draw(Graphics &graphics) {
 }
 
 void Game::update(float elapsedTime) {
-
+	this->_player.update(elapsedTime);
 }
