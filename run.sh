@@ -1,1 +1,1 @@
-cd out/build; ./a.out
+cd build; ./a.out

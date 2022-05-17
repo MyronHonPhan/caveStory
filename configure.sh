@@ -1,1 +1,1 @@
-cd out/build; cmake -S ../../ -B .;
+cd build; cmake ..;
