@@ -1,6 +1,12 @@
 #pragma once
 
+#include "Player.h"
+#include "Level.h"
+
 class Graphics;
+/*
+
+*/
 
 class Game {
 public:
@@ -11,4 +17,7 @@ private:
     void gameLoop();
     void draw(Graphics &graphics);
     void update(float elapsedTime);
+
+    Player _player;
+    Level _level;
 };

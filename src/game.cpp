@@ -1,5 +1,6 @@
 #include <SDL.h>
 
+#include <iostream>
 #include "game.h"
 #include "graphics.h"
 #include "Input.h"
@@ -10,6 +11,7 @@ namespace {
 }
 
 Game::Game() {
+    // initialize the sdl library (events, audio, controllers, etc.)
     SDL_Init(SDL_INIT_EVERYTHING);
     this->gameLoop();
 }
@@ -22,6 +24,9 @@ void Game::gameLoop() {
     Graphics graphics;
     SDL_Event event;
     Input input;
+
+    this->_player = Player(graphics, 100, 100);
+    this->_level = Level("Awesome Map", Vector2(100,100), graphics);
 
     int LAST_UPDATE_TIME = SDL_GetTicks();
 
@@ -36,7 +41,6 @@ void Game::gameLoop() {
             else if (event.type == SDL_KEYUP) {
                 input.keyUpEvent(event);
             }
-            
             else if (event.type == SDL_QUIT) {
                 return;
             }
@@ -44,18 +48,38 @@ void Game::gameLoop() {
         if (input.wasKeyPressed(SDL_SCANCODE_ESCAPE) == true) {
             return;
         }
-    }
-    int CURRENT_UPDATE_TIME = SDL_GetTicks();
-    int ELAPSED_TIME = CURRENT_UPDATE_TIME - LAST_UPDATE_TIME;
-    this->update(std::min(ELAPSED_TIME, MAX_FRAME_TIME));
-    LAST_UPDATE_TIME = CURRENT_UPDATE_TIME;
 
+        else if (input.isKeyHeld(SDL_SCANCODE_LEFT) == true) {
+        	this->_player.moveLeft();
+        }
+
+        else if (input.isKeyHeld(SDL_SCANCODE_RIGHT) == true) {
+        	this->_player.moveRight();
+        }
+
+        else if (!input.isKeyHeld(SDL_SCANCODE_LEFT) && !input.isKeyHeld(SDL_SCANCODE_RIGHT)) {
+        	this->_player.stopMoving();
+        }
+
+
+        int CURRENT_UPDATE_TIME = SDL_GetTicks();
+        int ELAPSED_TIME = CURRENT_UPDATE_TIME - LAST_UPDATE_TIME;
+        this->update(std::min(ELAPSED_TIME, MAX_FRAME_TIME));
+        LAST_UPDATE_TIME = CURRENT_UPDATE_TIME;
+
+        this->draw(graphics);
+    }
 }
 
 void Game::draw(Graphics &graphics) {
-    
+    // clear graphics, blit (copy data to rendering context), then render 
+    graphics.clear();
+    this->_level.draw(graphics);
+    this->_player.draw(graphics);
+    graphics.flip();
 }
 
-void update(float elapsedTime) {
-
+void Game::update(float elapsedTime) {
+	this->_level.update(elapsedTime);
+	this->_player.update(elapsedTime);
 }
