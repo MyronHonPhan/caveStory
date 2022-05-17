@@ -1,11 +1,31 @@
 #pragma once
 #include <map>
 #include <string>
+#include <SDL2/SDL.h>
 
 struct SDL_Window{};
 struct SDL_Renderer{};
 
 class Graphics {
+	/*
+
+	 In every object that is visible on the GUI, there will always be a update and
+	 a draw method.
+
+	 1) draw is going to blit the surface (take the source image and copy it
+	 to our destination through SDL_RenderCopy)
+
+	 2) update is going to update the frames of the animation since there could
+	 be many frames to an animation like walking
+
+	 3) once that is done, then we will SDL_RenderPresent which will update the
+	 entire frame
+
+	 main loop :
+
+	 update which frame -> render copy (copy pixels) -> render present (update frame)
+	 */
+
 public:
     Graphics();
     ~Graphics();

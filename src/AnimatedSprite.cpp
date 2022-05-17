@@ -59,6 +59,10 @@ void AnimatedSprite::stopAnimation() {
 }
 
 void AnimatedSprite::update(int elapsedTime) {
+	// function to update the screen to the next frame once the elapsed time passed
+	// the time to update. if animation once is activated, then we just set the visibility
+	// to false. If not, then we repeat the animation.
+
 	Sprite::update();
 
 	this->_timeElapsed += elapsedTime;
@@ -95,8 +99,4 @@ void AnimatedSprite::animationDone(std::string currentAnimation) {
 
 }
 
-void AnimatedSprite::setUpAnimations(){
-	this->addAnimation(3, 0, 0, "Running Left", 16, 16, Vector2(0,0));
-	this->addAnimation(3, 0, 16, "Running Right", 16, 16, Vector2(0,0));
-}
 

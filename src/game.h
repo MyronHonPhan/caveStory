@@ -1,7 +1,7 @@
 #pragma once
 
-#include "AnimatedSprite.h"
-#include "Sprite.h"
+#include "Player.h"
+#include "Level.h"
 
 class Graphics;
 /*
@@ -18,6 +18,6 @@ private:
     void draw(Graphics &graphics);
     void update(float elapsedTime);
 
-    AnimatedSprite _player;
-    Sprite _player1;
+    Player _player;
+    Level _level;
 };

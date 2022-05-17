@@ -25,10 +25,8 @@ void Game::gameLoop() {
     SDL_Event event;
     Input input;
 
-    this->_player = AnimatedSprite(graphics, "res/sprites/MyChar.png", 0, 0, 16, 16, 100, 100,100);
-
-    this->_player.setUpAnimations();
-    this->_player.playAnimation("Running Right");
+    this->_player = Player(graphics, 100, 100);
+    this->_level = Level("Awesome Map", Vector2(100,100), graphics);
 
     int LAST_UPDATE_TIME = SDL_GetTicks();
 
@@ -52,6 +50,19 @@ void Game::gameLoop() {
             return;
         }
 
+        else if (input.isKeyHeld(SDL_SCANCODE_LEFT) == true) {
+        	this->_player.moveLeft();
+        }
+
+        else if (input.isKeyHeld(SDL_SCANCODE_RIGHT) == true) {
+        	this->_player.moveRight();
+        }
+
+        else if (!input.isKeyHeld(SDL_SCANCODE_LEFT) && !input.isKeyHeld(SDL_SCANCODE_RIGHT)) {
+        	this->_player.stopMoving();
+        }
+
+
         int CURRENT_UPDATE_TIME = SDL_GetTicks();
         int ELAPSED_TIME = CURRENT_UPDATE_TIME - LAST_UPDATE_TIME;
         this->update(std::min(ELAPSED_TIME, MAX_FRAME_TIME));
@@ -64,10 +75,12 @@ void Game::gameLoop() {
 void Game::draw(Graphics &graphics) {
     // clear graphics, blit (copy data to rendering context), then render 
     graphics.clear();
-    this->_player.draw(graphics, 100, 100);
+    this->_level.draw(graphics);
+    this->_player.draw(graphics);
     graphics.flip();
 }
 
 void Game::update(float elapsedTime) {
+	this->_player.update(elapsedTime);
 	this->_player.update(elapsedTime);
 }

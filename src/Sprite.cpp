@@ -15,6 +15,7 @@ Sprite::Sprite(Graphics& graphics, const std::string& filePath, int sourceX, int
 	this->_sourceRect.w = width;
 	this->_sourceRect.h = height;
 	
+	// we want to convert from SDL surface to SDL texture to have the rendering GPU accelerated
 	this->_spriteSheet = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage(filePath));
 	if (this->_spriteSheet == NULL) {
 		std::cout << "Error: Unable to load image" << std::endl;
